@@ -26,3 +26,4 @@ A zip file with the derived datasets of students, teachers, and schools.
 a) error messages
 b) stop if error
 c) reactivity of datasets
+d) reduce size of data (to csv maybe of json possible)
