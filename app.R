@@ -29,8 +29,9 @@ ui <- fluidPage(
   shinyFeedback::useShinyFeedback(),
   
   #UI to import data
-  selectInput("round", label = "Round of the data",choices = rounds),
   fileInput("upload", label = "Import .zip file", accept = c(".zip")),
+  selectInput("round", label = "Round of the data",choices = rounds),
+  
   actionButton("sendData", label = "Upload data", class="btn btn-success"),
   
   #temp: to check what has been uploaded by user
@@ -64,6 +65,9 @@ server <- function(input, output, session) {
       info_file <- file.info(dir_uploads())
       date_file <- format(info_file$atime[1], "%B %d %Y at %H:%M") 
       
+    } else {
+      
+      exists_and_files <- FALSE
     }
     
     #define message to confirm with the user
@@ -123,7 +127,14 @@ server <- function(input, output, session) {
     
     #unzip --------------------------------------------------------------------
     showNotification("Reading uploaded files", type = "warning")
+    
+    #delete previous stata files
     tempDir = tempdir()
+    for(file in list.files(tempDir, full.names = T, pattern = ".dta", recursive = T)){
+  
+      unlink(file)
+    }
+    
     
     
     unzip(input$upload$datapath, overwrite = T, exdir = tempDir)
@@ -139,9 +150,9 @@ server <- function(input, output, session) {
     if(size_num != 3){
       
       modal_error_number_files <- modalDialog(
-        HTML(paste("<b>",size_num,"</b> have been uploaded<br>", 
+        HTML(paste("<b>",size_num,"</b> files have been uploaded.", 
                    "But 3 files are expected (school, teacher, and student).",
-                   "<br> Please verify and upload again.")),
+                   "<br><br> Please verify and upload again.")),
         title = "Error in file names",
         footer = tagList(
           actionButton("close_error_num_files", "Close", class = "btn btn-danger"),
@@ -302,7 +313,7 @@ server <- function(input, output, session) {
     removeModal()
   })
   
-  observeEvent(input$modal_error_number_files,{
+  observeEvent(input$close_error_num_files,{
     removeModal()
   })
   
