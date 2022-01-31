@@ -15,7 +15,8 @@ check_name_of_uploads <- function(user_files = uploaded_files,
   
   #this means that at least one file does not match with the survey levels
   if(any(!check)){
-    wrong_files <- paste(fles[!check], collapse = " and ")
+    wrong_files_short_name <- str_extract(user_files[!check], "[^\\/]+$")
+    wrong_files <- paste(wrong_files_short_name, collapse = " and ")
     return(wrong_files)
   } else{
     #the files are named correctly!
