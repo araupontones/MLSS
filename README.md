@@ -11,6 +11,7 @@ A zip file with the derived datasets of students, teachers, and schools.
 
 * Create a zip file with the three datasets. The format of the datasets must be .dta
 * The names of the .dta files should contain the words school, teacher, and students.
+* The files must include the variables specified by the World Bank (see guide)
 
 
 ### Importing backend protocol

@@ -13,7 +13,7 @@ copy_unzip_to_imports <- function(user_files,
       
       if(str_detect(dta, nivel)){
         
-        file.copy(dta, to= file.path(exdir,paste0(nivel, ".dta")))
+        file.copy(dta, to= file.path(exdir,paste0(nivel, ".dta")), overwrite = T)
       }
     }
   }
