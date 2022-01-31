@@ -42,7 +42,7 @@ b) Identify the variables that work as filters
 4. Check with WB for the derived Midline and Endline
 5. Import the Midline and Endline and write a protocol to append the three rounds into a single panel data
 6. Check with WB when more data is expected and how these rounds will be called.
-7. Write a users' guide to upload the data (considering all the points in the [Importing Protocol](## Importing Protocol))
+7. Write a users' guide to upload the data (considering all the points in the [Importing Protocol](#importing-backend-protocol))
 
 ## things to review
 
