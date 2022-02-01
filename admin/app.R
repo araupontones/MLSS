@@ -50,16 +50,22 @@ ui <- fluidPage(
   # authentication module
 
   #UI to import data
-  fileInput("upload", label = "Import .zip file", accept = c(".zip")),
-  selectInput("round", label = "Round of the data",choices = rounds),
+  fileInput("upload", label = "Upload  a .zip file with the data", accept = c(".zip")),
+  #Input select of round
+  uiOutput(outputId = "select_round"),
   
-  actionButton("sendData", label = "Upload data", class="btn btn-success"),
-  
-  #temp: to check what has been uploaded by user
+  #Button to validate
+  uiOutput(outputId = "validate_button"),
+ 
+  #Table to inform the users of the existing files
   uiOutput(outputId = "head_summary"),
-  tableOutput("head")
+  
+  tableOutput("table_summary")
+  
 )
 
+
+#secure the app
 ui <- secure_app(ui,
                  # add image on top ?
                  tags_top = 
@@ -87,7 +93,25 @@ server <- function(input, output, session) {
     check_credentials = check_credentials(credentials)
   )
   
+  #User inputs (validate button and select round) ------------------------------
+ 
+  output$select_round <- renderUI({
+    req(input$upload)
+    selectInput("round", label = "Select The Round Of the Upload",choices = c("",rounds))
+    
+  })
+  
+  output$validate_button <- renderUI({
+    req(input$upload, input$round)
+    
+    actionButton("sendData", label = "Verify data", class="btn btn-primary")
+    
+    
+  })
+  
+  
   #Server to import data --------------------------------------------------------
+  
   
   #1. define directory to store uploads based on input round
   dir_uploads <- reactive({
@@ -132,13 +156,18 @@ server <- function(input, output, session) {
     
     #check that a file has been uploaded
     files_sent <- length(input$upload)
-    
     shinyFeedback::feedbackDanger("upload", files_sent == 0, "Upload a file")
     
     
     req(input$upload)
     
-    #Confirm with user if wants to proceed
+    #check that user has selected a round 
+    check_selected_round <- input$round %in% rounds
+    shinyFeedback::feedbackDanger("round", !check_selected_round, "Select the round of the upload")
+    
+    req(check_selected_round)    
+    
+    #Confirm with user if wants to proceed (defined in text_message round)
     modal_confirm <- modalDialog(
       HTML(text_message_round()),
       title = paste("Uploading data from", input$round),
@@ -174,15 +203,8 @@ server <- function(input, output, session) {
     
     #delete previous stata files
     tempDir = tempdir()
-    for(file in list.files(tempDir, full.names = T, pattern = ".dta", recursive = T)){
-  
-      unlink(file)
-    }
+    temps_stata_files <- return_uploaded_files(from =input$upload$datapath , to = tempDir)
     
-    
-    
-    unzip(input$upload$datapath, overwrite = T, exdir = tempDir)
-    temps_stata_files <- list.files(tempDir, recursive = T, pattern = ".dta", full.names = T)
     
     print(temps_stata_files)
     ##check that number of uploaded files is 3----------------------------------
@@ -398,7 +420,7 @@ server <- function(input, output, session) {
     
   })
   
-  output$head <- renderTable({
+  output$table_summary <- renderTable({
     
     data_summary_files()
     

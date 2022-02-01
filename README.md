@@ -92,6 +92,20 @@ library(tidyr)
 library(shinymanager)
 ```
 
+9. Assing admin credentials to shiny user
+The shiny apps are run by the shiny user. Thus, higher level credentials should be added to this user.
+
+```
+sudo groupadd shiny-apps
+sudo usermod -aG shiny-apps rstudio
+sudo usermod -aG shiny-apps shiny
+cd /srv/shiny-server
+sudo chown -R rstudio:shiny-apps .
+sudo chmod g+w .
+sudo chmod g+s .
+
+```
+10. move application to /srv/shiny-server/MLSS
 
 ## Thigs to do
 1. Add a column to the data/reference/raw that includes a detailed description of each indicator (this will be used when the indicator is displayed)
@@ -102,6 +116,7 @@ library(shinymanager)
 6. Check with WB when more data is expected and how these rounds will be called.
 7. Write a users' guide to upload the data (considering all the points in the [Importing Protocol](#importing-backend-protocol))
 8. Customize log in page [shinymanager](https://datastorm-open.github.io/shinymanager/)
+9. Append data from all rounds.
 
 ## things to review
 

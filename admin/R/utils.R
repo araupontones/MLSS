@@ -24,6 +24,26 @@ define_project_dir <- function(repoName = "MLSS"){
 
 
 
+#' unzip uploaded files and returns the list of files uploaded by the user
+#' 
+
+return_uploaded_files <- function(from, to){
+  
+  #delete all previous files in source to start over
+  for(file in list.files(from, full.names = T, pattern = ".dta", recursive = T)){
+    
+    unlink(file)
+  }
+  
+  
+  #unzip
+  unzip(from, overwrite = T, exdir = to)
+  temps <- list.files(to, recursive = T, pattern = ".dta", full.names = T)
+  
+  return(temps)
+}
+
+
 #'create a tible with information of uploades accepted by the server
 
 #' @param  files directory
