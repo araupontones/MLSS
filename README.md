@@ -34,6 +34,64 @@ a) Check that the files uploaded by the user contain all the target variables
 b) Identify the variables that work as filters
 
 
+# Guide to create a server
+
+1. Create a droplet in Digital Ocean
+2. Create a root password: @2022mlSS
+3. Add a new user with sudo credentials: 
+
+```
+adduser rstudio`
+gpasswd -a rstudio sudo
+```
+
+4. Change to the created user
+`su - rstudio`
+
+5. Install nginx
+```
+sudo apt-get update
+sudo apt-get -y install nginx
+```
+
+6. Install R
+`sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/ubuntu bionic-cran35/" >> /etc/apt/sources.list'`
+
+add public keys
+```
+gpg --keyserver keyserver.ubuntu.com --recv-key E298A3A825C0D65DFD57CBB651716619E084DAB9
+gpg -a --export E298A3A825C0D65DFD57CBB651716619E084DAB9 | sudo apt-key add -
+```
+
+and install
+```
+sudo apt-get update
+sudo apt-get -y install r-base
+```
+
+Test that R is istalled by running `R` in the command line. Quit R `q()`
+
+
+
+7. Install shiny-server 
+[Steps to install shiny server](https://www.rstudio.com/products/shiny/download-server/ubuntu/)
+
+8. Install R packages
+
+`sudo su - -c "R -e \"install.packages('shinymanager', repos='http://cran.rstudio.com/')\""`
+
+Dependencies to run the dashboard
+```
+library(shiny)
+library(stringr)
+library(glue)
+library(shinyFeedback) #only if validate is used
+library(rio)
+library(dplyr)
+library(tidyr)
+library(shinymanager)
+```
+
 
 ## Thigs to do
 1. Add a column to the data/reference/raw that includes a detailed description of each indicator (this will be used when the indicator is displayed)
@@ -43,6 +101,7 @@ b) Identify the variables that work as filters
 5. Import the Midline and Endline and write a protocol to append the three rounds into a single panel data
 6. Check with WB when more data is expected and how these rounds will be called.
 7. Write a users' guide to upload the data (considering all the points in the [Importing Protocol](#importing-backend-protocol))
+8. Customize log in page [shinymanager](https://datastorm-open.github.io/shinymanager/)
 
 ## things to review
 

@@ -8,9 +8,11 @@
 check_var_names <- function(dir_imports = "data/imports/Baseline",
                             dir_reference = "data/reference",
                             dir_tempo, 
-                            nivel = "school"){
+                            nivel = "school"
+                            ){
   
   
+  round <- str_extract(dir_imports, "[^\\/]+$")
   data_upload <- import(file.path(dir_imports, glue("{nivel}.dta"))) 
   
   
@@ -43,7 +45,8 @@ check_var_names <- function(dir_imports = "data/imports/Baseline",
     
     #crete temporal rds (only keep if checking protocol is OK)
     data_upload %>%
-      select(reference_vars) %>%
+      select(all_of(reference_vars)) %>%
+      mutate(round = round) %>%
       export(.,file.path(dir_tempo, glue("{nivel}.rds")))
     
     return("OK")

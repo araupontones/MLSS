@@ -1,3 +1,9 @@
+#It takes the data from reference/raw
+# Filters all the variables that are targeted for the dashboard
+# Saves into refecnce as a csv.
+# The csv files work as a lookup table in the dashboard to check which variables
+# must be included in the uploaded files by the user
+
 library(rio)
 library(dplyr)
 library(tidyr)
