@@ -5,22 +5,40 @@ library(shinyFeedback) #only if validate is used
 library(rio)
 library(dplyr)
 library(tidyr)
-
+library(shinymanager)
 #to allow larger files from users
 options(shiny.maxRequestSize = 10 * 1024^2)
 
 #load functions  
-gmdacr::load_functions("functions")
+#gmdacr::load_functions("functions")
+
+
+project_path <- define_project_dir(repoName="MLSS")
 
 #define directory to store uploads from user
-dirImports <- 'data/imports'
+dirData <- file.path(project_path, "data")
+dirImports <- file.path(dirData,'imports')
+print(dirImports)
 
 #define directory of reference data
-dirReference <- "data/reference"
+dirReference <- file.path(dirData,'reference')
 
 #Useful vectors
 rounds <- c("Baseline", "Midline", "Endline")
 survey_levels <- c("school", "teacher", "student")
+
+
+# define some credentials
+credentials <- data.frame(
+  user = c("shiny", "shinymanager", "admin"), # mandatory
+  password = c("shiny", "12345", "admin"), # mandatory
+  #start = c("2019-04-15"), # optinal (all others)
+  #expire = c(NA, "2019-12-31"),
+  admin = c(FALSE, TRUE, TRUE),
+  comment = "Simple and secure authentification mechanism 
+  for single ‘Shiny’ applications.",
+  stringsAsFactors = FALSE
+)
 
 
 #UI ---------------------------------------------------------------------------
@@ -28,6 +46,8 @@ ui <- fluidPage(
   #enable shiny feedbacks
   shinyFeedback::useShinyFeedback(),
   
+  # authentication module
+
   #UI to import data
   fileInput("upload", label = "Import .zip file", accept = c(".zip")),
   selectInput("round", label = "Round of the data",choices = rounds),
@@ -35,13 +55,36 @@ ui <- fluidPage(
   actionButton("sendData", label = "Upload data", class="btn btn-success"),
   
   #temp: to check what has been uploaded by user
+  uiOutput(outputId = "head_summary"),
   tableOutput("head")
 )
 
+ui <- secure_app(ui,
+                 # add image on top ?
+                 tags_top = 
+                   tags$div(
+                     tags$h4("MLSS Dashboard", style = "align:center"),
+                     tags$img(
+                       src = "https://1000marcas.net/wp-content/uploads/2020/07/the-world-bank.jpg", width = 100
+                     )
+                   ),
+                 tags_bottom = tags$div(
+                   tags$p(
+                     "For any question, please  contact ",
+                     tags$a(
+                       href = "mailto:someone@example.com?Subject=Shiny%20aManager",
+                       target="_top", "administrator"
+                     )
+                   )
+                 ))
 
 #Server ------------------------------------------------------------------------
 server <- function(input, output, session) {
   
+  
+  res_auth <- secure_server(
+    check_credentials = check_credentials(credentials)
+  )
   
   #Server to import data --------------------------------------------------------
   
@@ -334,9 +377,29 @@ server <- function(input, output, session) {
     removeModal()
     
   })
+  
+  
   #temp outputs to check-------------------------------------------------------
+  
+  #data to show users wich files have been uploaded
+  data_summary_files <- reactive({
+    req(input$close_success)
+    create_summary_files(dirImports)
+    
+  })
+  
+  output$head_summary <- renderUI({
+    req(input$close_success)
+    
+    HTML(paste("<hr>",
+               "<h3> Summary and dates of uploaded files </h3>"))
+    
+    
+  })
+  
   output$head <- renderTable({
-    input$upload
+    
+    data_summary_files()
     
   })
 }
