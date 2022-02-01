@@ -6,6 +6,7 @@ library(rio)
 library(dplyr)
 library(tidyr)
 library(shinymanager)
+library(rmarkdown)
 #to allow larger files from users
 options(shiny.maxRequestSize = 10 * 1024^2)
 
@@ -18,7 +19,7 @@ project_path <- define_project_dir(repoName="MLSS")
 #define directory to store uploads from user
 dirData <- file.path(project_path, "data")
 dirImports <- file.path(dirData,'imports')
-print(dirImports)
+message(dirImports)
 
 #define directory of reference data
 dirReference <- file.path(dirData,'reference')
