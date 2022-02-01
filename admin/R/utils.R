@@ -12,7 +12,7 @@ define_project_dir <- function(repoName = "MLSS"){
     
   } else {
     
-    project_path <- glue("~/{repoName}")
+    project_path <- glue("/srv/shiny-server/{repoName}")
     #dash_path <- file.path(project_path, "dashboard")
     #project_path <- dirname(dash_path)
     
