@@ -35,7 +35,7 @@ b) Identify the variables that work as filters
 
 
 **create_look_up_tables.R**
-The idea is to create a collaborative environmen in which the world bank can specify details of the indicators to be displayed in the dashboard. For this a [Google Sheet](https://docs.google.com/spreadsheets/d/1S2X-fXJ0hb5r0m5JUury7I7Yqg0IAPmISBec57RQYFU/edit#gid=1069976462) has been created. Thus, the idea is that everytime that a change in the specs of the variables is done in the cloud, the system will pull those changes into the lookup tables.
+The idea is to create a collaborative environment in which the world bank can specify details of the indicators to be displayed in the dashboard. For this a [Google Sheet](https://docs.google.com/spreadsheets/d/1S2X-fXJ0hb5r0m5JUury7I7Yqg0IAPmISBec57RQYFU/edit#gid=1069976462) has been created. Thus, the idea is that everytime that a change in the specs of the variables is done in the cloud, the system will pull those changes into the lookup tables.
 
 This script, reads the Google Sheets and creates lookup tables that are used in the dashboard. This lookup tables include: 
 
