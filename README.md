@@ -125,6 +125,9 @@ sudo chmod g+s .
 
 11. **Install fonts in R** 
 
+## collaborative design
+To ease and motivate a collaborative environment in which different stakeholders, specifically the World Bank, a  [Google Sheet](https://docs.google.com/spreadsheets/d/1S2X-fXJ0hb5r0m5JUury7I7Yqg0IAPmISBec57RQYFU/edit#gid=1069976462) was created. The objective of this  [Google Sheet](https://docs.google.com/spreadsheets/d/1S2X-fXJ0hb5r0m5JUury7I7Yqg0IAPmISBec57RQYFU/edit#gid=1069976462) is to allow colleagues to provide information about the content of the dashboard. These sheets (school, teacher, and students) contain all the indicators to be displayed by the dashboard, a column to indicate the label to be used, and a description to be displayed when a user select that indicator in the dashboard. 
+
 ## Thigs to do
 1. Add a column to the data/reference/raw that includes a detailed description of each indicator (this will be used when the indicator is displayed)
 2. Create a module for uploading the data (ui and server)
