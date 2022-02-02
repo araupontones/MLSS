@@ -24,6 +24,10 @@ create_dirs <- sapply(niveles, function(x){
 
 
 
+
+
+
+
 #create lookups for target vars and dropdown vars
 
 create_lookups <- sapply(niveles, function(x){
@@ -36,17 +40,18 @@ create_lookups <- sapply(niveles, function(x){
 
   target_vars <- gsheet %>%
     rename(dropdown = `Dropdown indicator`) %>%
-    filter(Dashboard == T)
+    filter(Dashboard == T) %>%
+    mutate(dropdown = if_else(is.na(dropdown), TRUE, FALSE))
 
   rio::export(target_vars, file.path(exdir, glue::glue("target_vars_{x}.csv")))
 
 
   #lookup of vars that go in dropdown menu
   dropdown_vars <- target_vars %>%
-    filter(dropdown != FALSE) %>%
+    filter(dropdown) %>%
     select(-c(format, Dashboard, Filter))
 
-  rio::export(target_vars, file.path(exdir, glue::glue("dropdown_vars_{x}.csv")))
+  rio::export(dropdown_vars, file.path(exdir, glue::glue("dropdown_vars_{x}.csv")))
   
   
   

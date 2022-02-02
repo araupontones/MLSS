@@ -18,7 +18,7 @@ school |> tabyl(tch_present_clas)
 
 
 
-#distribution chart
+#Box Plot ------------------------------------------------
 school %>%
   filter(district_nam == "Lilongwe Rural West") %>%
   ggplot(aes(y = tch_present_clas,
