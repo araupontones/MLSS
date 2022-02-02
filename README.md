@@ -34,6 +34,19 @@ a) Check that the files uploaded by the user contain all the target variables
 b) Identify the variables that work as filters
 
 
+**create_look_up_tables.R**
+The idea is to create a collaborative environmen in which the world bank can specify details of the indicators to be displayed in the dashboard. For this a [Google Sheet](https://docs.google.com/spreadsheets/d/1S2X-fXJ0hb5r0m5JUury7I7Yqg0IAPmISBec57RQYFU/edit#gid=1069976462) has been created. Thus, the idea is that everytime that a change in the specs of the variables is done in the cloud, the system will pull those changes into the lookup tables.
+
+This script, reads the Google Sheets and creates lookup tables that are used in the dashboard. This lookup tables include: 
+
+a) variables to include in the dropdown menu of indicators
+b) all the variables that the protocol to upload the data checks for.
+c) Divisions
+d) District
+
+
+The lookup tables are stored in `/data/reference/lookups`. There is a specific directory for each level (school, teacher, student)
+
 # Guide to create a server
 
 1. Create a droplet in Digital Ocean
@@ -78,7 +91,10 @@ Test that R is istalled by running `R` in the command line. Quit R `q()`
 
 8. Install R packages
 
-`sudo su - -c "R -e \"install.packages('shinymanager', repos='http://cran.rstudio.com/')\""`
+`sudo su - -c "R -e \"install.packages('extrafont', repos='http://cran.rstudio.com/')\""`
+
+`sudo su - -c "R -e \"remotes::install_version('Rttf2pt1', version = '1.3.8')\""`
+r
 
 Dependencies to run the dashboard
 ```
@@ -107,6 +123,8 @@ sudo chmod g+s .
 ```
 10. move application to /srv/shiny-server/MLSS
 
+11. **Install fonts in R** 
+
 ## Thigs to do
 1. Add a column to the data/reference/raw that includes a detailed description of each indicator (this will be used when the indicator is displayed)
 2. Create a module for uploading the data (ui and server)
@@ -117,6 +135,9 @@ sudo chmod g+s .
 7. Write a users' guide to upload the data (considering all the points in the [Importing Protocol](#importing-backend-protocol))
 8. Customize log in page [shinymanager](https://datastorm-open.github.io/shinymanager/)
 9. Append data from all rounds.
+10. Upload fonts to extrafont (via pushing files)
+11. Create lookup tables for Divisions and districts.
+
 
 ## things to review
 

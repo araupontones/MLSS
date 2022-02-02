@@ -23,6 +23,7 @@ message(dirImports)
 
 #define directory of reference data
 dirReference <- file.path(dirData,'reference')
+dirLookUps <- file.path(dirReference,"lookups")
 
 #Useful vectors
 rounds <- c("Baseline", "Midline", "Endline")
@@ -48,7 +49,7 @@ ui <- fluidPage(
   shinyFeedback::useShinyFeedback(),
   
   # authentication module
-
+  
   #UI to import data
   fileInput("upload", label = "Upload  a .zip file with the data", accept = c(".zip")),
   #Input select of round
@@ -56,7 +57,7 @@ ui <- fluidPage(
   
   #Button to validate
   uiOutput(outputId = "validate_button"),
- 
+  
   #Table to inform the users of the existing files
   uiOutput(outputId = "head_summary"),
   
@@ -94,7 +95,7 @@ server <- function(input, output, session) {
   )
   
   #User inputs (validate button and select round) ------------------------------
- 
+  
   output$select_round <- renderUI({
     req(input$upload)
     selectInput("round", label = "Select The Round Of the Upload",choices = c("",rounds))
@@ -277,7 +278,7 @@ server <- function(input, output, session) {
     
     showNotification("Verifying names of school file", type = "warning")
     check_names_school <- check_var_names(dir_imports = dir_uploads(),
-                                          dir_reference = dirReference,
+                                          dir_lookups =  dirLookUps,
                                           dir_tempo = tempDir,
                                           nivel = "school")
     
@@ -300,17 +301,17 @@ server <- function(input, output, session) {
     #teacher
     showNotification("Verifying names of teacher file", type = "warning")
     check_names_teacher <- check_var_names(dir_imports = dir_uploads(),
-                                          dir_reference = dirReference,
-                                          dir_tempo = tempDir,
-                                          nivel = "teacher")
+                                           dir_lookups =  dirLookUps,
+                                           dir_tempo = tempDir,
+                                           nivel = "teacher")
     
     
     if(check_names_teacher != "OK"){
       
       
       modal_error_teacher_names <- create_dialog_vars(error_vars = check_names_teacher,
-                                                     id_button = "close_error_teacher_names",
-                                                     nivel = "teacher")
+                                                      id_button = "close_error_teacher_names",
+                                                      nivel = "teacher")
       
       showModal(modal_error_teacher_names)
       shinyFeedback::feedbackDanger("upload", check_names_teacher!="OK", "Check variable names of teacher file")
@@ -324,7 +325,7 @@ server <- function(input, output, session) {
     
     showNotification("Verifying names of student file", type = "warning")
     check_names_student <- check_var_names(dir_imports = dir_uploads(),
-                                           dir_reference = dirReference,
+                                           dir_lookups =  dirLookUps,
                                            dir_tempo = tempDir,
                                            nivel = "student")
     

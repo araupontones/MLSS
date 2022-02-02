@@ -10,6 +10,7 @@ library(tidyr)
 
 dir_reference_raw <- "data/reference/raw"
 dir_reference <- "data/reference"
+dir_lookups <- file.path(dir_reference,"lookups")
 
 list.files(dir_reference_raw)
 
@@ -24,6 +25,7 @@ data_filtered <- lapply(niveles, function(x){
   
   csv <- import(file.path(dir_reference_raw, glue("{x}_ref.csv")))
   
+  #keep only variables that are targeted for the dashboard
   target <-  csv %>%
     rename(Dashboard= `For_Dashboard`) %>%
     filter(Dashboard == TRUE)
