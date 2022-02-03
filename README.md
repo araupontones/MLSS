@@ -129,17 +129,17 @@ sudo chmod g+s .
 To ease and motivate a collaborative environment in which different stakeholders, specifically the World Bank, a  [Google Sheet](https://docs.google.com/spreadsheets/d/1S2X-fXJ0hb5r0m5JUury7I7Yqg0IAPmISBec57RQYFU/edit#gid=1069976462) was created. The objective of this  [Google Sheet](https://docs.google.com/spreadsheets/d/1S2X-fXJ0hb5r0m5JUury7I7Yqg0IAPmISBec57RQYFU/edit#gid=1069976462) is to allow colleagues to provide information about the content of the dashboard. These sheets (school, teacher, and students) contain all the indicators to be displayed by the dashboard, a column to indicate the label to be used, and a description to be displayed when a user select that indicator in the dashboard. 
 
 ## Thigs to do
-1. Add a column to the data/reference/raw that includes a detailed description of each indicator (this will be used when the indicator is displayed)
-2. Create a module for uploading the data (ui and server)
-3. Protect the section to upload the data with a password
-4. Check with WB for the derived Midline and Endline
+
+
+4. Check with WB for the derived Midline and Endline [pending answer]
 5. Import the Midline and Endline and write a protocol to append the three rounds into a single panel data
 6. Check with WB when more data is expected and how these rounds will be called.
 7. Write a users' guide to upload the data (considering all the points in the [Importing Protocol](#importing-backend-protocol))
 8. Customize log in page [shinymanager](https://datastorm-open.github.io/shinymanager/)
 9. Append data from all rounds.
-10. Upload fonts to extrafont (via pushing files)
-11. Create lookup tables for Divisions and districts.
+10. Upload fonts to extrafont (via pushing files) in server
+11. Check how to repeat the school module for other modules
+
 
 
 ## things to review

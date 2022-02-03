@@ -1,7 +1,11 @@
 #create look up tables
 
 library(googlesheets4)
+library(dplyr)
+library(tidyr)
 
+#import school data to get districts and divisions
+school_ref <- rio::import("data/imports/Baseline/school.rds")
 
 
 #URL of google sheet
@@ -59,5 +63,28 @@ create_lookups <- sapply(niveles, function(x){
 
   })
 
+# create lookups for divisions and districts
+
+names(school_ref)
+geo <- school_ref %>%
+  select(starts_with("division"), starts_with("district"))
+
+divisions_lkp <- geo %>%
+  select(starts_with("division")) %>%
+  group_by(division_nam) %>%
+  slice(1) %>%
+  ungroup()
 
 
+rio::export(divisions_lkp,file.path(dir_lookups,"divisions.csv"))
+
+districts_lkp <- geo %>%
+  group_by(district_nam) %>%
+  slice(1) %>%
+  ungroup()
+
+View(districts_lkp)  
+rio::export(districts_lkp,file.path(dir_lookups,"districts.csv"))
+
+divisions_lkp$division_nam
+divisions_lkp[["division_nam"]]
