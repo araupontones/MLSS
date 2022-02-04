@@ -91,7 +91,7 @@ Test that R is istalled by running `R` in the command line. Quit R `q()`
 
 8. Install R packages
 
-`sudo su - -c "R -e \"install.packages('extrafont', repos='http://cran.rstudio.com/')\""`
+`sudo su - -c "R -e \"install.packages('ggplot2', repos='http://cran.rstudio.com/')\""`
 
 `sudo su - -c "R -e \"remotes::install_version('Rttf2pt1', version = '1.3.8')\""`
 r
@@ -106,6 +106,7 @@ library(rio)
 library(dplyr)
 library(tidyr)
 library(shinymanager)
+library(shinyccloaders)
 ```
 
 9. Assing admin credentials to shiny user
@@ -139,6 +140,9 @@ To ease and motivate a collaborative environment in which different stakeholders
 9. Append data from all rounds.
 10. Upload fonts to extrafont (via pushing files) in server
 11. Check which variables are booleans, and enable only barplot for those. 
+12. requirement to display plot (currenty null if round is empty)
+13. Ask WB for description of indicators
+14. Add a spinner to plot 
 
 
 

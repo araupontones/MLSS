@@ -27,7 +27,7 @@ schoolUI <- function(id, dirImports,dirLookUps, divisions, nivel ) {
       ),
       mainPanel(width = 7,
                 uiOutput(NS(id,"title")),
-                plotOutput(NS(id,"plot")),
+                shinycssloaders::withSpinner(plotOutput(NS(id,"plot"))),
                 tableOutput(NS(id,"table"))
       )
     )
