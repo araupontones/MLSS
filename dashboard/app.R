@@ -4,6 +4,7 @@ library(tidyr)
 library(dplyr)
 library(stringr)
 library(shinyFeedback) #only if validate is used
+library(glue)
 
 #extrafont::fonts()
 # if(length(fonts()< 1)){
