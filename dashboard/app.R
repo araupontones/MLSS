@@ -12,7 +12,7 @@ library(shinyFeedback) #only if validate is used
 # }
 
 
-extrafont::loadfonts(device = 'win')
+#extrafont::loadfonts(device = 'win')
 
 project_path <- define_project_dir(repoName="MLSS")
 dirData <- file.path(project_path, "data")
@@ -41,13 +41,21 @@ rounds_v <- unique(school_data$round)
 ui <- navbarPage(
   "Dashboard",
   tabPanel("Schools",
-           schoolUI("school", 
+           schoolUI("school",
+                    nivel = "school",
                     dirLookUps = dirLookUps,
-                    divisions = divisions_v,
-                    rounds = rounds_v)),
+                    divisions = divisions_v
+                    )
+           
+           ),
   
   tabPanel("Teachers"),
-  tabPanel("Students")
+  tabPanel("Students",
+           schoolUI("student",
+                    nivel = "student",
+                    dirLookUps = dirLookUps,
+                    divisions = divisions_v
+           ))
   
 )
 
@@ -55,9 +63,19 @@ ui <- navbarPage(
 server <- function(input, output, session) {
  
   schoolServer("school", 
+               nivel = "school",
                database = school_data,
                dirLookUps = dirLookUps,
-               divisions = divisions_v)
+               divisions = divisions_v,
+               rounds = rounds_v)
+  
+  
+  schoolServer("student", 
+               nivel = "student",
+               database = school_data,
+               dirLookUps = dirLookUps,
+               divisions = divisions_v,
+               rounds = rounds_v)
 }
 
 shinyApp(ui, server)

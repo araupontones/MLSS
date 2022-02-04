@@ -13,14 +13,16 @@ extrafont::fonts()
 # Type of chart (Aggregate, Distribution)
 # If compare with other divisions | compare districts [Compare across rounds (Yes/NO)] --> If yes wrap ===
 
-school <- import(file.path(dir_data, "school.rds"))
+school <- rio::import(file.path(dir_data, "school.rds"))
 school |> tabyl(tch_present_clas)
+student <- rio::import(file.path(dir_data, "student.rds"))
 
+names(student)
+View(student)
 
 
 #Box Plot ------------------------------------------------
 school %>%
-  filter(district_nam == "Lilongwe Rural West") %>%
   ggplot(aes(y = tch_present_clas,
              x = round
              )) +
