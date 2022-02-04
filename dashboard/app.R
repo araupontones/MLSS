@@ -21,6 +21,7 @@ dirLookUps <- file.path(dirData, "reference/lookups")
 
 #load data
 school_data <- rio::import(file.path(dirImports, "Baseline/school.rds"))
+student_data <- rio::import(file.path(dirImports, "Baseline/student.rds"))
 
 
 #load lookups
@@ -72,7 +73,7 @@ server <- function(input, output, session) {
   
   schoolServer("student", 
                nivel = "student",
-               database = school_data,
+               database = student_data,
                dirLookUps = dirLookUps,
                divisions = divisions_v,
                rounds = rounds_v)
