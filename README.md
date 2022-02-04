@@ -138,7 +138,9 @@ To ease and motivate a collaborative environment in which different stakeholders
 8. Customize log in page [shinymanager](https://datastorm-open.github.io/shinymanager/)
 9. Append data from all rounds.
 10. Upload fonts to extrafont (via pushing files) in server
-11. Check how to repeat the school module for other modules
+11. Check which variables are booleans, and enable only barplot for those. 
+
+
 
 
 

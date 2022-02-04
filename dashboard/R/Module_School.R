@@ -26,6 +26,7 @@ schoolUI <- function(id, dirImports,dirLookUps, divisions, nivel ) {
                    
       ),
       mainPanel(width = 7,
+                uiOutput(NS(id,"title")),
                 plotOutput(NS(id,"plot")),
                 tableOutput(NS(id,"table"))
       )
@@ -37,6 +38,8 @@ schoolUI <- function(id, dirImports,dirLookUps, divisions, nivel ) {
 schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
   moduleServer(id, function(input, output, session) {
     #load lookups -----------------------------------------------------------------
+    
+    
     
     dropdowns_v <- rio::import(file.path(dirLookUps, nivel, glue::glue("dropdown_vars_{nivel}.csv")))
     var_codes <- setNames(dropdowns_v$var_name, dropdowns_v$label)
@@ -78,28 +81,46 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
     })
     
     
-    x_label <- eventReactive(input$go, {
+    parameters_panel <- eventReactive(input$go,{
+      
+      
+      region <- input$division
       
       if(across_time()){
         
-        lab = "Round"
-        message(lab)
-      }
-      
-      
-      
-      if(group_by_districts()){
-        
-        lab = "District"
+        title <- region
+        y_lab = "Round"
+        x = "round"
+        y = "mean"
+        group = "round"
+        color = ""
       }
       
       if(group_by_divisions()){
         
-        lab = "Division"
+        title <- paste("Divisions Of Malawi")
+        y_lab = "Division"
+        x = "division_nam"
+        y = "mean"
+        group = "division_nam"
+      } 
+      
+      if(group_by_districts()){
+        
+        title <- paste("Districts Of", region)
+        y_lab = "District"
+        x = "district_nam"
+        y = "district_nam"
+        group = "district_nam"
       }
       
-      lab
+      
+      
+      list(title = title, x = x,y = y, group = group, y_lab = y_lab)
+      
+    
     })
+   
     
     #****************ENABLING CONDITIONS ****************************************
     output$compareInput <- renderUI({
@@ -192,50 +213,28 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
       
     })
     
-    #**************************DEFINE POSITION OF VARIABLES IN CHART ***************
+   
     
-    
-    axis_var <- eventReactive(input$go,{
+  #***********************REACTIVE TEXT ****************************************
+  
+    output$title <- renderUI({
       
-      if(across_time()){
-        
-        x = "round"
-        y = "mean"
-        group = "round"
-        color = ""
-      }
-      
-      if(group_by_divisions()){
-        
-        x = "division_nam"
-        y = "mean"
-        group = "division_nam"
-        
-      }
-      
-      if(group_by_districts()){
-        
-        x = "district_nam"
-        y = "district_nam"
-        group = "district_nam"
-        
-        
-      }
-      
-      
-      list(x = x,y = y, group = group)
-      
+      HTML(paste(
+        "<h1>",parameters_panel()$title, "</h1>",
+        "<h2>",indicator_label(), "</h2>"
+        )
+           )
+     
     })
-    
     
     
     #*****************CREATE REACTIVE DATA *****************************************
     data_divison <- eventReactive(input$go,{
       print(paste("Group Divisions",group_by_divisions()))
       print(paste("Group Districts:", group_by_districts()))
-      print(paste("X=", axis_var()$x))
-      print(paste("Y=", axis_var()$y))
-      print(paste("grupo=", axis_var()$group))
+      print(paste("X=", parameters_panel()$x))
+      print(paste("Y=", parameters_panel()$y))
+      print(paste("grupo=", parameters_panel()$group))
       
       data_user <- database %>%
         select(targetvar = input$indicator,
@@ -255,7 +254,7 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
           
           
           data_user <- data_user %>%
-            group_by(.data[[axis_var()$group]], .data[["round"]]) %>%
+            group_by(.data[[parameters_panel()$group]], .data[["round"]]) %>%
             summarise(mean = mean(targetvar, na.rm = T))
         }
         
@@ -263,10 +262,6 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
         
       }
       
-      # if(input$plot_type == "Box Plot"){
-      #   
-      #   data_user <- data_user
-      # }
       
       
       
@@ -292,25 +287,25 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
       if(input$plot_type == "Bar Plot"){
         
         plot <- data_divison() %>%
-          ggplot(aes(x = .data[[axis_var()$x]],
+          ggplot(aes(x = .data[[parameters_panel()$x]],
                      y = mean,
                      fill = round)) +
           geom_col(position = "dodge2") +
           labs(y = indicator_label(),
-               x = x_label())
+               x = parameters_panel()$y_lab)
       }
       
       if(input$plot_type == "Box Plot"){
         
         plot <- data_divison() %>%
           ggplot(aes(y = targetvar,
-                     x = .data[[axis_var()$x]],
+                     x = .data[[parameters_panel()$x]],
           )) +
           #geom_col(aes(y = mean(school$enrol_lower_tot, na.rm = T))) +
           geom_boxplot(binaxis='y', stackdir='center', dotsize=1, fill = '#A8D1DF') +
           geom_jitter(shape=16, position=position_jitter(0.2)) +
           labs(y = indicator_label(),
-               x = x_label()) 
+               x = parameters_panel()$y_lab) 
         
         
         if(!across_time()){
@@ -326,23 +321,40 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
         
         plot <- data_divison() %>%
           ggplot() +
-          geom_density(aes(x = targetvar, fill = round)) +
-          geom_vline(aes(xintercept = mean(targetvar, na.rm = T)), 
-                     linetype = "dashed", size = 0.6,
-                     color = "#FC4E07") +
-          theme(text = element_text(family = "Roboto")) +
-          labs(x = indicator_label())
+          geom_density(aes(x = targetvar, fill = round)) 
+        
+        
+        if(across_time()){
+          
+          plot <- plot +
+            geom_vline(aes(xintercept = mean(targetvar, na.rm = T)), 
+                       linetype = "dashed", size = 0.6,
+                       color = "#FC4E07") 
+            
+            }
+          
+         
         
         if(!across_time()){
           
           plot <- plot +
-            facet_wrap(~ .data[[axis_var()$x]])
+            geom_vline(data = plyr::ddply(data_divison(), 
+                                          c(parameters_panel()$x,"round"), 
+                                          summarize, 
+                                          wavg = mean(targetvar, na.rm = T)), aes(xintercept=wavg, color = paste("Mean",rounds)),
+                       linetype = "dashed", size = 0.7
+                       ) +
+            facet_wrap(~ .data[[parameters_panel()$x]]) +
+            scale_color_manual(name = "",
+                               values = c("black", "red", "blue"))
             
             }
           
       }
       
-      plot
+      plot +
+        theme(text = element_text(family = "Roboto")) +
+        labs(x = indicator_label())
       
     })
     
@@ -351,54 +363,11 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
       
       my_plot()
       
-      # 
-      # input$go
-      # 
-      # if(input$plot_type == "Bar Plot"){
-      #   
-      #   plot <- data_divison() %>%
-      #     ggplot(aes(x = .data[[axis_var()$x]],
-      #                y = mean,
-      #                fill = round)) +
-      #     geom_col(position = "dodge2") +
-      #     labs(y = indicator_label(),
-      #          x = x_label())
-      # }
-      # 
-      # if(input$plot_type == "Box Plot"){
-      #   
-      #   plot <- data_divison() %>%
-      #     ggplot(aes(y = targetvar,
-      #                x = .data[[axis_var()$x]],
-      #     )) +
-      #     #geom_col(aes(y = mean(school$enrol_lower_tot, na.rm = T))) +
-      #     geom_boxplot(binaxis='y', stackdir='center', dotsize=1, fill = '#A8D1DF') +
-      #     geom_jitter(shape=16, position=position_jitter(0.2)) +
-      #     labs(y = indicator_label(),
-      #          x = x_label()) 
-      #   
-      #   
-      #   if(!across_time()){
-      #     
-      #     plot <- plot + facet_wrap(~ round) 
-      #   }
-      #     
-      #     
-      #   
-      # }
-      # 
-      # plot
-      
-      
-      
+  
     })
     
     
-    observeEvent(input$indicator,{
-      
-      message(indicator())
-      #message(input$indicator)
-    })
+   
     
   })
   

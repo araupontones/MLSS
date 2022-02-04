@@ -43,7 +43,7 @@ school %>%
              x = round)) +
   geom_col()
 
-  
+  plyr::dd
 
 #compare across groups chart (distribution)
 school %>%
@@ -62,12 +62,16 @@ school %>%
   ggplot(aes(y = mn,
              x = division_nam)) +
   geom_col()
+ddply
 
+plyr::ddply(school, "round", summarize, wavg = mean(hc_PTR_std6, na.rm = T))
 
 #Density
 school %>%
   ggplot() +
   geom_density(aes(x = hc_PTR_std6),fill = "lightgray") +
+  geom_vline(data = plyr::ddply(school, "round", summarize, wavg = mean(hc_PTR_std6, na.rm = T)), aes(xintercept=wavg)) +
+  facet_wrap(~ round)
   geom_vline(aes(xintercept = mean(hc_PTR_std6, na.rm = T)), 
              linetype = "dashed", size = 0.6,
              color = "#FC4E07") +
