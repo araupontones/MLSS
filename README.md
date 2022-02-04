@@ -91,7 +91,7 @@ Test that R is istalled by running `R` in the command line. Quit R `q()`
 
 8. Install R packages
 
-`sudo su - -c "R -e \"install.packages('ggplot2', repos='http://cran.rstudio.com/')\""`
+`sudo su - -c "R -e \"install.packages('shinycssloaders', repos='http://cran.rstudio.com/')\""`
 
 `sudo su - -c "R -e \"remotes::install_version('Rttf2pt1', version = '1.3.8')\""`
 r
@@ -143,6 +143,8 @@ To ease and motivate a collaborative environment in which different stakeholders
 12. requirement to display plot (currenty null if round is empty)
 13. Ask WB for description of indicators
 14. Add a spinner to plot 
+15. Create functions for plots
+16  themes for plots (ask WB color pallete and fonts)
 
 
 

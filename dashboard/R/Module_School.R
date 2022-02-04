@@ -83,44 +83,18 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
     
     parameters_panel <- eventReactive(input$go,{
       
-      
-      region <- input$division
-      
-      if(across_time()){
-        
-        title <- region
-        y_lab = "Round"
-        x = "round"
-        y = "mean"
-        group = "round"
-        color = ""
-      }
-      
-      if(group_by_divisions()){
-        
-        title <- paste("Divisions Of Malawi")
-        y_lab = "Division"
-        x = "division_nam"
-        y = "mean"
-        group = "division_nam"
-      } 
-      
-      if(group_by_districts()){
-        
-        title <- paste("Districts Of", region)
-        y_lab = "District"
-        x = "district_nam"
-        y = "district_nam"
-        group = "district_nam"
-      }
+      #saved in functions
+      create_data_parameters(region = input$division,
+                             by_time = across_time(),
+                             by_divisions = group_by_divisions(),
+                             by_districts = group_by_districts())
       
       
       
-      list(title = title, x = x,y = y, group = group, y_lab = y_lab)
       
-    
+      
     })
-   
+    
     
     #****************ENABLING CONDITIONS ****************************************
     output$compareInput <- renderUI({
@@ -138,17 +112,18 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
     })
     
     output$compareRounds <- renderUI({
-      
-      print(across_time())
-      
+
+     
+
       if(across_time()){
-        
-        
+
+
       } else {
-        
+
         selectInput(NS(id,"round"), "Rounds", choices = rounds, multiple = T)
       }
       
+     
       
       
     })
@@ -213,28 +188,28 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
       
     })
     
-   
     
-  #***********************REACTIVE TEXT ****************************************
-  
+    
+    #***********************REACTIVE TEXT ****************************************
+    
     output$title <- renderUI({
       
       HTML(paste(
         "<h1>",parameters_panel()$title, "</h1>",
         "<h2>",indicator_label(), "</h2>"
-        )
-           )
-     
+      )
+      )
+      
     })
     
     
     #*****************CREATE REACTIVE DATA *****************************************
     data_divison <- eventReactive(input$go,{
-      print(paste("Group Divisions",group_by_divisions()))
-      print(paste("Group Districts:", group_by_districts()))
-      print(paste("X=", parameters_panel()$x))
-      print(paste("Y=", parameters_panel()$y))
-      print(paste("grupo=", parameters_panel()$group))
+      # print(paste("Group Divisions",group_by_divisions()))
+      # print(paste("Group Districts:", group_by_districts()))
+      # print(paste("X=", parameters_panel()$x))
+      # print(paste("Y=", parameters_panel()$y))
+      # print(paste("grupo=", parameters_panel()$group))
       
       data_user <- database %>%
         select(targetvar = input$indicator,
@@ -244,12 +219,13 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
       
       
       if(input$plot_type == "Bar Plot"){
-        
+        #summarise by round
         if(across_time()){
           
           data_user <- data_user %>% group_by(round) %>% summarise(mean = mean(targetvar, na.rm = T, .groups = "drop"))
         }
         
+        #summarise by level of interest and round
         if(group_by_districts() | group_by_divisions()){
           
           
@@ -261,9 +237,6 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
         
         
       }
-      
-      
-      
       
       data_user
       
@@ -283,8 +256,10 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
     
     my_plot <- eventReactive(input$go, {
       
-      
+      print(parameters_panel()$y_lab)
       if(input$plot_type == "Bar Plot"){
+        
+        print(parameters_panel()$y_lab)
         
         plot <- data_divison() %>%
           ggplot(aes(x = .data[[parameters_panel()$x]],
@@ -303,9 +278,9 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
           )) +
           #geom_col(aes(y = mean(school$enrol_lower_tot, na.rm = T))) +
           geom_boxplot(binaxis='y', stackdir='center', dotsize=1, fill = '#A8D1DF') +
-          geom_jitter(shape=16, position=position_jitter(0.2)) +
+          geom_jitter(shape=16, position=position_jitter(0.2))  +
           labs(y = indicator_label(),
-               x = parameters_panel()$y_lab) 
+               x = parameters_panel()$y_lab)
         
         
         if(!across_time()){
@@ -321,7 +296,8 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
         
         plot <- data_divison() %>%
           ggplot() +
-          geom_density(aes(x = targetvar, fill = round)) 
+          geom_density(aes(x = targetvar, fill = round)) +
+          labs(x = indicator_label())
         
         
         if(across_time()){
@@ -330,10 +306,10 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
             geom_vline(aes(xintercept = mean(targetvar, na.rm = T)), 
                        linetype = "dashed", size = 0.6,
                        color = "#FC4E07") 
-            
-            }
           
-         
+        }
+        
+        
         
         if(!across_time()){
           
@@ -343,18 +319,23 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
                                           summarize, 
                                           wavg = mean(targetvar, na.rm = T)), aes(xintercept=wavg, color = paste("Mean",rounds)),
                        linetype = "dashed", size = 0.7
-                       ) +
+            ) +
             facet_wrap(~ .data[[parameters_panel()$x]]) +
             scale_color_manual(name = "",
                                values = c("black", "red", "blue"))
-            
-            }
           
+        }
+        
       }
       
+      
+      
       plot +
-        theme(text = element_text(family = "Roboto")) +
-        labs(x = indicator_label())
+        theme(text = element_text(family = "Roboto")) 
+      
+      
+      
+      
       
     })
     
@@ -363,11 +344,11 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
       
       my_plot()
       
-  
+      
     })
     
     
-   
+    
     
   })
   
