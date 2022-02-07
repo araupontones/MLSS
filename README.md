@@ -140,17 +140,17 @@ To ease and motivate a collaborative environment in which different stakeholders
 8. Customize log in page [shinymanager](https://datastorm-open.github.io/shinymanager/)
 9. Append data from all rounds.
 10. Upload fonts to extrafont (via pushing files) in server
-11. Check which variables are booleans, and enable only barplot for those. 
-12. requirement to display plot (currenty null if round is empty)
-13. Ask WB for description of indicators
-14. Add a spinner to plot 
-15. Create functions for plots
-16  themes for plots (ask WB color pallete and fonts)
-17. Binary variables, replace 2 to 0, 3 to NA. 
-18. Get division and district to teacher.rds (using school_ID)
-19. For binary, multiply axis in bar plot 
+
+
+11. Ask WB for description of indicators
+12. Beauty spinner of plots
+
+13  themes for plots (ask WB color pallete and fonts)
+
+
+19. For binary, multiply axis in bar plot (so they are displayed as %)
 20. Let the WB know that the teacher data does not have division_nam and district_nam
-21. Add lookup table to name of fill var
+21. Change labels of fill variables using lookups
 
 
 
