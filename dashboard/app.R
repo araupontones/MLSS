@@ -6,14 +6,9 @@ library(stringr)
 library(shinyFeedback) #only if validate is used
 library(glue)
 
-#extrafont::fonts()
-# if(length(fonts()< 1)){
-#   extrafont::loadfonts(device = 'win')
-#   
-# }
-
-
+#print(extrafont::fonts())
 #extrafont::loadfonts(device = 'win')
+
 
 project_path <- define_project_dir(repoName="MLSS")
 dirData <- file.path(project_path, "data")
