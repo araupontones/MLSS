@@ -12,7 +12,9 @@ plot_bar  <- function(database,
                fill = round)) +
     geom_col(position = "dodge2") +
     labs(y = y_label,
-         x = x_label)
+         x = x_label) +
+    scale_fill_manual(name = "Round",
+                      values = c("#053657", '#0071bc', "#A3DAFF"))
   
   return(plot)
   

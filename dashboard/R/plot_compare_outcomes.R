@@ -14,7 +14,7 @@ plot_compare_outcomes <- function(database,
                fill = fill)) +
     geom_col(position = "dodge2") +
     scale_fill_manual(name = name_fill,
-                      values = c("red", "blue")) +
+                      values = c("#002244", "#009FDA")) +
     labs(y = y_label,
          x = x_label) +
     facet_wrap(~ round)

@@ -13,7 +13,8 @@ plot_density <- function(database = data_division(),
   plot <- database %>%
     ggplot() +
     geom_density(aes(x = targetvar, fill = round)) +
-    labs(x =  x_label)
+    labs(x =  x_label) +
+    scale_fill_manual(values = c(alpha('#053657', .5), alpha('#0071bc', .5), alpha('#A3DAFF', .5)))
   
   
   #aggregate national or division level
