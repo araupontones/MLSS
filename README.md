@@ -91,7 +91,7 @@ Test that R is istalled by running `R` in the command line. Quit R `q()`
 
 8. Install R packages
 
-`sudo su - -c "R -e \"install.packages('shinycssloaders', repos='http://cran.rstudio.com/')\""`
+`sudo su - -c "R -e \"install.packages('plyr', repos='http://cran.rstudio.com/')\""`
 
 `sudo su - -c "R -e \"remotes::install_version('Rttf2pt1', version = '1.3.8')\""`
 r
@@ -107,6 +107,7 @@ library(dplyr)
 library(tidyr)
 library(shinymanager)
 library(shinyccloaders)
+library(plyr)
 ```
 
 9. Assing admin credentials to shiny user
@@ -127,7 +128,7 @@ sudo chmod g+s .
 11. **Install fonts in R** 
 
 ## collaborative design
-To ease and motivate a collaborative environment in which different stakeholders, specifically the World Bank, a  [Google Sheet](https://docs.google.com/spreadsheets/d/1S2X-fXJ0hb5r0m5JUury7I7Yqg0IAPmISBec57RQYFU/edit#gid=1069976462) was created. The objective of this  [Google Sheet](https://docs.google.com/spreadsheets/d/1S2X-fXJ0hb5r0m5JUury7I7Yqg0IAPmISBec57RQYFU/edit#gid=1069976462) is to allow colleagues to provide information about the content of the dashboard. These sheets (school, teacher, and students) contain all the indicators to be displayed by the dashboard, a column to indicate the label to be used, and a description to be displayed when a user select that indicator in the dashboard. 
+To ease and motivate a collaborative environment in which different stakeholders, specifically the World Bank, a  [Google Sheet](https://docs.google.com/spreadsheets/d/1S2X-fXJ0hb5r0m5JUury7I7Yqg0IAPmISBec57RQYFU/edit#gid=1069976462) was created. The objective of this  [Google Sheet](https://docs.google.com/spreadsheets/d/1S2X-fXJ0hb5r0m5JUury7I7Yqg0IAPmISBec57RQYFU/edit#gid=1069976462) is to allow colleagues to provide information about the content of the dashboard. These sheets (school, teacher, and students) contain all the indicators to be displayed by the dashboard, a column to indicate the label to be used, and a description to be displayed when a user select that indicator in the dashboard. This sheet also includes a column to indicate the type of variable (binary, continuous, id). All these information is used in the dashboard. 
 
 ## Thigs to do
 
@@ -145,6 +146,11 @@ To ease and motivate a collaborative environment in which different stakeholders
 14. Add a spinner to plot 
 15. Create functions for plots
 16  themes for plots (ask WB color pallete and fonts)
+17. Binary variables, replace 2 to 0, 3 to NA. 
+18. Get division and district to teacher.rds (using school_ID)
+19. For binary, multiply axis in bar plot 
+20. Let the WB know that the teacher data does not have division_nam and district_nam
+21. Add lookup table to name of fill var
 
 
 

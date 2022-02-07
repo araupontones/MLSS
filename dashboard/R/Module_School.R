@@ -5,6 +5,12 @@ schoolUI <- function(id, dirImports,dirLookUps, divisions, nivel ) {
   #school_data <- rio::import(file.path(dirImports, "Baseline/school.rds"))
   dropdowns_v <- rio::import(file.path(dirLookUps, nivel, glue::glue("dropdown_vars_{nivel}.csv")))
   var_codes <- setNames(dropdowns_v$var_name, dropdowns_v$label)
+  #variables to compare
+  compare_vars <- dropdowns_v %>% filter(type == "binary")
+  
+  #display selection for dont compare
+  lab_dont_compare <- "Don't compare"
+  compare_codes <- setNames(c(lab_dont_compare,compare_vars$var_name), c(lab_dont_compare,compare_vars$label))
   
   
   tagList(
@@ -12,15 +18,19 @@ schoolUI <- function(id, dirImports,dirLookUps, divisions, nivel ) {
     sidebarLayout(
       sidebarPanel(width = 3,
                    #selectInput("indicator", "Indicator",choices = "a"),
-                   selectInput(NS(id,"indicator"), "Select Indicator", choices = var_codes),
+                   selectInput(NS(id,"indicator"), "Indicator", choices = var_codes),
                    selectInput(NS(id,"division"), "Division", choices = divisions),
+                   
+                   uiOutput(NS(id,"compareVars")),
+                   #selectInput(NS(id,"compare"), "Compare", choices = compare_codes),
                    
                    
                    uiOutput(NS(id,"compareInput")),
                    uiOutput(NS(id,'compareRounds')),
                    #selectInput(NS(id,"round"), "Rounds", choices = rounds, multiple = T),
                    
-                   selectInput(NS(id,"plot_type"), "Select Plot Type", choices = c("Bar Plot","Box Plot", "Density Plot")),
+                   uiOutput(NS(id, "definePlot")),
+                   #selectInput(NS(id,"plot_type"), "Select Plot Type", choices = c("Bar Plot","Box Plot", "Density Plot")),
                    actionButton(NS(id,"go"), "Create Plot",class="btn btn-primary")
                    
                    
@@ -40,9 +50,11 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
     #load lookups -----------------------------------------------------------------
     
     
-    
+    lab_dont_compare <- "Don't compare"
     dropdowns_v <- rio::import(file.path(dirLookUps, nivel, glue::glue("dropdown_vars_{nivel}.csv")))
     var_codes <- setNames(dropdowns_v$var_name, dropdowns_v$label)
+    compare_vars <- dropdowns_v %>% filter(type == "binary")
+    compare_codes <- setNames(c(lab_dont_compare,compare_vars$var_name), c(lab_dont_compare,compare_vars$label))
     
     
     #confirm that all inputs have been provided by user -----------------------
@@ -73,58 +85,95 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
       
     })
     
-    #label of indicator to display in charts
-    indicator_label <- eventReactive(input$go, {
+    
+    indicator_type <- eventReactive(input$indicator,{
       
-      names(var_codes[which(var_codes == input$indicator)])
+      dropdowns_v$type[dropdowns_v$var_name == input$indicator]
       
     })
+    
+    
+    
+    
     
     
     parameters_panel <- eventReactive(input$go,{
       
       #saved in functions
-      create_data_parameters(region = input$division,
+      create_data_parameters(dropdowns_v = dropdowns_v,
+                             compare_vars = compare_vars,
+                             region = input$division,
+                             indicator = input$indicator,
+                             indicator_compare = input$compare,
                              by_time = across_time(),
                              by_divisions = group_by_divisions(),
-                             by_districts = group_by_districts())
-      
-      
-      
+                             by_districts = group_by_districts(),
+                             by_other = by_other_var()
+      )
       
       
     })
     
     
-    #****************ENABLING CONDITIONS ****************************************
+    
+    
+    #****************ENABLING CONDITIONS IN USER'S INPUTS ****************************************
     output$compareInput <- renderUI({
       
       
       
       if(input$division == "Malawi"){
-        radioButtons(NS(id,"compare_divisions"), "Compare",choices = c("Across time", "Divisions"))
+        radioButtons(NS(id,"compare_divisions"), "Display",choices = c("Across time", "Divisions"))
         
       } else {
         
-        radioButtons(NS(id,"compare_divisions"), "Compare",choices = c("Across time","With other divisions", "Districts within"))
+        radioButtons(NS(id,"compare_divisions"), "Display",choices = c("Across time","With other divisions", "Districts within"))
+      }
+      
+    })
+    
+    output$compareVars <- renderUI({
+      
+      if(indicator_type()!= "binary"){
+        
+        selectInput(NS(id,"compare"), paste0("Compare by  ", nivel,"s", " characteristics?"), choices = compare_codes)
+      } else {
+        
+        
       }
       
     })
     
     output$compareRounds <- renderUI({
-
-     
-
+      
+      
+      
       if(across_time()){
-
-
+        
+        
       } else {
-
+        
         selectInput(NS(id,"round"), "Rounds", choices = rounds, multiple = T)
       }
       
-     
       
+      
+      
+    })
+    
+    output$definePlot <- renderUI({
+      
+      
+      show_all <- indicator_type() != "binary" & !compare_groups()
+      
+      if(show_all){
+        
+        selectInput(NS(id,"plot_type"), "Plot Type", choices = c("Bar Plot","Box Plot", "Density Plot"))
+      } else {
+        
+        selectInput(NS(id,"plot_type"), "Plot Type", choices = c("Bar Plot"))
+        
+      }
       
     })
     
@@ -160,7 +209,17 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
       
     })
     
-    #*********************CREATE VECTORS TO FILTER THE DATA *************************
+    compare_groups <- eventReactive(input$compare, {
+      
+      input$compare != lab_dont_compare
+      
+    })
+    
+    by_other_var <- eventReactive(input$go,{
+      compare_groups() & indicator_type()!="binary"
+    })
+    
+    #*********************CREATE VECTORS TO FILTER THE USER'S DATA *************************
     
     
     divisions_selected <- eventReactive(input$go,{
@@ -194,9 +253,11 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
     
     output$title <- renderUI({
       
+      
+      
       HTML(paste(
         "<h1>",parameters_panel()$title, "</h1>",
-        "<h2>",indicator_label(), "</h2>"
+        "<h2>",parameters_panel()$subtitle, "</h2>"
       )
       )
       
@@ -210,35 +271,22 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
       # print(paste("X=", parameters_panel()$x))
       # print(paste("Y=", parameters_panel()$y))
       # print(paste("grupo=", parameters_panel()$group))
+      #print(paste("compare groups:", compare_groups()))
+      #print(paste("compare", input$compare))
+      data_user <- create_data_user (db = database,
+                                     indicator_user = input$indicator,
+                                     divisions_user = divisions_selected(),
+                                     rounds_user = rounds_selected(),
+                                     indicator_type = indicator_type(),
+                                     plot_user = input$plot_type, 
+                                     by_divisions = group_by_divisions(),
+                                     by_districts = group_by_districts(),
+                                     
+                                     parameters_group = parameters_panel()$group,
+                                     by_time = across_time(),
+                                     by_other_vars = by_other_var(),
+                                     fill = input$compare)
       
-      data_user <- database %>%
-        select(targetvar = input$indicator,
-               division_nam, district_nam, round) %>%
-        filter(division_nam %in% divisions_selected()) %>%
-        filter(round %in% rounds_selected())
-      
-      
-      if(input$plot_type == "Bar Plot"){
-        #summarise by round
-        if(across_time()){
-          
-          data_user <- data_user %>% group_by(round) %>% summarise(mean = mean(targetvar, na.rm = T, .groups = "drop"))
-        }
-        
-        #summarise by level of interest and round
-        if(group_by_districts() | group_by_divisions()){
-          
-          
-          data_user <- data_user %>%
-            group_by(.data[[parameters_panel()$group]], .data[["round"]]) %>%
-            summarise(mean = mean(targetvar, na.rm = T))
-        }
-        
-        
-        
-      }
-      
-      data_user
       
       
     })
@@ -256,75 +304,57 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
     
     my_plot <- eventReactive(input$go, {
       
-      print(parameters_panel()$y_lab)
+      
+      #bar plots =============================================================
       if(input$plot_type == "Bar Plot"){
         
-        print(parameters_panel()$y_lab)
         
-        plot <- data_divison() %>%
-          ggplot(aes(x = .data[[parameters_panel()$x]],
-                     y = mean,
-                     fill = round)) +
-          geom_col(position = "dodge2") +
-          labs(y = indicator_label(),
-               x = parameters_panel()$y_lab)
+        #if user selects to compare by other variable
+        if(by_other_var()){
+          
+          
+          plot <- plot_compare_outcomes(database = data_divison(),
+                                        x = parameters_panel()$x,
+                                        name_fill = input$compare,
+                                        y_label =  parameters_panel()$indicator_label,
+                                        x_label = parameters_panel()$x_lab
+          )
+          
+        } else{
+          
+          plot <- plot_bar(database = data_divison(),
+                           x = parameters_panel()$x,
+                           y_label =  parameters_panel()$indicator_label,
+                           x_label  = parameters_panel()$x_lab
+          )
+        }
+        
+        
       }
+      
+      #Box plots =============================================================
       
       if(input$plot_type == "Box Plot"){
         
-        plot <- data_divison() %>%
-          ggplot(aes(y = targetvar,
-                     x = .data[[parameters_panel()$x]],
-          )) +
-          #geom_col(aes(y = mean(school$enrol_lower_tot, na.rm = T))) +
-          geom_boxplot(binaxis='y', stackdir='center', dotsize=1, fill = '#A8D1DF') +
-          geom_jitter(shape=16, position=position_jitter(0.2))  +
-          labs(y = indicator_label(),
-               x = parameters_panel()$y_lab)
         
-        
-        if(!across_time()){
-          
-          plot <- plot + facet_wrap(~ round) 
-        }
-        
+        plot<-plot_box(database= data_divison(),
+                       by_time = across_time(),
+                       x = parameters_panel()$x,
+                       y_label = parameters_panel()$indicator_label,
+                       x_label = parameters_panel()$x_lab
+        )
         
         
       }
       
       if(input$plot_type == "Density Plot"){
         
-        plot <- data_divison() %>%
-          ggplot() +
-          geom_density(aes(x = targetvar, fill = round)) +
-          labs(x = indicator_label())
+        plot <- plot_density(database = data_divison(),
+                     by_time = across_time(),
+                     x_label = parameters_panel()$indicator_label,
+                     wrap_var = parameters_panel()$x,
+                     rounds = rounds)
         
-        
-        if(across_time()){
-          
-          plot <- plot +
-            geom_vline(aes(xintercept = mean(targetvar, na.rm = T)), 
-                       linetype = "dashed", size = 0.6,
-                       color = "#FC4E07") 
-          
-        }
-        
-        
-        
-        if(!across_time()){
-          
-          plot <- plot +
-            geom_vline(data = plyr::ddply(data_divison(), 
-                                          c(parameters_panel()$x,"round"), 
-                                          summarize, 
-                                          wavg = mean(targetvar, na.rm = T)), aes(xintercept=wavg, color = paste("Mean",rounds)),
-                       linetype = "dashed", size = 0.7
-            ) +
-            facet_wrap(~ .data[[parameters_panel()$x]]) +
-            scale_color_manual(name = "",
-                               values = c("black", "red", "blue"))
-          
-        }
         
       }
       
