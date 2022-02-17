@@ -46,8 +46,12 @@ schoolUI <- function(id, dirImports,dirLookUps, divisions, nivel ) {
 
 
 schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
+  
+  
+  
   moduleServer(id, function(input, output, session) {
     #load lookups -----------------------------------------------------------------
+    
     
     
     lab_dont_compare <- "Don't compare"
@@ -118,17 +122,22 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
     
     
     #****************ENABLING CONDITIONS IN USER'S INPUTS ****************************************
+    
+   
+    
     output$compareInput <- renderUI({
-      
-      
-      
+
+
+
       if(input$division == "Malawi"){
         radioButtons(NS(id,"compare_divisions"), "Display",choices = c("Across time", "Divisions"))
-        
+
       } else {
-        
+
         radioButtons(NS(id,"compare_divisions"), "Display",choices = c("Across time","With other divisions", "Districts within"))
       }
+
+      
       
     })
     
@@ -350,10 +359,10 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
       if(input$plot_type == "Density Plot"){
         
         plot <- plot_density(database = data_divison(),
-                     by_time = across_time(),
-                     x_label = parameters_panel()$indicator_label,
-                     wrap_var = parameters_panel()$x,
-                     rounds = rounds)
+                             by_time = across_time(),
+                             x_label = parameters_panel()$indicator_label,
+                             wrap_var = parameters_panel()$x,
+                             rounds = rounds)
         
         
       }
