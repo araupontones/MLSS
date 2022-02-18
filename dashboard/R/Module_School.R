@@ -16,7 +16,7 @@ schoolUI <- function(id, dirImports,dirLookUps, divisions, nivel ) {
   tagList(
     shinyFeedback::useShinyFeedback(),
     sidebarLayout(
-      sidebarPanel(width = 3,
+      sidebarPanel(width = 3, class ="form",
                    #selectInput("indicator", "Indicator",choices = "a"),
                    selectInput(NS(id,"indicator"), "Indicator", choices = var_codes),
                    selectInput(NS(id,"division"), "Division", choices = divisions),
@@ -31,7 +31,7 @@ schoolUI <- function(id, dirImports,dirLookUps, divisions, nivel ) {
                    
                    uiOutput(NS(id, "definePlot")),
                    #selectInput(NS(id,"plot_type"), "Select Plot Type", choices = c("Bar Plot","Box Plot", "Density Plot")),
-                   actionButton(NS(id,"go"), "Create Plot",class="btn btn-primary")
+                   actionButton(NS(id,"go"), "Create Plot",class="btn btn-secondary")
                    
                    
       ),

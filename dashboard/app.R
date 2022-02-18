@@ -14,6 +14,7 @@ project_path <- define_project_dir(repoName="MLSS")
 dirData <- file.path(project_path, "data")
 dirImports <- file.path(dirData, "imports")
 dirLookUps <- file.path(dirData, "reference/lookups")
+dirStyles <- file.path(project_path, "html/css")
 
 #load data
 school_data <- rio::import(file.path(dirImports, "Baseline/school.rds"))
@@ -35,30 +36,47 @@ rounds_v <- unique(school_data$round)
 
 
 
-ui <- navbarPage(
-  "Dashboard",
-  tabPanel("Schools",
-           schoolUI("school",
-                    nivel = "school",
-                    dirLookUps = dirLookUps,
-                    divisions = divisions_v
-                    )
-           
-           ),
+ui <- fluidPage(
+    
+  tags$head(
+    #fonts -------------------------------------------------
   
-  tabPanel("Teachers"),
-  tabPanel("Students",
-           schoolUI("student",
-                    nivel = "student",
-                    dirLookUps = dirLookUps,
-                    divisions = divisions_v
-           ))
+      tags$link(rel="preconnect", href="https://fonts.googleapis.com"),
+      tags$link(href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Roboto:wght@300&display=swap", rel="stylesheet"),
+    tags$link( href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap", rel="stylesheet"),
+    
+    
+    #styles -----------------------------------------------
+    tags$link(rel="stylesheet", href="styleMain.css")
+    ),
   
-)
+    navbarPage(
+      
+      "Dashboard",
+      tabPanel("Schools",
+               schoolUI("school",
+                        nivel = "school",
+                        dirLookUps = dirLookUps,
+                        divisions = divisions_v
+               )
+               
+      ),
+      
+      tabPanel("Teachers"),
+      tabPanel("Students",
+               schoolUI("student",
+                        nivel = "student",
+                        dirLookUps = dirLookUps,
+                        divisions = divisions_v
+               ))
+      
+    )
+  )
+
 
 
 server <- function(input, output, session) {
- 
+  
   schoolServer("school", 
                nivel = "school",
                database = school_data,
