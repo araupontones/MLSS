@@ -1,0 +1,45 @@
+body{
+  font-family: 'Noto Serif', serif;
+  margin: 0 80px;
+}
+
+/*Navbar-----------------------------------------------------------------------*/
+.navbar{
+  background-color: white !important;
+  text-align: right;
+  border-bottom: 1.5px solid black;
+}
+
+.navbar-nav{
+  position: absolute;
+  right: 10%;
+}
+
+
+.navbar-brand{
+  display: none;
+}
+
+.navbar-nav>li>a{
+  font-size: 18px !important;
+}
+.navbar-nav>.active>a{
+  background-color: white !important;
+  border-bottom: 4px solid black !important;
+  color: black !important;
+
+}
+
+/*Form ------------------------------------------------------------------------*/
+.form{
+  border: 1px solid black;
+  font-family: 'Noto Sans', sans-serif;
+  background-color: #fafafa
+}
+
+
+  .btn-dark {
+    color: #fff;
+    background-color: #212529;
+    border-color: #212529;
+  }
