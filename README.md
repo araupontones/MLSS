@@ -53,6 +53,8 @@ The lookup tables are stored in `/data/reference/lookups`. There is a specific d
 2. Create a root password: @2022mlSS
 3. Add a new user with sudo credentials: 
 
+Password of rstudio: rstudio
+
 ```
 adduser rstudio`
 gpasswd -a rstudio sudo
@@ -110,7 +112,7 @@ library(shinyccloaders)
 library(plyr)
 ```
 
-9. Assing admin credentials to shiny user
+9. Assign admin credentials to shiny user
 The shiny apps are run by the shiny user. Thus, higher level credentials should be added to this user.
 
 ```
@@ -126,6 +128,26 @@ sudo chmod g+s .
 10. move application to /srv/shiny-server/MLSS
 
 11. **Install fonts in R** 
+For the charts to read costumed fonts in the server, the fonts should be installed first. These are stepsts to follow:
+
+a. In Linux: cd `/usr/share/fonts/`
+b. Download a .zip with the fonts. From github, get the dowload link : `wget https://github.com/araupontones/fonts/raw/main/Noto_Sans.zip`
+c. `mkdir` with the name of the font (e.g. Nano-Sans)
+d. `cd` to the new dir (e.g. `cd Nano-Sans`)
+e. `unzip file.zip` (e.g. `unzip Nano-Sans.zip`)
+f. `cd ..`
+g.  Copy the font into truetype `cp -R Name_font /usr/share/fonts/truetype`
+
+Once the font is installed in the server, it has to be loeaded in R:
+
+In the termina, assign root credentials to `/usr/local/lib/R/site-library/extrafontdb` so the users root, rstudio, and shiny can access these fonts.
+
+a. Access rstudio
+b. Check the fonts available in R `extrafont::fonts()`
+c. Import the new font `extrafont::font_import()`
+d. Load the font into the session `extrafont::loadfonts()`
+
+
 
 ## collaborative design
 To ease and motivate a collaborative environment in which different stakeholders, specifically the World Bank, a  [Google Sheet](https://docs.google.com/spreadsheets/d/1S2X-fXJ0hb5r0m5JUury7I7Yqg0IAPmISBec57RQYFU/edit#gid=1069976462) was created. The objective of this  [Google Sheet](https://docs.google.com/spreadsheets/d/1S2X-fXJ0hb5r0m5JUury7I7Yqg0IAPmISBec57RQYFU/edit#gid=1069976462) is to allow colleagues to provide information about the content of the dashboard. These sheets (school, teacher, and students) contain all the indicators to be displayed by the dashboard, a column to indicate the label to be used, and a description to be displayed when a user select that indicator in the dashboard. This sheet also includes a column to indicate the type of variable (binary, continuous, id). All these information is used in the dashboard. 
@@ -138,7 +160,7 @@ To ease and motivate a collaborative environment in which different stakeholders
 6. Check with WB when more data is expected and how these rounds will be called.
 7. Write a users' guide to upload the data (considering all the points in the [Importing Protocol](#importing-backend-protocol))
 8. Customize log in page [shinymanager](https://datastorm-open.github.io/shinymanager/)
-9. Append data from all rounds.
+
 10. Upload fonts to extrafont (via pushing files) in server
 
 

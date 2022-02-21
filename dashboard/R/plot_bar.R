@@ -14,7 +14,8 @@ plot_bar  <- function(database,
     labs(y = y_label,
          x = x_label) +
     scale_fill_manual(name = "Round",
-                      values = c("#053657", '#0071bc', "#A3DAFF"))
+                      values = c("#053657", '#0071bc', "#A3DAFF")) +
+    theme_MLSS()
   
   return(plot)
   

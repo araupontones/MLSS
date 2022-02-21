@@ -45,7 +45,7 @@ ui <- fluidPage(
       tags$link(rel="preconnect", href="https://fonts.googleapis.com"),
       tags$link(href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Roboto:wght@300&display=swap", rel="stylesheet"),
     tags$link( href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap", rel="stylesheet"),
-    
+    tags$title("MLSS-Dashboard"),
     
     #styles -----------------------------------------------
     tags$link(rel="stylesheet", href="styleMain.css")
@@ -53,7 +53,7 @@ ui <- fluidPage(
   
     navbarPage(
       
-      "Dashboard",
+      tags$a("Home", href = "http://198.211.96.106/", target = "_blank",class = 'brand'),
       tabPanel("Schools",
                schoolUI("school",
                         nivel = "school",
