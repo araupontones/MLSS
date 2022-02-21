@@ -128,19 +128,29 @@ sudo chmod g+s .
 10. move application to /srv/shiny-server/MLSS
 
 11. **Install fonts in R** 
-For the charts to read costumed fonts in the server, the fonts should be installed first. These are stepsts to follow:
+For the charts to read costumed fonts in the server, the fonts should be installed first. 
+
+A [repositary](https://github.com/araupontones/fonts) that contains the fonts used in the dashbaord has been created. 
+
+These are steps to follow:
 
 a. In Linux: cd `/usr/share/fonts/`
+
 b. Download a .zip with the fonts. From github, get the dowload link : `wget https://github.com/araupontones/fonts/raw/main/Noto_Sans.zip`
+
 c. `mkdir` with the name of the font (e.g. Nano-Sans)
 d. `cd` to the new dir (e.g. `cd Nano-Sans`)
+
 e. `unzip file.zip` (e.g. `unzip Nano-Sans.zip`)
+
 f. `cd ..`
+
 g.  Copy the font into truetype `cp -R Name_font /usr/share/fonts/truetype`
+
 
 Once the font is installed in the server, it has to be loeaded in R:
 
-In the termina, assign root credentials to `/usr/local/lib/R/site-library/extrafontdb` so the users root, rstudio, and shiny can access these fonts.
+In the terminal, assign root credentials to `/usr/local/lib/R/site-library/extrafontdb` so the users root, rstudio, and shiny can access these fonts.
 
 a. Access rstudio
 b. Check the fonts available in R `extrafont::fonts()`
@@ -161,8 +171,6 @@ To ease and motivate a collaborative environment in which different stakeholders
 7. Write a users' guide to upload the data (considering all the points in the [Importing Protocol](#importing-backend-protocol))
 8. Customize log in page [shinymanager](https://datastorm-open.github.io/shinymanager/)
 
-10. Upload fonts to extrafont (via pushing files) in server
-
 
 11. Ask WB for description of indicators
 12. Beauty spinner of plots
@@ -172,13 +180,15 @@ To ease and motivate a collaborative environment in which different stakeholders
 
 
 19. For binary, multiply axis in bar plot (so they are displayed as %)
+
 20. Let the WB know that the teacher data does not have division_nam and district_nam
+
 21. Change labels of fill variables using lookups
+
 22. Ask world bank logos for Malawi and world bank
+
 23. Ask world bank mail of administrator
 
-
-24. add home to navbar
 
 
 

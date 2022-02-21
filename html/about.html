@@ -1,10 +1,155 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
 
-  </body>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!--local CSS -->
+  <link rel="stylesheet" href="css/styleMain.css">
+  <link rel="stylesheet" href="css/styleAbout.css">
+  <title>MLSS-About</title>
+</head>
+
+<body>
+
+  <!--NAV BAR ----------------------------------------------------->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index.html">Home</a>
+        </li>
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Background
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#objective">Objective</a></li>
+            <li><a class="dropdown-item" href="#sample">Sample</a></li>
+            <li><a class="dropdown-item" href="#links">Useful links</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="http://198.211.96.106:3838/MLSS/dashboard/" target="_blank">Dashboard</a>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+
+  <!-- About title ---------------------------------------------------------------->
+  <div class="row container-title container-about-title justify-content-md-end justify-content-sm-start">
+    <div class="col-6 align-self-center">
+      <h1 class="title"> MLSS: background</h1>
+    </div>
+  </div>
+
+  <!--Background -------------------------------------------------------------->
+  <div id="objective" class="row container-about container-intro">
+    <h1>Objective Of the Survey</h1>
+    <p class="about-text">
+      The Government of Malawi (GoM) aims to provide equitable access to an adequate and safe learning space to all learners. In accordance with the GoM’s goal, the Malawi Education Sector Improvement Project’s (MESIP’s) main objective is to
+      improve the equity and quality of primary education service delivery in early grade levels with an emphasis on improved accountability and functioning at the school level. MESIP includes a set of interconnected interventions, including: (1)
+      performance-based grants to schools for improvements in retention; (2) a pilot School Leadership Program providing training to head teachers, deputy head teachers, and sub-district officials on how to improve management of schools in
+      conditions of resource scarcity, achieve inclusive school cultures, and improve learning outcomes; (3) a pilot of real-time app-based data collection of key school indicators, with feedback ‘report cards’ for school leaders; (4) a pilot of
+      regular SMS-based community feedback on schools via a dedicated platform; and (5) results-based finance to government on achievement of improvements in promotion and staffing in key disadvantaged districts.
+      <br><br>
+      MESIP is designed to include rigorous experimental impact evaluation of the majority of its activities. This is achieved through an independent school survey, the Malawi Longitudinal Schools Survey (MLSS), conducted in three rounds during the
+      project. Baseline data collection took place during April-October 2016 and April-July 2018, and midline data collection from November 2018 – January 2020. Endline data collection began in April 2021 and is scheduled to be completed in all
+      schools in 2021/22.
+
+
+    </p>
+
+  </div>
+
+
+  <!--Sample -------------------------------------------------------------->
+  <div id="sample" class="row container-about container-intro">
+    <h1>Sample</h1>
+    <p class="about-text">
+    <h4>Component 3.1:</h4>
+    <ol>
+      <li>Small schools, junior primary schools and private schools have been dropped as before.</li>
+      <li>All zones where MESIP Component 3.1 is active have been dropped.</li>
+      <li>Random sampling of schools with divisional stratification (additional strata for urban)</li>
+      <li>Only 398 schools in each group due to rounding down in PPS – kindly review.</li>
+    </ol>
+
+
+    <h4>Component 3.2:</h4>
+    <ol>
+      <li>Small schools, junior primary schools and private schools have been dropped as before.</li>
+      <li>All zones where MESIP Component 3.2 is active have been dropped.</li>
+      <li>No scoping visit done so none of the zones have been dropped due to connectivity issues.</li>
+      <li>No information on which additional zones have zEMIS officers. Since there are no establishment positions for this role, EMIS intends to assign an officer where necessary. I have no information on this currently but I have assumed that EMIS
+        will allocate one new zEMIS officer per district – so I have randomly selected one zone per district. I dropped zones with less than 8 schools. As a result, some districts are no longer represented like Likoma, Mzuzu City and xxx – However,
+        these are quite small and already have 2 zEMIS officers each under MESIP, so they might not need additional officers there. Also I played around with the seed but can’t get to 400 schools by randomly selecting zones first.</li>
+      <li>Schools were then randomly allocated into 4 groups.</li>
+    </ol>
+
+    <h4>Component 3.3</h4>
+    <ol>
+      <li>50 additional communities selected within 8 MESIP Component 3.3 districts.</li>
+      <li>Randomly selected 50 out of 113 zones.</li>
+      <li>Two schools selected within each zone for treatment and control – distance between schools improved from MESIP.
+      </li>
+    </ol>
+
+
+    <!--Sample -------------------------------------------------------------->
+    <div id="links" class="row container-about container-intro">
+      <h1>Useful resources</h1>
+      <p class="about-text">
+
+
+      </p>
+
+    </div>
+
+
+      <!--logos ---------------------------------------------------->
+
+      <div class="row container-logos text-center">
+        <div class="align-self-center col-md-6">
+          <img src="imgs/malawi-logo.jpeg" alt="logo-malawi" class="logo">
+        </div>
+        <div class="align-self-center col-md-6">
+          <img src="imgs/wb-logo.svg" alt="logo-wb" class="logo">
+        </div>
+
+      </div>
+
+      <div class="row container-footer justify-content-end">
+        <a class="admin_text" href="http://198.211.96.106:3838/MLSS/admin/" target="_blank">Log in as an administrators</a>
+
+        <p class="admin_text">For any question, please contact
+          <a href="mailto:someone@example.com?Subject=Shiny%20aManager" target="_top">administrator</a>
+        </p>
+
+      </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+
 </html>
