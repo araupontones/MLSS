@@ -17,8 +17,9 @@ dirLookUps <- file.path(dirData, "reference/lookups")
 dirStyles <- file.path(project_path, "html/css")
 
 #load data
-school_data <- rio::import(file.path(dirImports, "Baseline/school.rds"))
-student_data <- rio::import(file.path(dirImports, "Baseline/student.rds"))
+school_data <- rio::import(file.path(dirImports, "school.rds"))
+student_data <- rio::import(file.path(dirImports, "student.rds"))
+teacher_data <- rio::import(file.path(dirImports, "teacher.rds"))
 
 
 #load lookups
@@ -62,13 +63,20 @@ ui <- fluidPage(
                
       ),
       
-      tabPanel("Teachers"),
+      tabPanel("Teachers",
+               schoolUI("teacher",
+                        nivel = "teacher",
+                        dirLookUps = dirLookUps,
+                        divisions = divisions_v
+               )
+               ),
       tabPanel("Students",
                schoolUI("student",
                         nivel = "student",
                         dirLookUps = dirLookUps,
                         divisions = divisions_v
-               ))
+               )
+               )
       
     )
   )
@@ -80,6 +88,13 @@ server <- function(input, output, session) {
   schoolServer("school", 
                nivel = "school",
                database = school_data,
+               dirLookUps = dirLookUps,
+               divisions = divisions_v,
+               rounds = rounds_v)
+  
+  schoolServer("teacher", 
+               nivel = "teacher",
+               database = teacher_data,
                dirLookUps = dirLookUps,
                divisions = divisions_v,
                rounds = rounds_v)

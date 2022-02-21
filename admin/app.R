@@ -19,7 +19,7 @@ project_path <- define_project_dir(repoName="MLSS")
 #define directory to store uploads from user
 dirData <- file.path(project_path, "data")
 dirImports <- file.path(dirData,'imports')
-message(dirImports)
+
 
 #define directory of reference data
 dirReference <- file.path(dirData,'reference')
@@ -346,18 +346,17 @@ server <- function(input, output, session) {
     #save data if everything OK
     req(check_names_student == "OK")
     
+    #copy temp files to imports
+    copy_to_imports(survey_levels = survey_levels,
+                    tempDir = tempDir,
+                    dir_uploads = dir_uploads(),
+                    dirLookUps = dirLookUps)
     
-    for(nivel in survey_levels){
-      showNotification(paste("Saving", nivel, "data"), type = "message")
-      
-      rds_temp <- file.path(tempDir, glue("{nivel}.rds"))
-      rds_final <- file.path(dir_uploads(), glue("{nivel}.rds"))
-      
-      #print(rds_temp)
-      file.copy(from = rds_temp, to = rds_final, overwrite = T)
-      
-    }
+    #Append versions
+    showNotification(paste("Appending rounds"), type = "message")
+    append_rounds <- lapply(survey_levels, append_versions, dir_imports = dirImports)
     
+    #say thanks to the user
     modal_success <- modalDialog(
       HTML(paste("Data has been updated succesfully!")),
       title = "Thank you!",
