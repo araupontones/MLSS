@@ -17,8 +17,9 @@ dirLookUps <- file.path(dirData, "reference/lookups")
 dirStyles <- file.path(project_path, "html/css")
 
 #load data
-school_data <- rio::import(file.path(dirImports, "Baseline/school.rds"))
-student_data <- rio::import(file.path(dirImports, "Baseline/student.rds"))
+school_data <- rio::import(file.path(dirImports, "school.rds"))
+student_data <- rio::import(file.path(dirImports, "student.rds"))
+teacher_data <- rio::import(file.path(dirImports, "teacher.rds"))
 
 
 #load lookups
@@ -44,7 +45,7 @@ ui <- fluidPage(
       tags$link(rel="preconnect", href="https://fonts.googleapis.com"),
       tags$link(href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Roboto:wght@300&display=swap", rel="stylesheet"),
     tags$link( href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap", rel="stylesheet"),
-    
+    tags$title("MLSS-Dashboard"),
     
     #styles -----------------------------------------------
     tags$link(rel="stylesheet", href="styleMain.css")
@@ -52,7 +53,7 @@ ui <- fluidPage(
   
     navbarPage(
       
-      "Dashboard",
+      tags$a("Home", href = "http://198.211.96.106/", target = "_blank",class = 'brand'),
       tabPanel("Schools",
                schoolUI("school",
                         nivel = "school",
@@ -62,13 +63,20 @@ ui <- fluidPage(
                
       ),
       
-      tabPanel("Teachers"),
+      tabPanel("Teachers",
+               schoolUI("teacher",
+                        nivel = "teacher",
+                        dirLookUps = dirLookUps,
+                        divisions = divisions_v
+               )
+               ),
       tabPanel("Students",
                schoolUI("student",
                         nivel = "student",
                         dirLookUps = dirLookUps,
                         divisions = divisions_v
-               ))
+               )
+               )
       
     )
   )
@@ -80,6 +88,13 @@ server <- function(input, output, session) {
   schoolServer("school", 
                nivel = "school",
                database = school_data,
+               dirLookUps = dirLookUps,
+               divisions = divisions_v,
+               rounds = rounds_v)
+  
+  schoolServer("teacher", 
+               nivel = "teacher",
+               database = teacher_data,
                dirLookUps = dirLookUps,
                divisions = divisions_v,
                rounds = rounds_v)

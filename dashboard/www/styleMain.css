@@ -1,6 +1,6 @@
 body{
   font-family: 'Noto Serif', serif;
-  margin: 0 80px;
+  margin: 0 5px;
 }
 
 /*Navbar-----------------------------------------------------------------------*/
@@ -8,6 +8,7 @@ body{
   background-color: white !important;
   text-align: right;
   border-bottom: 1.5px solid black;
+  font-size: 18px !important;
 }
 
 .navbar-nav{
@@ -15,14 +16,22 @@ body{
   right: 10%;
 }
 
-
-.navbar-brand{
-  display: none;
+.brand {
+  color: #777777;
 }
 
+.brand:hover{
+  
+  color: black;
+  text-decoration: unset;
+}
+
+/*
 .navbar-nav>li>a{
   font-size: 18px !important;
 }
+*/
+
 .navbar-nav>.active>a{
   background-color: white !important;
   border-bottom: 4px solid black !important;

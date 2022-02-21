@@ -18,7 +18,7 @@ schoolUI <- function(id, dirImports,dirLookUps, divisions, nivel ) {
     sidebarLayout(
       sidebarPanel(width = 3, class ="form",
                    #selectInput("indicator", "Indicator",choices = "a"),
-                   selectInput(NS(id,"indicator"), "Indicator", choices = var_codes),
+                   selectInput(NS(id,"indicator"), "Indicator", choices = var_codes, selected = var_codes[1]),
                    selectInput(NS(id,"division"), "Division", choices = divisions),
                    
                    uiOutput(NS(id,"compareVars")),
@@ -123,20 +123,20 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
     
     #****************ENABLING CONDITIONS IN USER'S INPUTS ****************************************
     
-   
+    
     
     output$compareInput <- renderUI({
-
-
-
+      
+      
+      
       if(input$division == "Malawi"){
         radioButtons(NS(id,"compare_divisions"), "Display",choices = c("Across time", "Divisions"))
-
+        
       } else {
-
+        
         radioButtons(NS(id,"compare_divisions"), "Display",choices = c("Across time","With other divisions", "Districts within"))
       }
-
+      
       
       
     })
@@ -162,7 +162,7 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
         
       } else {
         
-        selectInput(NS(id,"round"), "Rounds", choices = rounds, multiple = T)
+        selectInput(NS(id,"round"), "Rounds", choices = rounds, multiple = T, selected = rounds[1])
       }
       
       
@@ -339,6 +339,7 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
         }
         
         
+        
       }
       
       #Box plots =============================================================
@@ -370,7 +371,7 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
       
       
       plot +
-        theme(text = element_text(family = "Roboto")) 
+        theme_MLSS()
       
       
       
