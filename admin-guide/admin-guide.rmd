@@ -1,19 +1,20 @@
 ---
-title: "admin-guide"
-author: "MLSS"
-date: "22/02/2022"
-output: html_document
+title: "Guide To Import Files Into The System"
+output: 
+  html_document:
+    css: "www/styleAdminGuide.css"
+  
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
-# Importing zip files from rounds
-A zip file with the derived datasets of students, teachers, and schools.
-
-[Uploads and downloads](https://mastering-shiny.org/action-transfer.html)
+````{=html}
+```{r, echo=FALSE, results='asis'}
+xfun::file_string('navbar.html')
+```
+````
 
 
 ## Guide to Importing

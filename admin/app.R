@@ -65,7 +65,7 @@ ui <- fluidPage(
            
   ),
   
-  tags$a(href = "admin-guide.rmd", "Admin guide", target = "_blank"),
+  tags$a(href = "http://198.211.96.106:3838/MLSS/admin-guide/", "Admin guide", target = "_blank"),
   
   tags$div(class = 'row container-form',
            # authentication module
