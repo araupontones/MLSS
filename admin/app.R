@@ -46,22 +46,64 @@ credentials <- data.frame(
 #UI ---------------------------------------------------------------------------
 ui <- fluidPage(
   #enable shiny feedbacks
+  tags$head(
+      tags$link(rel = 'stylesheet', href = 'styleAdmin.css')
+  ),
   shinyFeedback::useShinyFeedback(),
   
-  # authentication module
+  tags$div(class = 'row container-nav',
+           tags$div(class = 'col-4',
+                    
+                    tags$ul(
+                      tags$li(tags$a("Home", href = "http://198.211.96.106") ,class = 'item'),
+                      tags$li(tags$a("Background"),href = "http://198.211.96.106/about.html", class = 'item'),
+                      tags$li(tags$a("Dashboard"), href = "http://198.211.96.106:3838/MLSS/dashboard/",class = 'item')
+                      
+                    )
+                    
+           )
+           
+  ),
   
-  #UI to import data
-  fileInput("upload", label = "Upload  a .zip file with the data", accept = c(".zip")),
-  #Input select of round
-  uiOutput(outputId = "select_round"),
+  tags$a(href = "admin-guide.rmd", "Admin guide", target = "_blank"),
   
-  #Button to validate
-  uiOutput(outputId = "validate_button"),
-  
+  tags$div(class = 'row container-form',
+           # authentication module
+           
+           #UI to import data
+           fileInput("upload", label = "Upload  a .zip file with the data", accept = c(".zip")),
+           #Input select of round
+           uiOutput(outputId = "select_round"),
+           
+           #Button to validate
+           uiOutput(outputId = "validate_button")
+           
+           
+  ),
   #Table to inform the users of the existing files
   uiOutput(outputId = "head_summary"),
   
-  tableOutput("table_summary")
+  tableOutput("table_summary"),
+  
+  #logos
+  
+  tags$div(class = 'row container-logos text-center',
+          
+                    tags$img(src="imgs/malawi-logo.jpeg", class = "logo" ),
+          
+          
+                    tags$img(src="imgs/wb-logo.svg", class = "logo logo-wb" )
+           
+  ),
+  
+  tags$div(class = 'row container-footer',
+           tags$p(class = 'admin_text',
+                 "For any question, please contact",
+                 tags$a(href="mailto:someone@example.com?Subject=Shiny%20aManager", 
+                        "administrator", target ="_top" )
+                 )
+           )
+  
   
 )
 
@@ -98,7 +140,7 @@ server <- function(input, output, session) {
   
   output$select_round <- renderUI({
     req(input$upload)
-    selectInput("round", label = "Select The Round Of the Upload",choices = c("",rounds))
+    selectInput("round", label = "Select The Round Of The Upload",choices = c("",rounds))
     
   })
   
