@@ -1,0 +1,53 @@
+body {
+  font-family: 'Noto Serif', serif;
+  margin: 0 5px;
+}
+
+/*navbar-----------------------------------------------------------------------*/
+.container-nav {
+  font-size: 24px;
+  margin-right: 10%;
+  text-align: right;
+}
+
+.item {
+  display: inline-block;
+  padding-right: 10px;
+}
+
+.item>a {
+  color: #737373;
+}
+
+.item>a:hover {
+  color: black;
+  text-decoration: unset;
+}
+
+/*--Form ----------------------------------------------------------------------*/
+.container-form {
+  border: 3px solid black;
+  border-radius: 10px;
+  font-family: 'Noto Sans', sans-serif;
+  background-color: #fafafa;
+  margin: 100px auto 60px;
+  padding: 50px;
+  width: 500px;
+}
+
+/*logos-----------------------------------------------------------------------*/
+.container-logos {
+  text-align: center;
+}
+
+.logo {
+  width: 200px;
+}
+
+/* FOOTER ----------------------------------------------------------------------*/
+.container-footer {
+  background-color: black;
+  color: white;
+  margin-top: 40px;
+  text-align: right;
+}

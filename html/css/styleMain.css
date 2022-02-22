@@ -106,13 +106,13 @@ position: relative;
   }
 
   .container-title{
-  background-image: url("../imgs/school1.png");
+  background-image: url("../imgs/school1_low.png");
   background-size: 100%;
   height: 250px;
   position: relative;
   }
 
   .logo{
-    margin-top: 40px;
+    margin-top:15px;
   }
 }
