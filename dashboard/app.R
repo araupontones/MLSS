@@ -53,7 +53,8 @@ ui <- fluidPage(
   
     navbarPage(
       
-      tags$a("Home", href = "http://198.211.96.106/", target = "_blank",class = 'brand'),
+      tags$a("Malawi Longitudinal School Survey", href = "http://198.211.96.106/", target = "_blank",class = 'brand'),
+      collapsible = T,
       tabPanel("Schools",
                schoolUI("school",
                         nivel = "school",
