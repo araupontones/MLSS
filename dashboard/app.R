@@ -48,13 +48,14 @@ ui <- fluidPage(
     tags$title("MLSS-Dashboard"),
     
     #styles -----------------------------------------------
-    tags$link(rel="stylesheet", href="styleMain.css")
+    tags$link(rel="stylesheet", href="styleDash.css")
     ),
   
     navbarPage(
       
       tags$a("Malawi Longitudinal School Survey", href = "http://198.211.96.106/", target = "_blank",class = 'brand'),
       collapsible = T,
+      fluid = T,
       tabPanel("Schools",
                schoolUI("school",
                         nivel = "school",
