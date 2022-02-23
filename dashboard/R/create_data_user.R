@@ -76,6 +76,7 @@ create_data_user <- function(db,
       data_user <- data_user %>%
         mutate(targetvar = case_when(targetvar == 2 ~ 0,
                                      targetvar == 3 ~ NA_real_,
+                                     targetvar == 0 ~ 0,
                                      T ~ 1))
       
     }

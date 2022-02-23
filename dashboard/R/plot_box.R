@@ -6,12 +6,16 @@ plot_box <- function(database,
                      x_label = parameters_panel()$x_lab
                      ){
   
+  
   plot <- database %>%
+    group_by_at(x) %>%
+    mutate(order = mean(targetvar, na.rm = T)) %>%
+    ungroup() %>%
     ggplot(aes(y = targetvar,
-               x = .data[[x]],
+               x = reorder(.data[[x]],-order)
     )) +
-    geom_boxplot(binaxis='y', stackdir='center', dotsize=1, fill = '#A8D1DF') +
-    geom_jitter(shape=16, position=position_jitter(0.2))  +
+    geom_boxplot(binaxis='y', stackdir='center', dotsize=1, fill = alpha('#053657', .5)) +
+    #geom_jitter(shape=16, position=position_jitter(0.2))  +
     labs(y =  y_label,
          x = x_label)
   

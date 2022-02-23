@@ -37,7 +37,7 @@ schoolUI <- function(id, dirImports,dirLookUps, divisions, nivel ) {
       ),
       mainPanel(width = 7,
                 uiOutput(NS(id,"title")),
-                shinycssloaders::withSpinner(plotOutput(NS(id,"plot"))),
+                shinycssloaders::withSpinner(plotOutput(NS(id,"plot")), type = 5, color = "black"),
                 tableOutput(NS(id,"table"))
       )
     )
@@ -335,7 +335,7 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
                            x = parameters_panel()$x,
                            y_label =  parameters_panel()$indicator_label,
                            x_label  = parameters_panel()$x_lab
-          )
+          ) 
         }
         
         
@@ -368,8 +368,15 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
         
       }
       
-      
-      
+  
+  if(indicator_type()=="binary"){
+    
+    plot <- plot +
+      scale_y_continuous(limits= c(0:1),
+                         labels = function(x)c(seq(0,75,25), paste0(100,"%"))
+                         )
+  }      
+     
       plot +
         theme_MLSS()
       
