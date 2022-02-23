@@ -1,6 +1,6 @@
 schoolUI <- function(id, dirImports,dirLookUps, divisions, nivel ) {
   
-  
+  #options <- c("compareVars", "compareInput", "compareRounds", "definePot")
   #load lookups
   #school_data <- rio::import(file.path(dirImports, "Baseline/school.rds"))
   dropdowns_v <- rio::import(file.path(dirLookUps, nivel, glue::glue("dropdown_vars_{nivel}.csv")))
@@ -21,23 +21,26 @@ schoolUI <- function(id, dirImports,dirLookUps, divisions, nivel ) {
                    selectInput(NS(id,"indicator"), "Indicator", choices = var_codes, selected = var_codes[1]),
                    selectInput(NS(id,"division"), "Division", choices = divisions),
                    
+                   
+                  
+                   #lapply(options, UInput, id = id),
+                   
                    uiOutput(NS(id,"compareVars")),
-                   #selectInput(NS(id,"compare"), "Compare", choices = compare_codes),
-                   
-                   
+
+
+
                    uiOutput(NS(id,"compareInput")),
                    uiOutput(NS(id,'compareRounds')),
-                   #selectInput(NS(id,"round"), "Rounds", choices = rounds, multiple = T),
-                   
+
                    uiOutput(NS(id, "definePlot")),
-                   #selectInput(NS(id,"plot_type"), "Select Plot Type", choices = c("Bar Plot","Box Plot", "Density Plot")),
+                   
                    actionButton(NS(id,"go"), "Create Plot",class="btn btn-secondary")
                    
                    
       ),
       mainPanel(width = 7,
                 uiOutput(NS(id,"title")),
-                shinycssloaders::withSpinner(plotOutput(NS(id,"plot")), type = 5, color = "black"),
+                shinycssloaders::withSpinner(plotOutput(NS(id,"plot")), type = 1, color = "black"),
                 tableOutput(NS(id,"table"))
       )
     )
@@ -54,10 +57,10 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
     
     
     
-    lab_dont_compare <- "Don't compare"
+    lab_dont_compare <- "Don't compare" #label for dont compare option
     dropdowns_v <- rio::import(file.path(dirLookUps, nivel, glue::glue("dropdown_vars_{nivel}.csv")))
     var_codes <- setNames(dropdowns_v$var_name, dropdowns_v$label)
-    compare_vars <- dropdowns_v %>% filter(type == "binary")
+    compare_vars <- dropdowns_v %>% filter(type == "binary") #variables to compare outcomes
     compare_codes <- setNames(c(lab_dont_compare,compare_vars$var_name), c(lab_dont_compare,compare_vars$label))
     
     
@@ -103,6 +106,7 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
     
     parameters_panel <- eventReactive(input$go,{
       
+      message(input$compare)
       #saved in functions
       create_data_parameters(dropdowns_v = dropdowns_v,
                              compare_vars = compare_vars,
@@ -121,50 +125,33 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
     
     
     
-    #****************ENABLING CONDITIONS IN USER'S INPUTS ****************************************
+    #****************ENABLING CONDITIONS IN USER'S FORM ****************************************
     
     
     
     output$compareInput <- renderUI({
-      
-      
-      
-      if(input$division == "Malawi"){
-        radioButtons(NS(id,"compare_divisions"), "Display",choices = c("Across time", "Divisions"))
-        
-      } else {
-        
-        radioButtons(NS(id,"compare_divisions"), "Display",choices = c("Across time","With other divisions", "Districts within"))
-      }
+      #from utils_form.R
+      buttons_display(id,inputId = "compare_divisions", label = "Display", selected_division = input$division)
       
       
       
     })
     
+   
     output$compareVars <- renderUI({
-      
-      if(indicator_type()!= "binary"){
-        
-        selectInput(NS(id,"compare"), paste0("Compare by  ", nivel,"s", " characteristics?"), choices = compare_codes)
-      } else {
-        
-        
-      }
-      
+
+      #from utils_form.R
+      select_chars(id, inputID = "compare", 
+                    indicator_type = indicator_type(), 
+                    label = paste0("Compare by  ", nivel,"s", " characteristics?"), 
+                    choices = compare_codes)
+
     })
     
     output$compareRounds <- renderUI({
       
-      
-      
-      if(across_time()){
-        
-        
-      } else {
-        
-        selectInput(NS(id,"round"), "Rounds", choices = rounds, multiple = T, selected = rounds[1])
-      }
-      
+      #from utils_form.R
+      select_rounds(id, inputId = "round", label = "Rounds", across_time = across_time(), choices = rounds)
       
       
       
@@ -172,17 +159,7 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
     
     output$definePlot <- renderUI({
       
-      
-      show_all <- indicator_type() != "binary" & !compare_groups()
-      
-      if(show_all){
-        
-        selectInput(NS(id,"plot_type"), "Plot Type", choices = c("Bar Plot","Box Plot", "Density Plot"))
-      } else {
-        
-        selectInput(NS(id,"plot_type"), "Plot Type", choices = c("Bar Plot"))
-        
-      }
+      select_plot(id, inputId = "plot_tyoe", label = "Plot Type", indicator_type = indicator_type(), compare_groups())
       
     })
     
