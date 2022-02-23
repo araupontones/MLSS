@@ -173,19 +173,14 @@ To ease and motivate a collaborative environment in which different stakeholders
 
 
 11. Ask WB for description of indicators
-12. Beauty spinner of plots
 
 
-13  themes for plots (ask WB color pallete and fonts)
-
-
-19. For binary, multiply axis in bar plot (so they are displayed as %)
+19. Confirm with WB which variables require % labels in Y axis (apart from binary)
 
 20. Let the WB know that the teacher data does not have division_nam and district_nam
 
 21. Change labels of fill variables using lookups
 
-22. Ask world bank logos for Malawi and world bank
 
 23. Ask world bank mail of administrator
 
