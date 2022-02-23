@@ -7,7 +7,7 @@ plot_bar  <- function(database,
 ){
   
   plot <- database %>%
-    ggplot(aes(x = .data[[x]],
+    ggplot(aes(x = reorder(.data[[x]],-mean),
                y = mean,
                fill = round)) +
     geom_col(position = "dodge2") +
