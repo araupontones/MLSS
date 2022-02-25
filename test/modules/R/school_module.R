@@ -12,14 +12,15 @@ uiSchool <- function(id){
 serverSchool <-  function(id, inputs) {
   moduleServer(id, function(input, output, session) {
   
-    inputs <- outputForm("test")
+    inputs <- outputForm("test", session)
     
-    observeEvent(inputs$division(),{
-      print(inputs$division())
+    observeEvent(inputs,{
+      
+      print("inputs$division()")
       
     })
-    # 
-    serverForm("test", inputs)
+    
+    #serverForm("test", inputs)
     
     })
   

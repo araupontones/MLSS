@@ -37,7 +37,7 @@ uiForm <- function(id, compare_codes, rondas,dirLookUps,nivel, divisions){
 #===============================================================================
 
 
-outputForm <- function(id){
+outputForm <- function(id, session){
   
   moduleServer(id, function(input, output, session){
     

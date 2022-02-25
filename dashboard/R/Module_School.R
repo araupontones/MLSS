@@ -58,9 +58,9 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
     compare_vars <- dropdowns_v %>% filter(type == "binary") #variables to compare outcomes
     compare_codes <- setNames(c(lab_dont_compare,compare_vars$var_name), c(lab_dont_compare,compare_vars$label))
     
-    #inputs <- outputForm("form")
+    inputs <- outputForm("form")
     
-    observeEvent(input$indicator,{
+    observeEvent(inputs$province(),{
       print("Hoao")
     })
       

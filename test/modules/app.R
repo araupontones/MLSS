@@ -6,12 +6,9 @@ ui <- fluidPage(
 
 server <- function(input, output, session) {
   
-  t <- outputForm('form')
+  #t <- outputForm('form')
   
-  observeEvent(t$division(),{
-    print(t$division())
-    
-  })
+ 
   serverSchool("school")
 }
 
