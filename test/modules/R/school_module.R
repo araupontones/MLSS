@@ -1,31 +1,23 @@
 library(shiny)
 
-uiSchool <- function(id){
+uiSchool <- function(id, dirLookUps){
+  
   
   tagList(
-    uiForm("test")
-  )
+    sidebarLayout(
+      
+      sidebarPanel(width = 3, class = 'form',
+                   uiForm(id, dirLookUps = dirLookUps)
+                   ),
+      mainPanel(width = 7)
+      
+    )
+    
   
+    )
 }
 
-
-serverSchool <-  function(id, inputs) {
-  moduleServer(id, function(input, output, session) {
   
-    inputs <- outputForm("test", session)
-    
-    observeEvent(inputs,{
-      
-      print("inputs$division()")
-      
-    })
-    
-    #serverForm("test", inputs)
-    
-    })
-  
-}
-
 
 
 

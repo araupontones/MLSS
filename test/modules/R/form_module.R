@@ -1,19 +1,12 @@
 uiForm <- function(id, compare_codes, rondas,dirLookUps,nivel, divisions){
   
-  # 
-  # dropdowns_v <- rio::import(file.path(dirLookUps, nivel, glue::glue("dropdown_vars_{nivel}.csv")))
-  # var_codes <- setNames(dropdowns_v$var_name, dropdowns_v$label)
-  # #variables to compare
-  # compare_vars <- dropdowns_v %>% filter(type == "binary")
-  # 
-  # #display selection for dont compare
-  # lab_dont_compare <- "Don't compare"
-  # compare_codes <- setNames(c(lab_dont_compare,compare_vars$var_name), c(lab_dont_compare,compare_vars$label))
-  
+  #print(file.path(dirLookUps, id, glue::glue("dropdown_vars_{id}.csv")))
+  dropdowns_v <- rio::import(file.path(dirLookUps, id, glue::glue("dropdown_vars_{id}.csv")))
+  var_codes <- setNames(dropdowns_v$var_name, dropdowns_v$label)
   
   tagList(
     
-    selectInput(NS(id,"indicator"), "Indicator", choices = c("indicator 1", "2")),
+    selectInput(NS(id,"indicator"), paste(id, "Indicator"), choices = var_codes),
     
     selectInput(NS(id,"division"), "Division", choices = c("Malawi", "div 1")),
     
@@ -37,12 +30,13 @@ uiForm <- function(id, compare_codes, rondas,dirLookUps,nivel, divisions){
 #===============================================================================
 
 
-outputForm <- function(id, session){
+outputForm <- function(id){
   
   moduleServer(id, function(input, output, session){
     
     
-    list(division = reactive(input$division),
+    list(
+      division = reactive({input$division}),
       display = reactive(input$display),
       round = reactive(input$round),
       plot_type = reactive(input$plot_type)
@@ -58,6 +52,7 @@ outputForm <- function(id, session){
   })
 }
 
+#inputs is the output of outputForm
 serverForm <-  function(id, inputs) {
   moduleServer(id, function(input, output, session) {
     
