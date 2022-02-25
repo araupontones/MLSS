@@ -22,16 +22,15 @@ schoolUI <- function(id, dirImports,dirLookUps, divisions, nivel ) {
                    selectInput(NS(id,"division"), "Division", choices = divisions),
                    
                    
-                  
+                   
                    #lapply(options, UInput, id = id),
                    
                    uiOutput(NS(id,"compareVars")),
-
-
-
+                   
+                   
                    uiOutput(NS(id,"compareInput")),
                    uiOutput(NS(id,'compareRounds')),
-
+                   
                    uiOutput(NS(id, "definePlot")),
                    
                    actionButton(NS(id,"go"), "Create Plot",class="btn btn-secondary")
@@ -137,15 +136,15 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
       
     })
     
-   
+    
     output$compareVars <- renderUI({
-
+      
       #from utils_form.R
       select_chars(id, inputID = "compare", 
-                    indicator_type = indicator_type(), 
-                    label = paste0("Compare by  ", nivel,"s", " characteristics?"), 
-                    choices = compare_codes)
-
+                   indicator_type = indicator_type(), 
+                   label = paste0("Compare by  ", nivel,"s", " characteristics?"), 
+                   choices = compare_codes)
+      
     })
     
     output$compareRounds <- renderUI({
@@ -345,15 +344,15 @@ schoolServer <- function(id, dirLookUps, divisions, database, nivel, rounds) {
         
       }
       
-  
-  if(indicator_type()=="binary"){
-    
-    plot <- plot +
-      scale_y_continuous(limits= c(0:1),
-                         labels = function(x)c(seq(0,75,25), paste0(100,"%"))
-                         )
-  }      
-     
+      
+      if(indicator_type()=="binary"){
+        
+        plot <- plot +
+          scale_y_continuous(limits= c(0:1),
+                             labels = function(x)c(seq(0,75,25), paste0(100,"%"))
+          )
+      }      
+      
       plot +
         theme_MLSS()
       

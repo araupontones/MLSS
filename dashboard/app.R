@@ -61,6 +61,7 @@ ui <- fluidPage(
                         nivel = "school",
                         dirLookUps = dirLookUps,
                         divisions = divisions_v
+                        
                )
                
       ),
@@ -69,7 +70,8 @@ ui <- fluidPage(
                schoolUI("teacher",
                         nivel = "teacher",
                         dirLookUps = dirLookUps,
-                        divisions = divisions_v
+                        divisions = divisions_v,
+                        
                )
                ),
       tabPanel("Students",
@@ -77,6 +79,7 @@ ui <- fluidPage(
                         nivel = "student",
                         dirLookUps = dirLookUps,
                         divisions = divisions_v
+                        
                )
                )
       
