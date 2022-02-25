@@ -1,4 +1,6 @@
 library(shiny)
+library(dplyr)
+library(tidyr)
 
 project_path <- define_project_dir(repoName="MLSS")
 dirData <- file.path(project_path, "data")
@@ -8,6 +10,8 @@ dirStyles <- file.path(project_path, "html/css")
 
 
 ui <- fluidPage(
+  
+  uiLinks("links"),
   navbarPage(
     "MLSS",
     
@@ -30,14 +34,15 @@ ui <- fluidPage(
 )
 
 server <- function(input, output, session) {
+  #dirLookUps <- file.path("C:/repositaries/1.work/MLSS/data/reference/lookups")
   
 #attach brain to forms =======================================================
   niveles <- c("school", "teacher", "student")
   
   inputs <- lapply(niveles, function(x){
-    inputs<- outputForm(x)
+    inputs<- outputForm(x, dirLookUps)
     
-    serverForm(x, inputs)
+    serverForm(x, inputs,dirLookUps)
     
     return(inputs)
   })
@@ -46,9 +51,9 @@ server <- function(input, output, session) {
   
   
 #example to read output =======================================================  
-  observeEvent(inputs$school$division(),{
+  observeEvent(inputs$school$indicator(),{
     
-    print(inputs$school$division())
+    print(inputs$school$binary_indicator())
     
   })
   

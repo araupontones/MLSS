@@ -4,13 +4,14 @@ uiForm <- function(id, compare_codes, rondas,dirLookUps,nivel, divisions){
   dropdowns_v <- rio::import(file.path(dirLookUps, id, glue::glue("dropdown_vars_{id}.csv")))
   var_codes <- setNames(dropdowns_v$var_name, dropdowns_v$label)
   
+  
   tagList(
     
     selectInput(NS(id,"indicator"), paste(id, "Indicator"), choices = var_codes),
     
     selectInput(NS(id,"division"), "Division", choices = c("Malawi", "div 1")),
     
-    uiOutput(NS(id,"compareVars")),
+    uiOutput(NS(id,"binaryBars")),
     
     radioButtons(NS(id,"display"), label = "Display",choices = c("Across time","With other divisions")),
     
@@ -30,16 +31,24 @@ uiForm <- function(id, compare_codes, rondas,dirLookUps,nivel, divisions){
 #===============================================================================
 
 
-outputForm <- function(id){
+outputForm <- function(id, dirLookUps){
   
   moduleServer(id, function(input, output, session){
+    
+   
+    dropdowns_v <- rio::import(file.path(dirLookUps, id, glue::glue("dropdown_vars_{id}.csv")))
+    binary_vars <- dropdowns_v %>% filter(type == "binary")
+    
+  
     
     
     list(
       division = reactive({input$division}),
       display = reactive(input$display),
       round = reactive(input$round),
-      plot_type = reactive(input$plot_type)
+      plot_type = reactive(input$plot_type),
+      indicator = reactive(input$indicator),
+      binary_indicator = reactive({input$indicator} %in% binary_vars$var_name)
       
     )
     
@@ -53,10 +62,15 @@ outputForm <- function(id){
 }
 
 #inputs is the output of outputForm
-serverForm <-  function(id, inputs) {
+serverForm <-  function(id, inputs, dirLookUps ) {
   moduleServer(id, function(input, output, session) {
     
-    
+    dropdowns_v <- rio::import(file.path(dirLookUps, id, glue::glue("dropdown_vars_{id}.csv")))
+    compare_vars <- dropdowns_v %>% filter(type == "binary")
+    #display selection for dont compare
+    lab_dont_compare <- "Don't compare"
+    compare_codes <- setNames(c(lab_dont_compare,compare_vars$var_name), c(lab_dont_compare,compare_vars$label))
+
     observeEvent(inputs$division(), {
       
       if(inputs$division() == "Malawi"){
@@ -72,7 +86,27 @@ serverForm <-  function(id, inputs) {
       
     })
     
-  })
+    
+    output$binaryBars <- renderUI({
+      if(inputs$binary_indicator()){
+        
+        
+      } else {
+        
+        selectInput(NS(id,"compare"), paste("Compare", "by", id, "characteristics?"), choices =  compare_codes)
+      }
+      
+    })
+    
+      
+      
+      
+      
+    })
+    
+    
+    
+  
 }
 
 
