@@ -93,6 +93,7 @@ ui <- fluidPage(
 
 server <- function(input, output, session) {
   
+  
   schoolServer("school", 
                nivel = "school",
                database = school_data,

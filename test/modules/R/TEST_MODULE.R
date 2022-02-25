@@ -42,10 +42,7 @@ outputForm <- function(id){
   moduleServer(id, function(input, output, session){
     
     
-    list(
-      
-      indicator = reactive(input$indicator),
-      division = reactive(input$division),
+    list(division = reactive(input$division),
       display = reactive(input$display),
       round = reactive(input$round),
       plot_type = reactive(input$plot_type)
@@ -55,19 +52,27 @@ outputForm <- function(id){
     
     
     
+    
+    
+    
   })
 }
 
-serverForm <-  function(id, input_division) {
+serverForm <-  function(id, inputs) {
   moduleServer(id, function(input, output, session) {
     
     
-    
-    observeEvent(input_division(), {
+    observeEvent(inputs$division(), {
       
-      if(input_division()!= "Malawi"){
+      if(inputs$division() == "Malawi"){
         
-        updateSelectInput(session, "display", choices = "C")
+        updateRadioButtons(session, "display", choices = c("Across time","With other divisions"))
+      }
+      
+      
+      if(inputs$division()!= "Malawi"){
+        
+        updateRadioButtons(session, "display", choices = c("Across time","With other divisions", "Districts within"))
       }
       
     })
@@ -127,10 +132,10 @@ serverForm <-  function(id, input_division) {
 #    })
 #       
 #       
-      
-    
-  #} )
-  
-  
-  
+
+
+#} )
+
+
+
 #}

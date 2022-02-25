@@ -13,7 +13,7 @@ uiForm <- function(id, compare_codes, rondas,dirLookUps,nivel, divisions){
   
   tagList(
     
-    selectInput(NS(id,"indicator"), "Indicator", choices = var_codes, selected = var_codes[1]),
+    #selectInput(NS(id,"indicator"), "Indicator", choices = var_codes, selected = var_codes[1]),
     
     selectInput(NS(id,"division"), "Division", choices = divisions),
     

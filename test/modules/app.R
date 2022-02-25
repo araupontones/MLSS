@@ -1,21 +1,18 @@
 library(shiny)
 
-
 ui <- fluidPage(
-  
-  uiForm("test")
+  uiSchool("school")
 )
 
 server <- function(input, output, session) {
   
-   inputs <- outputForm("test")
-
-   observeEvent(inputs$division(),{
-      print(inputs$division())
-
-     })
-  # 
-  # serverTest("test", inputs$andres)
+  t <- outputForm('form')
+  
+  observeEvent(t$division(),{
+    print(t$division())
+    
+  })
+  serverSchool("school")
 }
 
 shinyApp(ui, server)
