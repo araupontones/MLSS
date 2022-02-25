@@ -60,7 +60,8 @@ ui <- fluidPage(
                schoolUI("school",
                         nivel = "school",
                         dirLookUps = dirLookUps,
-                        divisions = divisions_v
+                        divisions = divisions_v,
+                        rounds = rounds_v
                         
                )
                
@@ -71,6 +72,7 @@ ui <- fluidPage(
                         nivel = "teacher",
                         dirLookUps = dirLookUps,
                         divisions = divisions_v,
+                        rounds = rounds_v
                         
                )
                ),
@@ -78,7 +80,8 @@ ui <- fluidPage(
                schoolUI("student",
                         nivel = "student",
                         dirLookUps = dirLookUps,
-                        divisions = divisions_v
+                        divisions = divisions_v,
+                        rounds = rounds_v
                         
                )
                )
