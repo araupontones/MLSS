@@ -2,13 +2,19 @@ library(shiny)
 library(dplyr)
 library(tidyr)
 library(stringr)
+library(ggplot2)
+library(shinyjs)
+
+
+#extrafont::loadfonts(device = 'win')
 
 project_path <- define_project_dir(repoName="MLSS")
 dirData <- file.path(project_path, "data")
-dirImports <- file.path("C:/repositaries/1.work/MLSS/data/imports")
-dirLookUps <- file.path("C:/repositaries/1.work/MLSS/data/reference/lookups")
+dirImports <- file.path(dirData, "imports")
+dirLookUps <- file.path(dirData, "/reference/lookups")
 dirStyles <- file.path(project_path, "html/css")
 
+print(dirData)
 
 school_data <- rio::import(file.path(dirImports, "school.rds"))
 teacher_data <- rio::import(file.path(dirImports, "teacher.rds"))
@@ -57,7 +63,9 @@ server <- function(input, output, session) {
     #reactive form
     serverForm(x, inputs,dirLookUps)
     #reactive data
-    data <- serverData(x, inputs, dirImports)
+    database <- serverData(x, inputs, dirImports)
+    
+    plotServer(x, inputs, database)
     
     
     return(inputs)
@@ -73,7 +81,8 @@ server <- function(input, output, session) {
     print(inputs$school$plot_type())
     print(inputs$school$keep_divisions())
     print(inputs$school$by_other_var())
-    
+    print(inputs$school$x_var_plot()$x_lab)
+    print(inputs$school$var_label())
     
     
   })

@@ -3,10 +3,8 @@ uiForm <- function(id, compare_codes, rounds,dirLookUps,nivel, divisions){
   #print(file.path(dirLookUps, id, glue::glue("dropdown_vars_{id}.csv")))
   dropdowns_v <- rio::import(file.path(dirLookUps, id, glue::glue("dropdown_vars_{id}.csv")))
   var_codes <- setNames(dropdowns_v$var_name, dropdowns_v$label)
-  
-  # divisions_lkp <- rio::import(file.path(dirLookUps, "divisions.csv"))
-  # divisions_v <- c("Malawi",divisions_lkp[["division_nam"]])
-  
+  # compare_vars <- dropdowns_v %>% filter(type == "binary")
+ 
   
   tagList(
     
@@ -15,6 +13,8 @@ uiForm <- function(id, compare_codes, rounds,dirLookUps,nivel, divisions){
     selectInput(NS(id,"division"), "Division", choices = divisions),
     
     uiOutput(NS(id,"binaryBars")),
+    
+   
     
     radioButtons(NS(id,"display"), label = "Display",choices = c("Across rounds","Divisions of Malawi")),
     
@@ -55,6 +55,11 @@ outputForm <- function(id, dirLookUps){
     )
     
     
+#condition to.. characteristics 
+    compare_by_chars <- eventReactive(input$compare, {
+      
+      {input$compare} != "Don't compare"
+    })
     
     
 #divisions to keep in data
@@ -108,12 +113,52 @@ outputForm <- function(id, dirLookUps){
       
       
     })
+   
     
-#compare characteristics 
-    compare_by_chars <- eventReactive(input$compare, {
+#Plot axis 
+    
+    x_var_plot <- reactive(  
       
-      {input$compare} != "Don't compare"
-    })
+      if(str_detect({input$display}, "[Dd]ivision")){
+        list(
+          
+          x = c("division_nam"),
+          x_lab =  "Division",
+          across_time = F
+          
+        )
+        
+        
+      } else if (str_detect({input$display}, "[Dd]istrict")) {
+        
+        list( x = c("district_nam"),
+              x_lab = "District",
+              across_time = F)
+        
+       
+        
+        
+      } else{
+        
+        list(
+          x = c("round"),
+          x_lab = "Round",
+          across_time = T
+        )
+       
+      }
+      
+      )
+    
+    
+#Plot label 
+    
+var_label <- reactive(
+  
+  indicator_label <- dropdowns_v$label[dropdowns_v$var_name == input$indicator]
+)
+     
+
    
 
 
@@ -138,7 +183,12 @@ outputForm <- function(id, dirLookUps){
       #parameters for data ---------
       group_vars = group_vars,
       by_other_var = by_other_var,
-      keep_divisions = keep_divisions
+      keep_divisions = keep_divisions,
+      
+      #parameters for plot ----
+      x_var_plot = x_var_plot,
+      var_label = var_label
+      
       
     )
     
@@ -186,17 +236,18 @@ serverForm <-  function(id, inputs, dirLookUps ) {
     compare_codes <- setNames(c(lab_dont_compare,compare_vars$var_name), c(lab_dont_compare,compare_vars$label))
     
     output$binaryBars <- renderUI({
-      
-      
+
+
       if(inputs$binary_indicator()){
-        
-        
+
+
       } else {
-        
+
         selectInput(NS(id,"compare"), paste("Compare", "by", id, "characteristics?"), choices =  compare_codes)
       }
-      
+
     })
+    
     
     
     

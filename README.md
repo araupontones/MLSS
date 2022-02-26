@@ -110,6 +110,7 @@ library(tidyr)
 library(shinymanager)
 library(shinyccloaders)
 library(plyr)
+library(shinyjs)
 ```
 
 9. Assign admin credentials to shiny user
