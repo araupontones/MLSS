@@ -1,6 +1,7 @@
 serverData <-  function(id, inputs, dirImports ) {
   moduleServer(id, function(input, output, session) {
     
+    #import data ------------------------------------------------------------
     database <- rio::import(file.path(dirImports, glue::glue("{id}.rds")))
     
     data_user <- eventReactive(inputs$go(),{
@@ -48,17 +49,17 @@ serverData <-  function(id, inputs, dirImports ) {
         if(inputs$plot_type() == "Bar Plot"){
           
           data_reactive <- data_reactive %>% group_by_at(inputs$group_vars()) %>%
-           summarise(mean = mean(targetvar, na.rm = T),
-                     n = n(),
-                     .groups = "drop")
+            summarise(mean = mean(targetvar, na.rm = T),
+                      n = n(),
+                      .groups = "drop")
           
-         
+          
           
         }
         
         data_reactive
         
-       
+        
         
       }
       
@@ -70,16 +71,111 @@ serverData <-  function(id, inputs, dirImports ) {
     
     
     
-    output$table <- renderTable({
+    my_table <- eventReactive(data_user(),{
       
-      #display <- !is.null(input$round) | across_time()
+      req(inputs$go(), cancelOutput = T)
       
-      req(data_user(), cancelOutput = T)
-      data_user()
+      if(inputs$plot_type()== "Bar Plot"){
+        
+        if(inputs$binary_indicator()){
+          
+          #if binary
+          reactable(
+            data_user(),
+            bordered = T,
+            defaultPageSize = nrow(data_user()),
+            columns = list(
+              mean = colDef(
+                cell = data_bars(data_user(),
+                                 background = "lightgrey",
+                                 number_fmt = scales::percent,
+                                 text_position = "inside-end")
+                
+              ),
+              n = colDef(
+                cell = data_bars(data_user(),
+                                 background = "lightgrey",
+                                 number_fmt = scales::number,
+                                 text_position = "inside-end")
+                
+              )
+            )
+          )
+        } else{
+          #if it is not binary
+          reactable(
+            data_user(),
+            bordered = T,
+            defaultPageSize = nrow(data_user()),
+            columns = list(
+              mean = colDef(
+                cell = data_bars(data_user(),
+                                 background = "lightgrey",
+                                 number_fmt = scales::number_format(accuracy = 0.01),
+                                 text_position = "inside-end")
+                
+              ),
+              n = colDef(
+                cell = data_bars(data_user(),
+                                 background = "lightgrey",
+                                 number_fmt = scales::number,
+                                 text_position = "inside-end")
+                
+              )
+            )
+          )
+          
+        }
+        
+      }
+      
+      # if(inputs$plot_type() != "Bar Plot"){
+      #   
+      #   reactable(
+      #     data_user() %>%
+      #       relocate(division_nam, district_nam, round, targetvar)
+      #     
+      #   )
+      # }
+      #   
+       
+      
+          
+        
+      # if(inputs$plot_type() == "Box Plot"){
+      #   
+      
+      # } else {
+      #   
+      #   reactable(data_user())
+      # }
+      # 
       
     })
+    
+    
+    
+    # output$table <- renderTable({
+    #   
+    #   #display <- !is.null(input$round) | across_time()
+    #   
+    #   req(data_user(), cancelOutput = T)
+    #   data_user()
+    #   
+    # })
+    
+    output$table <- renderReactable({
+      
+      req(my_table())
+      my_table()
       
       
+      
+      
+      
+      
+    })
+    
     reactive(data_user())
     
   })

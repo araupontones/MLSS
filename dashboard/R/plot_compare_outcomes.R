@@ -9,12 +9,17 @@ plot_compare_outcomes <- function(database,
                                   ){
   
   plot <- database %>%
+    mutate(fill = factor(fill,
+                         levels = c("Yes", "No"))) %>%
     ggplot(aes(x = reorder(.data[[x]], -mean),
                y = mean,
                fill = fill)) +
-    geom_col(position = "dodge2") +
+    geom_col(position = "dodge2",
+             width = .7) +
     scale_fill_manual(name = name_fill,
-                      values = c("#002244", "#009FDA")) +
+                      breaks = c("Yes", "No"),
+                      values = c(alpha("#002244", .9), alpha("#009FDA", .7))
+                      ) +
     labs(y = y_label,
          x = x_label) +
     facet_wrap(~ round)

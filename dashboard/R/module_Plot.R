@@ -13,19 +13,28 @@ plotServer <-  function(id, inputs, database ) {
           
           
           plot <- plot_compare_outcomes(database = database(),
-                                        x = inputs$x_var_plot()$x,
+                                        x = inputs$display(),
+                                        #x = inputs$x_var_plot()$x,
                                         name_fill = inputs$compare_var(),
                                         y_label =  inputs$var_label(),
                                         x_label = inputs$x_var_plot()$x_lab
-          )
+          ) +
+           guides(fill = guide_legend(title = 
+                                        paste(str_to_title(id),inputs$compare_var_label()),
+                                      title.position = "top",
+                                      title.hjust = 0.5
+                                      )
+                  )
           
         } else{
           
           plot <- plot_bar(database = database(),
-                           x = inputs$x_var_plot()$x,
+                           x = inputs$display(),
+                           #x = inputs$x_var_plot()$x,
                            y_label =  inputs$var_label(),
                            x_label  = inputs$x_var_plot()$x_lab
-          ) 
+          ) +
+            theme(legend.title = element_blank())
         }
         
         
@@ -39,7 +48,8 @@ plotServer <-  function(id, inputs, database ) {
         
         plot<-plot_box(database= database(),
                        by_time = inputs$x_var_plot()$across_time,
-                       x = inputs$x_var_plot()$x,
+                       x = inputs$display(),
+                       #x = inputs$x_var_plot()$x,
                        y_label = inputs$var_label(),
                        x_label =inputs$x_var_plot()$x_lab
         )
@@ -52,7 +62,7 @@ plotServer <-  function(id, inputs, database ) {
         plot <- plot_density(database = database(),
                              by_time = inputs$x_var_plot()$across_time,
                              x_label = inputs$var_label(),
-                             wrap_var = inputs$x_var_plot()$x,
+                             wrap_var = inputs$display(),
                              rounds = inputs$round())
         
         
@@ -67,10 +77,11 @@ plotServer <-  function(id, inputs, database ) {
           )
       }      
       
-      plot +
+      plot <- plot +
         theme_MLSS()
       
       
+      plot
       
       
       
@@ -79,7 +90,7 @@ plotServer <-  function(id, inputs, database ) {
     
     output$plot <- renderPlot({
       
-      req(my_plot, cancelOutput = T)
+      req(my_plot(), cancelOutput = T)
       my_plot()
       
       

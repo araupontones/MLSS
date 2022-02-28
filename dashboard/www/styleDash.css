@@ -53,6 +53,20 @@ body{
     border-color: #212529;
   }
   
+/*header* "#053657", '#0071bc', "#A3DAFF"*/
+
+.compare-text{
+  
+  color:gray;
+}
+.yes {
+  color: #002244;
+  font-weight: "bold";
+}
+
+.no{
+  color: #009FDA;
+}
 /*Mobile-------------------------------------------------------------------*/
   @media (max-width:768px){
     .navbar-nav{

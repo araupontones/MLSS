@@ -16,7 +16,10 @@ uiForm <- function(id, compare_codes, rounds,dirLookUps,nivel, divisions){
     
    
     
-    radioButtons(NS(id,"display"), label = "Display",choices = c("Across rounds","Divisions of Malawi")),
+    radioButtons(
+      NS(id,"display"), label = "Display",choices = setNames(c("round", "division_nam"),
+                                                             c("Across rounds","Divisions of Malawi"))
+      ),
     
     
     selectInput(NS(id,"round"), "Round", choices = rounds, multiple = T, selected = rounds),
@@ -87,17 +90,18 @@ outputForm <- function(id, dirLookUps){
     
     group_vars <- reactive(
       
- 
       
-      if(str_detect({input$display}, "[Dd]ivision")){
-        
+
+      if({input$display} == "division_nam"){
+
         vars <- c("division_nam", "round")
-        
-      } else if (str_detect({input$display}, "[Dd]istrict")) {
-        
+
+      } else if ({input$display} == "district_nam") {
+
         vars <- c("division_nam", "district_nam", "round")
-      } else{
-        
+
+        } else if ({input$display} == "round"){
+
         vars <- c("round")
       }
       
@@ -119,7 +123,7 @@ outputForm <- function(id, dirLookUps){
     
     x_var_plot <- reactive(  
       
-      if(str_detect({input$display}, "[Dd]ivision")){
+      if({input$display} == "division_nam"){
         list(
           
           x = c("division_nam"),
@@ -159,6 +163,10 @@ var_label <- reactive(
 )
      
 
+compare_var_label <- reactive(
+  
+  dropdowns_v$label_yes[dropdowns_v$var_name == input$compare]
+)
    
 
 
@@ -177,6 +185,7 @@ var_label <- reactive(
       #enabling conditions
       binary_indicator = reactive({input$indicator} %in% binary_vars$var_name),
       compare_by_chars = compare_by_chars,
+      compare_var_label = compare_var_label,
       only_bar = only_bar,
       #divisions_selected = divisions_selected,
       
@@ -187,8 +196,10 @@ var_label <- reactive(
       
       #parameters for plot ----
       x_var_plot = x_var_plot,
-      var_label = var_label
+      var_label = var_label, 
       
+      #lookup
+      lookUp = dropdowns_v
       
     )
     
@@ -216,15 +227,19 @@ serverForm <-  function(id, inputs, dirLookUps ) {
       
       if(inputs$division() == "Malawi"){
         
-        updateRadioButtons(session, "display", choices = c("Malawi across rounds","Divisions of Malawi"))
+        updateRadioButtons(session, "display", choices = setNames(c("round", "division_nam"),
+                                                                  c("Malawi across rounds","Divisions of Malawi"))
+                           )
       }
       
       
       if(inputs$division()!= "Malawi"){
         
-        updateRadioButtons(session, "display", choices = c(paste(inputs$division(),"across rounds"),
-                                                           paste(inputs$division(),"with other divisions"),
-                                                           paste("Districts of", inputs$division())))
+        updateRadioButtons(session, "display", choices = setNames(c("round", "division_nam", "district_nam"),
+                                                                  c(paste(inputs$division(),"across rounds"),
+                                                                    paste(inputs$division(),"with other divisions"),
+                                                                    paste("Districts of", inputs$division())))
+                           )
       }
       
     })

@@ -4,6 +4,8 @@ library(tidyr)
 library(stringr)
 library(ggplot2)
 library(shinyjs)
+library(reactable)
+library(reactablefmtr)
 
 
 #extrafont::loadfonts(device = 'win')
@@ -22,8 +24,7 @@ student_data <- rio::import(file.path(dirImports, "student.rds"))
 
 
 ui <- fluidPage(
-  
-  uiLinks("links"),
+   uiLinks("links"),
   navbarPage(
     tags$a("Malawi Longitudinal School Survey", href = "http://198.211.96.106/", target = "_blank",class = 'brand'),
     collapsible = T,
@@ -62,8 +63,12 @@ server <- function(input, output, session) {
     
     #reactive form
     serverForm(x, inputs,dirLookUps)
+    
+    serverHeader(x, inputs)    
+    
     #reactive data
     database <- serverData(x, inputs, dirImports)
+    
     
     plotServer(x, inputs, database)
     
@@ -77,12 +82,13 @@ server <- function(input, output, session) {
 #example to read output =======================================================  
   observeEvent(inputs$school$go(),{
     
-    print(inputs$school$group_vars())
-    print(inputs$school$plot_type())
-    print(inputs$school$keep_divisions())
-    print(inputs$school$by_other_var())
-    print(inputs$school$x_var_plot()$x_lab)
-    print(inputs$school$var_label())
+    print(paste("Group by:",inputs$school$group_vars()))
+    print(inputs$school$display())
+    # print(inputs$school$plot_type())
+    # print(inputs$school$keep_divisions())
+    # print(inputs$school$by_other_var())
+    # print(inputs$school$x_var_plot()$x_lab)
+    # print(inputs$school$var_label())
     
     
   })

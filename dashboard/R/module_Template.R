@@ -15,8 +15,12 @@ uiTemplate <- function(id, dirLookUps, database){
                   
                    ),
       mainPanel(width = 7,
+               uiOutput(NS(id,"header")),
                 shinycssloaders::withSpinner(plotOutput(NS(id, "plot")), type = 5, color = "black"),
-                tableOutput(NS(id,"table")))
+               reactableOutput(NS(id,"table"))
+      )
+                #tableOutput(NS(id,"table")))
+      
       
     )
     

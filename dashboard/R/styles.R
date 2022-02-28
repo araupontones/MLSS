@@ -7,7 +7,7 @@ theme_MLSS <- function(){
         #legend
         legend.position = 'top',
         legend.background = element_rect(fill = color_bg),
-        legend.title = element_blank(),
+        #legend.title = element_blank(),
         #background
         panel.background = element_rect(fill = color_bg),
         plot.background = element_rect(fill = color_bg),
