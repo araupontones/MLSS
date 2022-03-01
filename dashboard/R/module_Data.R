@@ -18,10 +18,11 @@ serverData <-  function(id, inputs, dirImports ) {
           filter(round %in% inputs$round()) %>%
           mutate(fill = case_when(fill == 1 ~ "Yes",
                                   fill == 3 ~ NA_character_,
+                                  is.na(fill) ~ NA_character_,
                                   T ~ "No")) %>%
           group_by_at(c(inputs$group_vars(), "fill")) %>%
           summarise(mean = mean(targetvar, na.rm = T),
-                    n = n(), .groups = 'drop')
+                    n = sum(!is.na(targetvar)), .groups = 'drop')
         
         #if user does not want to compare outcomes by characteristics ----------------
       } else {
@@ -41,6 +42,7 @@ serverData <-  function(id, inputs, dirImports ) {
           data_reactive <- data_reactive %>%
             mutate(targetvar = case_when(targetvar == 2 ~ 0,
                                          targetvar == 3 ~ NA_real_,
+                                         is.na(targetvar) ~ NA_real_,
                                          targetvar == 0 ~ 0,
                                          T ~ 1))
           
@@ -48,9 +50,10 @@ serverData <-  function(id, inputs, dirImports ) {
         
         if(inputs$plot_type() == "Bar Plot"){
           
-          data_reactive <- data_reactive %>% group_by_at(inputs$group_vars()) %>%
+          data_reactive <- data_reactive %>% 
+            group_by_at(inputs$group_vars()) %>%
             summarise(mean = mean(targetvar, na.rm = T),
-                      n = n(),
+                      n = sum(!is.na(targetvar)),
                       .groups = "drop")
           
           

@@ -62,6 +62,8 @@ server <- function(input, output, session) {
     #catch inputs of user
     inputs<- outputForm(x, dirLookUps)
     
+   
+    
     #reactive form
     serverForm(x, inputs,dirLookUps)
     
@@ -85,6 +87,7 @@ server <- function(input, output, session) {
     
     print(paste("Group by:",inputs$school$group_vars()))
     print(inputs$school$display())
+    print(paste("keep:",inputs$school$keep_divisions()))
     # print(inputs$school$plot_type())
     # print(inputs$school$keep_divisions())
     # print(inputs$school$by_other_var())
