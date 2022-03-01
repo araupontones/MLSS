@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-var_name,label,type,label_fill,dropdown,Description_Dashboard,Name dropdown,Description
-=======
 var_name,label,type,label_yes,dropdown,Description_Dashboard,Name dropdown,Description
->>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
 time_prepare_lesson,time spent on preparing lesson plan(in hours),continous,,TRUE,,,
 time_tch_stu,Time spent teaching students,continous,,TRUE,,,
 time_mark_hw,Time spent marking hw,continous,,TRUE,,,
@@ -10,16 +6,6 @@ time_sch_adm,Time spent on school admin,continous,,TRUE,,,
 time_help_oth,Time spent helping others,continous,,TRUE,,,
 time_other,Time spent on other activities,continous,,TRUE,,,
 ht_observe,,binary,HT observe,TRUE,,,
-<<<<<<< HEAD
-tch_reward,,binary,Teacher reward,TRUE,,,
-basic_qualification,Teacher has basic qualifications,binary,Has basic qualifications,TRUE,,,
-above_high_qualification,Teacher has above high-school qualifications,binary,Has above high-school qualifications,TRUE,,,
-tch_trained,Teacher trained,binary,Is trained,TRUE,,,
-unpaid_claim_yes,teacher has unpaid claim including salary delays,binary,Unpaid claims,TRUE,,,
-salary_delay_yes,Salary has been delayed,binary,Delay Salary,TRUE,,,
-num_salary_delay,number of salary delays in the past 12 months,continous,,TRUE,,,
-in_service_train,Received in-service training,binary,Received training,TRUE,,,
-=======
 tch_reward,,binary,has been rewarded,TRUE,,,
 basic_qualification,Teacher has basic qualifications,binary,has basic qualifications,TRUE,,,
 above_high_qualification,Teacher has above high-school qualifications,binary,has above high-school qualifications,TRUE,,,
@@ -28,19 +14,12 @@ unpaid_claim_yes,teacher has unpaid claim including salary delays,binary,has unp
 salary_delay_yes,Salary has been delayed,binary,salary has been delayed in the past 12 months,TRUE,,,
 num_salary_delay,number of salary delays in the past 12 months,continous,,TRUE,,,
 in_service_train,Received in-service training,binary,has received in-service training,TRUE,,,
->>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
 EnglishTotal_Percent,English percent score,continous,,TRUE,,,
 MathsTotal_Percent,Math percent score,continous,,TRUE,,,
 ChichewaTotal_Percent,Chichewa percent score,continous,,TRUE,,,
 Total_score_percent_tch,Total percent score,continous,,TRUE,,,
 ENG_hard_item_percent,English hard item percent score,continous,,TRUE,,,
 MATH_hard_item_percent,Math hard item percent score,continous,,TRUE,,,
-<<<<<<< HEAD
-tch_female,Teacher female,binary,Is female,TRUE,,,
-ODL,Highest level of teacher training = ODL,binary,ODL highest level,TRUE,,,
-IPTE,Highest level of teacher training = IPTE,binary,IPTE highest level,TRUE,,,
-=======
 tch_female,Teacher female,binary,is female,TRUE,,,
 ODL,Highest level of teacher training = ODL,binary,highest level of teacher training is ODL,TRUE,,,
 IPTE,Highest level of teacher training = IPTE,binary,highest level of teacher training is IPTE,TRUE,,,
->>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c

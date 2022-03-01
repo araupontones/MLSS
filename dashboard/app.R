@@ -1,5 +1,4 @@
 library(shiny)
-
 library(dplyr)
 library(tidyr)
 library(stringr)
@@ -9,7 +8,6 @@ library(reactable)
 library(reactablefmtr)
 
 
-#Andres Arau
 #extrafont::loadfonts(device = 'win')
 
 project_path <- define_project_dir(repoName="MLSS")
@@ -19,8 +17,6 @@ dirLookUps <- file.path(dirData, "reference/lookups")
 dirStyles <- file.path(project_path, "html/css")
 
 
-
-
 school_data <- rio::import(file.path(dirImports, "school.rds"))
 teacher_data <- rio::import(file.path(dirImports, "teacher.rds"))
 student_data <- rio::import(file.path(dirImports, "student.rds"))
@@ -28,7 +24,6 @@ student_data <- rio::import(file.path(dirImports, "student.rds"))
 
 
 ui <- fluidPage(
-
    uiLinks("links"),
   navbarPage(
     tags$a("Malawi Longitudinal School Survey", href = "http://198.211.96.106/", target = "_blank",class = 'brand'),

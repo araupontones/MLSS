@@ -1,18 +1,4 @@
 library(shiny)
-<<<<<<< HEAD
-
-ui <- fluidPage(
-  selectInput("var", "Variable", names(mtcars)),
-  numericInput("bins", "bins", 10, min = 1),
-  plotOutput("hist")
-)
-server <- function(input, output, session) {
-  data <- reactive(mtcars[[input$var]])
-  output$hist <- renderPlot({
-    hist(data(), breaks = input$bins, main = input$var)
-  }, res = 96)
-}
-=======
 library(dplyr)
 library(tidyr)
 library(stringr)
@@ -106,6 +92,5 @@ server <- function(input, output, session) {
 
   
   }
->>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
 
 shinyApp(ui, server)

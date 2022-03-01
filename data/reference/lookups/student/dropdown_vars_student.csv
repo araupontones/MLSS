@@ -1,32 +1,3 @@
-<<<<<<< HEAD
-var_name,label,dropdown,type,label_fill,Name dropdown,Description
-English_klg_score,English Knowledge score,TRUE,continous,,,
-Math_klg_score,Math Knowledge score,TRUE,continous,,,
-Chi_klg_score,Chichewa Knowledge score,TRUE,continous,,,
-female,"Female child (=1, 0 otherwise)",TRUE,binary,Female,,
-stu_age,stu_age,TRUE,continous,,,
-stu_age_above_m,age is above the median age,TRUE,binary,Age is above median,,
-Chewa_speaking,Which language (s) do you usually speak at home?:Chewa,TRUE,binary,Speaks Chewa,,
-above_SES_40th,asset_index>SES_40th,TRUE,binary,Asset Index > 40th,,
-above_SES_60th,asset_index>SES_60th,TRUE,binary,Asset Index > 60th,,
-absent_last_week_yes,absent from school on any day last week (y or n),TRUE,binary,Absent school last week,,
-hw_help_yes,student got homework last week (y or n),TRUE,binary,Got homework last week,,
-stu_repeat_before,whether students repeated grades before (y or n),TRUE,binary,Repeated grades before,,
-a34,34. Which standard are you currently in?,TRUE,categorical,,,
-a47_m1,47_m1. Do you have a school bag?,TRUE,binary,Has a school bag,,
-a47_m2,47_m2. Do you have a uniform?,TRUE,binary,Has a uniform,,
-a47_m3,47_m3. Do you have a notebook/ exercise book/ workbook?,TRUE,binary,Has a notebook,,
-a47_m4,47_m4. Did you get the notebook/ exercise book/ workbook from the school?,TRUE,binary,Got notebook from school,,
-q48,48. Do you do your homework?,TRUE,categorical,,,
-q49,49. How much time do you usually spend at home every day doing homework?,TRUE,continous,,,
-q50,50. Who helps you the most with homework at home?,TRUE,categorical,,,
-a51,"51. Last week, were you absent from school on any day?",TRUE,binary,Absent from school last week,,
-a52,52. Why were you absent?,TRUE,categorical,,,
-q53,"53. Last week, were you absent from school on all days?",TRUE,binary,Absent from school all days last week,,
-live_with_no_parent,live with neither mom nor dad,TRUE,binary,Doesn't live with mom and dad,,
-mom_literate,mom literate (y or n),TRUE,binary,Mother is literated,,
-dad_literate,dad literate (y or n),TRUE,binary,Father is literated,,
-=======
 var_name,label,dropdown,type,label_yes,Name dropdown,Description
 English_klg_score,English Knowledge score,TRUE,continous,,,
 Math_klg_score,Math Knowledge score,TRUE,continous,,,
@@ -54,4 +25,3 @@ q53,"53. Last week, were you absent from school on all days?",TRUE,binary,was ab
 live_with_no_parent,live with neither mom nor dad,TRUE,binary,doesn't live with mom and dad,,
 mom_literate,mom literate (y or n),TRUE,binary,mother is literated,,
 dad_literate,dad literate (y or n),TRUE,binary,father is literated,,
->>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
