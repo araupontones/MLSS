@@ -20,6 +20,7 @@ library(reactable)
 library(reactablefmtr)
 
 
+#Andres Arau
 #extrafont::loadfonts(device = 'win')
 >>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
 
