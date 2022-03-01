@@ -6,6 +6,7 @@ library(ggplot2)
 library(shinyjs)
 library(reactable)
 library(reactablefmtr)
+library(glue)
 
 
 #extrafont::loadfonts(device = 'win')
