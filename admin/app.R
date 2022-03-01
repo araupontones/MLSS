@@ -8,7 +8,11 @@ library(tidyr)
 library(shinymanager)
 library(rmarkdown)
 #to allow larger files from users
+<<<<<<< HEAD
 options(shiny.maxRequestSize = 10 * 1024^2)
+=======
+options(shiny.maxRequestSize = 30 * 1024^2)
+>>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
 
 #load functions  
 #gmdacr::load_functions("functions")
@@ -26,6 +30,7 @@ dirReference <- file.path(dirData,'reference')
 dirLookUps <- file.path(dirReference,"lookups")
 
 #Useful vectors
+<<<<<<< HEAD
 rounds <- c("Baseline", "Midline", "Endline")
 survey_levels <- c("school", "teacher", "student")
 
@@ -41,10 +46,18 @@ credentials <- data.frame(
   for single ‘Shiny’ applications.",
   stringsAsFactors = FALSE
 )
+=======
+rounds <- c("Round 1", "Round 2", "Round 3", "Round 4", "Round 5", "Round 6")
+survey_levels <- c("school", "teacher", "student")
+
+
+
+>>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
 
 
 #UI ---------------------------------------------------------------------------
 ui <- fluidPage(
+<<<<<<< HEAD
   #enable shiny feedbacks
   tags$head(
       tags$link(rel = 'stylesheet', href = 'styleAdmin.css')
@@ -103,12 +116,29 @@ ui <- fluidPage(
                         "administrator", target ="_top" )
                  )
            )
+=======
+  
+  
+  uiHead('header'),
+  
+  
+  uiForm('form'),
+  
+  #Table to inform the users of the existing files
+  uiOutput(outputId = "head_summary"),
+  tableOutput("table_summary"),
+  
+ #logos and footer banner
+   uiFooter("footer")
+ 
+>>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
   
   
 )
 
 
 #secure the app
+<<<<<<< HEAD
 ui <- secure_app(ui,
                  # add image on top ?
                  tags_top = 
@@ -127,15 +157,24 @@ ui <- secure_app(ui,
                      )
                    )
                  ))
+=======
+ui <- uiLogin(ui)
+
+>>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
 
 #Server ------------------------------------------------------------------------
 server <- function(input, output, session) {
   
+<<<<<<< HEAD
   
+=======
+  #check credentials of user
+>>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
   res_auth <- secure_server(
     check_credentials = check_credentials(credentials)
   )
   
+<<<<<<< HEAD
   #User inputs (validate button and select round) ------------------------------
   
   output$select_round <- renderUI({
@@ -221,15 +260,38 @@ server <- function(input, output, session) {
     )
     
     showModal(modal_confirm)
+=======
+
+  #Add brains to the form (enable rounds and button)
+  enablingConditionsForm("form", rounds)
+  inputs <- inputsForm("form")
+  
+  
+  #check if data exists (outputs: message, replace, create, dir_uploads)
+  confirmDirs <- confirmDirsExist('form', inputs,dirImports )
+  #ask user if want to continue with the upload (outputs: input$cancel and input$ok)
+  validateForm('form', inputs, rounds, confirmDirs)
+ 
+  
+  
+  observeEvent(confirmDirs$dir_uploads(),{
+
+    print(confirmDirs$dir_uploads())
+>>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
   })
   
   
   
+<<<<<<< HEAD
   #4. stop uploading if user cancels confirmation
+=======
+  #stop uploading if user cancels confirmation*********************************
+>>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
   observeEvent(input$cancel, {
     removeModal()
   })
   
+<<<<<<< HEAD
   #5. Continue if user says OK to confirmation message
   observeEvent(input$ok, {
     removeModal()
@@ -396,6 +458,40 @@ server <- function(input, output, session) {
     
     #Append versions
     showNotification(paste("Appending rounds"), type = "message")
+=======
+  
+  #Upload data if user confirms
+  observeEvent(input$ok, {
+    removeModal()
+    
+    #check that files in .zip are 3 (output: file_num, tempfiles, temDir)-------
+    file_info <- countZipFiles('form', inputs)
+    
+    observeEvent(file_info$tempDir(),{
+
+      print(file_info$tempDir())
+    })
+
+    
+    req(file_info$file_num() == 3)
+    
+    #check name of files (school, student, teacher)-----------------------------
+    files_ok <- checkNameFiles('form', file_info, survey_levels)
+    
+    req(files_ok() == "OK")
+    
+    #check variable names output(vars_school, teacher_vars, student_vars)------
+    vars_ok <- checkVarNames('form', file_info, dirLookUps)
+    
+    
+    req(vars_ok$student_vars() == "OK")
+    
+    #save and append data ------------------------------------------------------
+    saveData("form", confirmDirs, vars_ok, inputs, survey_levels, dirLookUps)
+    
+    showNotification(paste("Appending rounds"), type = "message")
+    
+>>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
     append_rounds <- lapply(survey_levels, append_versions, dir_imports = dirImports)
     
     #say thanks to the user
@@ -412,10 +508,22 @@ server <- function(input, output, session) {
     
     
     
+<<<<<<< HEAD
     
   })
   
   
+=======
+  })
+  
+  
+  
+  
+  
+  
+  
+  
+>>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
   #close error messages -------------------------------------------------------
   observeEvent(input$close_error_names,{
     removeModal()

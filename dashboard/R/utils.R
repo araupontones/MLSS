@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
 define_project_dir <- function(repoName = "MLSS"){
   
   if(Sys.info()["sysname"] == "Windows"){
@@ -16,6 +19,7 @@ define_project_dir <- function(repoName = "MLSS"){
   
   return(project_path)
   
+<<<<<<< HEAD
 }
 
 
@@ -34,3 +38,6 @@ radioButtonsUser <- function(input_division){
   
   return(botones)
 }
+=======
+}
+>>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c

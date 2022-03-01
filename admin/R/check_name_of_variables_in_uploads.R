@@ -5,6 +5,7 @@
 #'@return a character: OK if variables are in uploads, a character with all
 #'the variables missing in the uploads
 
+<<<<<<< HEAD
 check_var_names <- function(dir_imports = "data/imports/Baseline",
                             dir_lookups = "data/reference/lookups",
                             dir_tempo, 
@@ -17,6 +18,24 @@ check_var_names <- function(dir_imports = "data/imports/Baseline",
   print(file.path(dir_lookups, nivel,  glue::glue("target_vars_{nivel}.csv")))
   data_look_up <- import(file.path(dir_lookups, nivel,  glue::glue("target_vars_{nivel}.csv")))
   #data_reference <- import(file.path(dir_reference, glue("{nivel}_vars.csv")))
+=======
+check_var_names <- function(#dir_imports = "data/imports/Baseline",
+                            #dir_zips,
+                            dir_lookups = "data/reference/lookups",
+                            tempfiles, 
+                            nivel = "school"
+                            ){
+  
+  #temp file
+  tempofile <- tempfiles[which(str_detect(tempfiles, nivel))]
+    
+    
+
+  
+  data_upload <- rio::import(tempofile)
+  data_look_up <- import(file.path(dir_lookups, nivel,  glue::glue("target_vars_{nivel}.csv")))
+  
+>>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
   
   
   #names of reference vars
@@ -39,6 +58,7 @@ check_var_names <- function(dir_imports = "data/imports/Baseline",
     
   } else {
     
+<<<<<<< HEAD
     #delete stata file
     unlink(file.path(dir_imports, glue("{nivel}.dta")))
     
@@ -48,6 +68,17 @@ check_var_names <- function(dir_imports = "data/imports/Baseline",
       select(all_of(reference_vars)) %>%
       mutate(round = round) %>%
       export(.,file.path(dir_tempo, glue("{nivel}.rds")))
+=======
+      #delete tempfile
+    unlink(tempofile)
+    # 
+    # 
+    # #crete temporal rds (only keep if checking protocol is OK)
+    # data_upload %>%
+    #   select(all_of(reference_vars)) %>%
+    #   mutate(round = round) %>%
+    #   export(.,file.path(dir_tempo, glue("{nivel}.rds")))
+>>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
     
     return("OK")
   }
