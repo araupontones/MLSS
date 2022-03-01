@@ -110,9 +110,12 @@ library(tidyr)
 library(shinymanager)
 library(shinyccloaders)
 library(plyr)
+<<<<<<< HEAD
+=======
 library(reactable)
 library(reactablefmtr)
 library(scales)
+>>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
 ```
 
 9. Assign admin credentials to shiny user
@@ -187,8 +190,11 @@ To ease and motivate a collaborative environment in which different stakeholders
 
 23. Ask world bank mail of administrator
 
+<<<<<<< HEAD
+=======
 24. Change colors of bars in table
 
+>>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
 
 
 

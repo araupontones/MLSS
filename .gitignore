@@ -2,5 +2,8 @@
 .Rhistory
 .RData
 .Ruserdata
+<<<<<<< HEAD
+=======
 
 find . -size +100M | cat >> .gitignore
+>>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c

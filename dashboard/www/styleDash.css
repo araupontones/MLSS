@@ -53,6 +53,8 @@ body{
     border-color: #212529;
   }
   
+<<<<<<< HEAD
+=======
 /*header* "#053657", '#0071bc', "#A3DAFF"*/
 
 .compare-text{
@@ -67,6 +69,7 @@ body{
 .no{
   color: #009FDA;
 }
+>>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
 /*Mobile-------------------------------------------------------------------*/
   @media (max-width:768px){
     .navbar-nav{

@@ -1,9 +1,38 @@
+<<<<<<< HEAD
+var_name,label,format,Dashboard,dropdown,Filter,type,label_fill,Name dropdown,Description
+=======
 var_name,label,format,Dashboard,dropdown,Filter,type,label_yes,Name dropdown,Description
+>>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
 school_id,School ID,%8.0g,TRUE,FALSE,,id,,,
 student_id,Student ID:,%8.0g,TRUE,FALSE,,id,,,
 English_klg_score,English Knowledge score,%9.0g,TRUE,TRUE,,continous,,,
 Math_klg_score,Math Knowledge score,%9.0g,TRUE,TRUE,,continous,,,
 Chi_klg_score,Chichewa Knowledge score,%9.0g,TRUE,TRUE,,continous,,,
+<<<<<<< HEAD
+female,"Female child (=1, 0 otherwise)",%9.0g,TRUE,TRUE,TRUE,binary,Female,,
+stu_age,stu_age,%9.0g,TRUE,TRUE,,continous,,,
+stu_age_above_m,age is above the median age,%9.0g,TRUE,TRUE,TRUE,binary,Age is above median,,
+Chewa_speaking,Which language (s) do you usually speak at home?:Chewa,%9.0g,TRUE,TRUE,TRUE,binary,Speaks Chewa,,
+above_SES_40th,asset_index>SES_40th,%9.0g,TRUE,TRUE,TRUE,binary,Asset Index > 40th,,
+above_SES_60th,asset_index>SES_60th,%9.0g,TRUE,TRUE,TRUE,binary,Asset Index > 60th,,
+absent_last_week_yes,absent from school on any day last week (y or n),%9.0g,TRUE,TRUE,,binary,Absent school last week,,
+hw_help_yes,student got homework last week (y or n),%9.0g,TRUE,TRUE,,binary,Got homework last week,,
+stu_repeat_before,whether students repeated grades before (y or n),%9.0g,TRUE,TRUE,,binary,Repeated grades before,,
+a34,34. Which standard are you currently in?,%10.0g,TRUE,TRUE,,categorical,,,
+a47_m1,47_m1. Do you have a school bag?,%8.0g,TRUE,TRUE,,binary,Has a school bag,,
+a47_m2,47_m2. Do you have a uniform?,%8.0g,TRUE,TRUE,,binary,Has a uniform,,
+a47_m3,47_m3. Do you have a notebook/ exercise book/ workbook?,%8.0g,TRUE,TRUE,,binary,Has a notebook,,
+a47_m4,47_m4. Did you get the notebook/ exercise book/ workbook from the school?,%8.0g,TRUE,TRUE,,binary,Got notebook from school,,
+q48,48. Do you do your homework?,%23.0g,TRUE,TRUE,,categorical,,,
+q49,49. How much time do you usually spend at home every day doing homework?,%8.0g,TRUE,TRUE,,continous,,,
+q50,50. Who helps you the most with homework at home?,%14.0g,TRUE,TRUE,,categorical,,,
+a51,"51. Last week, were you absent from school on any day?",%8.0g,TRUE,TRUE,,binary,Absent from school last week,,
+a52,52. Why were you absent?,%31.0g,TRUE,TRUE,,categorical,,,
+q53,"53. Last week, were you absent from school on all days?",%8.0g,TRUE,TRUE,,binary,Absent from school all days last week,,
+live_with_no_parent,live with neither mom nor dad,%9.0g,TRUE,TRUE,,binary,Doesn't live with mom and dad,,
+mom_literate,mom literate (y or n),%9.0g,TRUE,TRUE,,binary,Mother is literated,,
+dad_literate,dad literate (y or n),%9.0g,TRUE,TRUE,,binary,Father is literated,,
+=======
 female,"Female child (=1, 0 otherwise)",%9.0g,TRUE,TRUE,TRUE,binary,is female,,
 stu_age,stu_age,%9.0g,TRUE,TRUE,,continous,,,
 stu_age_above_m,age is above the median age,%9.0g,TRUE,TRUE,TRUE,binary,age is above the median,,
@@ -27,5 +56,6 @@ q53,"53. Last week, were you absent from school on all days?",%8.0g,TRUE,TRUE,,b
 live_with_no_parent,live with neither mom nor dad,%9.0g,TRUE,TRUE,,binary,doesn't live with mom and dad,,
 mom_literate,mom literate (y or n),%9.0g,TRUE,TRUE,,binary,mother is literated,,
 dad_literate,dad literate (y or n),%9.0g,TRUE,TRUE,,binary,father is literated,,
+>>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
 division_nam,Division_nam,%16s,TRUE,FALSE,TRUE,id,,,
 district_nam,District_nam,%19s,TRUE,FALSE,TRUE,id,,,

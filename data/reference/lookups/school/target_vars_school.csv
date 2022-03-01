@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+var_name,label,format,Dashboard,type,label_fill,dropdown,Filter,Name dropdown,Description
+=======
 var_name,label,format,Dashboard,type,label_yes,dropdown,Filter,Name dropdown,Description
+>>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
 school_id,School ID,%10.0g,TRUE,id,,FALSE,,,
 school_nam,School Name,%9s,TRUE,id,,FALSE,,,
 division_num,Division_num,%10.0g,TRUE,id,,FALSE,TRUE,,
@@ -56,7 +60,11 @@ ptxt_ratio_upper_eng,,%9.0g,TRUE,continous,,TRUE,,,
 ptxt_ratio_upper_math,,%9.0g,TRUE,continous,,TRUE,,,
 ptxt_ratio_upper_chi,,%9.0g,TRUE,continous,,TRUE,,,
 ptxt_ratio_tot,Pupil-Textbook Ratio,%9.0g,TRUE,continous,,TRUE,,,
+<<<<<<< HEAD
+co_edu_sch,coeducational school gender category (y or n),%9.0g,TRUE,binary,Coeducational School Gender,TRUE,,,
+=======
 co_edu_sch,coeducational school gender category (y or n),%9.0g,TRUE,binary,is coeducational school gender,TRUE,,,
+>>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
 public,"schoolâ€™s ownership type: Government, Non-religious NGO, Religious Agency (specif",%9.0g,TRUE,continous,,TRUE,,,
 rmdl_class,131_m1: Does the school offer remedial classes for poor performing students?,%8.0g,TRUE,continous,,TRUE,,,
 rmdl_class_tot,,%9.0g,TRUE,continous,,TRUE,,,
@@ -129,26 +137,45 @@ abs_rate_std4,Absence Rate in std 4 (HC),%9.0g,TRUE,continous,,TRUE,,,
 abs_rate_std5,Absence Rate in std 5 (HC),%9.0g,TRUE,continous,,TRUE,,,
 abs_rate_std6,Absence Rate in std 6 (HC),%9.0g,TRUE,continous,,TRUE,,,
 abs_rate_std7,Absence Rate in std 7 (HC),%9.0g,TRUE,continous,,TRUE,,,
+<<<<<<< HEAD
+electricity_yes,School has electricity (y or n),%9.0g,TRUE,binary,Has Electricity,TRUE,,,
+num_water_points,Number of Water Points,%9.0g,TRUE,continous,,TRUE,,,
+quality_water,quality of drinking water spots,%9.0g,TRUE,continous,,TRUE,,,
+electricity_yes_sfo,Electricity,%9.0g,TRUE,binary,Has Electricity,TRUE,,,
+=======
 electricity_yes,School has electricity (y or n),%9.0g,TRUE,binary,has electricity,TRUE,,,
 num_water_points,Number of Water Points,%9.0g,TRUE,continous,,TRUE,,,
 quality_water,quality of drinking water spots,%9.0g,TRUE,continous,,TRUE,,,
 electricity_yes_sfo,Electricity,%9.0g,TRUE,binary,has electricity,TRUE,,,
+>>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
 enrol_pupil_toilet_ratio_tot,total pupil enrolment / total number of functional toilets for boys and girls,%9.0g,TRUE,continous,,TRUE,,,
 enrol_num_func_toilet_per_stu,total number of functional toilets for boys and girls / total pupil enrolment,%9.0g,TRUE,continous,,TRUE,,,
 enrol_pupil_toilet_ratio_girl,total female enrolment / number of toilets for girls available,%9.0g,TRUE,continous,,TRUE,,,
 enrol_pupil_toilet_ratio_boy,total male enrolment / number of toilets for boys available,%9.0g,TRUE,continous,,TRUE,,,
+<<<<<<< HEAD
+electricity,electricity line to the school (y or n),%9.0g,TRUE,binary,Has Electricity Line,TRUE,,,
+=======
 electricity,electricity line to the school (y or n),%9.0g,TRUE,binary,has electricity line,TRUE,,,
+>>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
 num_drink_water_spots,,%9.0g,TRUE,continous,,TRUE,,,
 block_condi_complete_bad,school blocks need to be completely rebuilt,%9.0g,TRUE,continous,,TRUE,,,
 block_condi_part_major,school block' major parts need to be reparied,%9.0g,TRUE,continous,,TRUE,,,
 block_condi_part_minor,school block' minor parts need to be reparied,%9.0g,TRUE,continous,,TRUE,,,
 block_condi_good,school block is in a good condition,%9.0g,TRUE,continous,,TRUE,,,
 tch_house_available,school has teacher housing (based on SFO),%9.0g,TRUE,continous,,TRUE,,,
+<<<<<<< HEAD
+office_yes,school has ht/dht/teacher/offices (y or n),%9.0g,TRUE,binary,Has Office,TRUE,,,
+staff_room_yes,school has staff rooms (y or n),%9.0g,TRUE,binary,Has Staff Room,TRUE,,,
+lib_yes,school has library rooms (y or n),%9.0g,TRUE,binary,Has Library Room,TRUE,,,
+lab_yes,school has laboratory rooms (y or n),%9.0g,TRUE,binary,Has Laboratory,TRUE,,,
+storage_room_yes,school has storage rooms  (y or n),%9.0g,TRUE,binary,Has Storage Room,TRUE,,,
+=======
 office_yes,school has ht/dht/teacher/offices (y or n),%9.0g,TRUE,binary,has ht/dht/teacher offices,TRUE,,,
 staff_room_yes,school has staff rooms (y or n),%9.0g,TRUE,binary,has staff room,TRUE,,,
 lib_yes,school has library rooms (y or n),%9.0g,TRUE,binary,has library room,TRUE,,,
 lab_yes,school has laboratory rooms (y or n),%9.0g,TRUE,binary,has laboratory,TRUE,,,
 storage_room_yes,school has storage rooms  (y or n),%9.0g,TRUE,binary,has storage room,TRUE,,,
+>>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
 wall_yes,(mean) wall_yes,%9.0g,TRUE,continous,,TRUE,,,
 wall_fine,(mean) wall_fine,%9.0g,TRUE,continous,,TRUE,,,
 wall_paint,(mean) wall_paint,%9.0g,TRUE,continous,,TRUE,,,

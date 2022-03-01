@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+var_name,label,type,label_fill,dropdown,Name dropdown,Description
+=======
 var_name,label,type,label_yes,dropdown,Name dropdown,Description
+>>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
 enrol_std1,Enrollment (std 1),continous,,TRUE,,
 enrol_std2,Enrollment (std 2),continous,,TRUE,,
 enrol_std3,Enrollment (std 3),continous,,TRUE,,
@@ -50,7 +54,11 @@ ptxt_ratio_upper_eng,,continous,,TRUE,,
 ptxt_ratio_upper_math,,continous,,TRUE,,
 ptxt_ratio_upper_chi,,continous,,TRUE,,
 ptxt_ratio_tot,Pupil-Textbook Ratio,continous,,TRUE,,
+<<<<<<< HEAD
+co_edu_sch,coeducational school gender category (y or n),binary,Coeducational School Gender,TRUE,,
+=======
 co_edu_sch,coeducational school gender category (y or n),binary,is coeducational school gender,TRUE,,
+>>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
 public,"schoolâ€™s ownership type: Government, Non-religious NGO, Religious Agency (specif",continous,,TRUE,,
 rmdl_class,131_m1: Does the school offer remedial classes for poor performing students?,continous,,TRUE,,
 rmdl_class_tot,,continous,,TRUE,,
@@ -123,26 +131,45 @@ abs_rate_std4,Absence Rate in std 4 (HC),continous,,TRUE,,
 abs_rate_std5,Absence Rate in std 5 (HC),continous,,TRUE,,
 abs_rate_std6,Absence Rate in std 6 (HC),continous,,TRUE,,
 abs_rate_std7,Absence Rate in std 7 (HC),continous,,TRUE,,
+<<<<<<< HEAD
+electricity_yes,School has electricity (y or n),binary,Has Electricity,TRUE,,
+num_water_points,Number of Water Points,continous,,TRUE,,
+quality_water,quality of drinking water spots,continous,,TRUE,,
+electricity_yes_sfo,Electricity,binary,Has Electricity,TRUE,,
+=======
 electricity_yes,School has electricity (y or n),binary,has electricity,TRUE,,
 num_water_points,Number of Water Points,continous,,TRUE,,
 quality_water,quality of drinking water spots,continous,,TRUE,,
 electricity_yes_sfo,Electricity,binary,has electricity,TRUE,,
+>>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
 enrol_pupil_toilet_ratio_tot,total pupil enrolment / total number of functional toilets for boys and girls,continous,,TRUE,,
 enrol_num_func_toilet_per_stu,total number of functional toilets for boys and girls / total pupil enrolment,continous,,TRUE,,
 enrol_pupil_toilet_ratio_girl,total female enrolment / number of toilets for girls available,continous,,TRUE,,
 enrol_pupil_toilet_ratio_boy,total male enrolment / number of toilets for boys available,continous,,TRUE,,
+<<<<<<< HEAD
+electricity,electricity line to the school (y or n),binary,Has Electricity Line,TRUE,,
+=======
 electricity,electricity line to the school (y or n),binary,has electricity line,TRUE,,
+>>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
 num_drink_water_spots,,continous,,TRUE,,
 block_condi_complete_bad,school blocks need to be completely rebuilt,continous,,TRUE,,
 block_condi_part_major,school block' major parts need to be reparied,continous,,TRUE,,
 block_condi_part_minor,school block' minor parts need to be reparied,continous,,TRUE,,
 block_condi_good,school block is in a good condition,continous,,TRUE,,
 tch_house_available,school has teacher housing (based on SFO),continous,,TRUE,,
+<<<<<<< HEAD
+office_yes,school has ht/dht/teacher/offices (y or n),binary,Has Office,TRUE,,
+staff_room_yes,school has staff rooms (y or n),binary,Has Staff Room,TRUE,,
+lib_yes,school has library rooms (y or n),binary,Has Library Room,TRUE,,
+lab_yes,school has laboratory rooms (y or n),binary,Has Laboratory,TRUE,,
+storage_room_yes,school has storage rooms  (y or n),binary,Has Storage Room,TRUE,,
+=======
 office_yes,school has ht/dht/teacher/offices (y or n),binary,has ht/dht/teacher offices,TRUE,,
 staff_room_yes,school has staff rooms (y or n),binary,has staff room,TRUE,,
 lib_yes,school has library rooms (y or n),binary,has library room,TRUE,,
 lab_yes,school has laboratory rooms (y or n),binary,has laboratory,TRUE,,
 storage_room_yes,school has storage rooms  (y or n),binary,has storage room,TRUE,,
+>>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
 wall_yes,(mean) wall_yes,continous,,TRUE,,
 wall_fine,(mean) wall_fine,continous,,TRUE,,
 wall_paint,(mean) wall_paint,continous,,TRUE,,
