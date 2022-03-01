@@ -8,6 +8,7 @@ library(reactable)
 library(reactablefmtr)
 
 
+#Andres Arau
 #extrafont::loadfonts(device = 'win')
 
 project_path <- define_project_dir(repoName="MLSS")
