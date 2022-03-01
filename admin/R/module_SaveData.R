@@ -56,7 +56,7 @@ saveData <- function(id, confirmDirs, vars_ok,inputs, survey_levels, dirLookUps)
             group_by(school_id) %>%
             slice(1) %>%
             ungroup() %>%
-            select(school_id, division_nam, school_nam)
+            select(school_id, division_nam, district_nam)
           
           
           data_upload <- data_upload %>%
