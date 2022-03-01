@@ -9,11 +9,20 @@ append_versions <- function(nivel,
   
   #message(dir_imports)
   
+  #File to find
+  find_this <- glue::glue("{nivel}.rds")
+  
+  #delete existing append versions
+  unlink(file.path(dir_imports, find_this))
+  
   #Define file to look and save
   find_this <- glue::glue("{nivel}.rds")
   
   #list all rounds of this file 
   files <- list.files(dir_imports, recursive = T, full.names = T, pattern =  find_this)
+  
+  
+  
   
   #append all rounds into a single file
   all_rounds <- lapply(files, function(x){rio::import(x)})

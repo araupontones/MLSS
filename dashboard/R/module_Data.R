@@ -95,6 +95,8 @@ serverData <-  function(id, inputs, dirImports ) {
               n = colDef(
                 cell = data_bars(data_user(),
                                  background = "lightgrey",
+                                 fill_color = "black",
+                                 text_color = "white",
                                  number_fmt = scales::number,
                                  text_position = "inside-end")
                 
@@ -119,6 +121,8 @@ serverData <-  function(id, inputs, dirImports ) {
                 cell = data_bars(data_user(),
                                  background = "lightgrey",
                                  number_fmt = scales::number,
+                                 fill_color = "black",
+                                 text_color = "white",
                                  text_position = "inside-end")
                 
               )
