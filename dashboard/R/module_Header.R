@@ -13,7 +13,7 @@ serverHeader <-  function(id, inputs) {
                                      tags$h3(inputs$division()),
                                      tags$h4(inputs$var_label()),
                                      tags$p(class = "compare-text",
-                                            paste0("Wether ", id,"s "), 
+                                            paste0("Wether ", id), 
                                             tags$span(class = "yes",inputs$compare_var_label()),
                                             tags$span(class = "no",  " or not")
                                      )
@@ -38,25 +38,7 @@ serverHeader <-  function(id, inputs) {
       
       text_header()
       
-      # if(inputs$by_other_var()){
-      #   
-      #   tags$div(
-      #     tags$h3(inputs$division()),
-      #     tags$h4(inputs$var_label()),
-      #     tags$p(class = "compare-text",
-      #            paste0("Wether ", id,"s "), 
-      #            tags$span(class = "yes",inputs$compare_var_label()),
-      #            tags$span(class = "no",  " or not")
-      #     )
-      #   )
-      # } else{
-      #   tags$div(
-      #     tags$h3(inputs$division()),
-      #     tags$h4(inputs$var_label())
-      #   )
-      #   
-      # }
-      
+     
       
     })
     

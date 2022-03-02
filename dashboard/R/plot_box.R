@@ -14,7 +14,7 @@ plot_box <- function(database,
     ggplot(aes(y = targetvar,
                x = reorder(.data[[x]],-order)
     )) +
-    geom_boxplot(binaxis='y', stackdir='center', dotsize=1, fill = alpha('#053657', .5)) +
+    geom_boxplot(binaxis='y', stackdir='center', dotsize=1, fill = alpha(color_yes, .5)) +
     #geom_jitter(shape=16, position=position_jitter(0.2))  +
     labs(y =  y_label,
          x = x_label)
@@ -28,3 +28,4 @@ plot_box <- function(database,
   return(plot)
   
 }
+

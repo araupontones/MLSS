@@ -15,13 +15,13 @@ plot_bar  <- function(database,
     labs(y = y_label,
          x = x_label) +
     scale_fill_manual(name = "Round",
-                      values = c(alpha("#053657",.9),
-                                 alpha('#0071bc',.9),
-                                 alpha("#A3DAFF"), .9)
+                      values = alpha(colors_rounds, .9)
                       )+
     theme_MLSS()
   
   return(plot)
   
 }
-  
+ 
+
+         #alpha("#A3DAFF"), .9) 

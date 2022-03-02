@@ -22,7 +22,9 @@ serverData <-  function(id, inputs, dirImports ) {
                                   T ~ "No")) %>%
           group_by_at(c(inputs$group_vars(), "fill")) %>%
           summarise(mean = mean(targetvar, na.rm = T),
-                    n = sum(!is.na(targetvar)), .groups = 'drop')
+                    n = sum(!is.na(targetvar)), .groups = 'drop') %>%
+          mutate(color = if_else(fill =="Yes", color_yes, color_no)) %>%
+          filter(!is.na(fill))
         
         #if user does not want to compare outcomes by characteristics ----------------
       } else {
@@ -74,102 +76,92 @@ serverData <-  function(id, inputs, dirImports ) {
     
     
     
-    my_table <- eventReactive(data_user(),{
-      
-      req(inputs$go(), cancelOutput = T)
+    title_table <- eventReactive(data_user(),{
       
       if(inputs$plot_type()== "Bar Plot"){
         
-        if(inputs$binary_indicator()){
+        title <- tags$div(
+          tags$hr(),
+          tags$h4("Summary table"),
+          tags$br(),
           
-          #if binary
-          reactable(
-            data_user(),
-            bordered = T,
-            defaultPageSize = nrow(data_user()),
-            columns = list(
-              mean = colDef(
-                cell = data_bars(data_user(),
-                                 background = "lightgrey",
-                                 number_fmt = scales::percent,
-                                 text_position = "inside-end")
-                
-              ),
-              n = colDef(
-                cell = data_bars(data_user(),
-                                 background = "lightgrey",
-                                 fill_color = "black",
-                                 text_color = "white",
-                                 number_fmt = scales::number,
-                                 text_position = "inside-end")
-                
-              )
-            )
-          )
-        } else{
-          #if it is not binary
-          reactable(
-            data_user(),
-            bordered = T,
-            defaultPageSize = nrow(data_user()),
-            columns = list(
-              mean = colDef(
-                cell = data_bars(data_user(),
-                                 background = "lightgrey",
-                                 number_fmt = scales::number_format(accuracy = 0.01),
-                                 text_position = "inside-end")
-                
-              ),
-              n = colDef(
-                cell = data_bars(data_user(),
-                                 background = "lightgrey",
-                                 number_fmt = scales::number,
-                                 fill_color = "black",
-                                 text_color = "white",
-                                 text_position = "inside-end")
-                
-              )
-            )
-          )
-          
-        }
+        )
         
-      }
-      
-      # if(inputs$plot_type() != "Bar Plot"){
-      #   
-      #   reactable(
-      #     data_user() %>%
-      #       relocate(division_nam, district_nam, round, targetvar)
-      #     
-      #   )
-      # }
-      #   
-       
-      
-          
+      } else{
         
-      # if(inputs$plot_type() == "Box Plot"){
-      #   
+        title <- tags$h4("")
+      } 
       
-      # } else {
-      #   
-      #   reactable(data_user())
-      # }
-      # 
+      title
+      
+    })
+    #title --------------------------------------------------------------------
+    
+    
+    
+    
+    output$title_table <- renderUI({
+      req(title_table())  
+      
+      
+      
+      title_table()
+      
       
     })
     
     
     
-    # output$table <- renderTable({
-    #   
-    #   #display <- !is.null(input$round) | across_time()
-    #   
-    #   req(data_user(), cancelOutput = T)
-    #   data_user()
-    #   
-    # })
+    #reactive table ------------------------------------------------------------------
+    my_table <- eventReactive(data_user(),{
+      
+      
+      data_table <- data_user()
+      
+      #change names in table
+      names(data_table)[which(names(data_table) == "round")] <- "Round"
+      names(data_table)[which(names(data_table) == "division_nam")] <- "Division"
+      names(data_table)[which(names(data_table) == "district_nam")] <- "District"
+      
+      
+      
+      req(inputs$go(), cancelOutput = T)
+      
+      if(inputs$compare_by_chars() & !inputs$binary_indicator()){
+        
+        
+        reactable_compare(data_table, inputs$compare_var_label(), inputs$var_label(), level = id)
+        
+        
+      } else if(inputs$binary_indicator()) {
+        
+        
+        reactable_bar_binary(data_table, inputs$var_label())
+        
+      } else if(!inputs$binary_indicator()) {
+        
+        
+        reactable_bar(data_table, inputs$var_label())
+        
+      }
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    })
+    
+    
+    
+    
     
     output$table <- renderReactable({
       
@@ -183,6 +175,7 @@ serverData <-  function(id, inputs, dirImports ) {
       
     })
     
+    #return data user to use outside module
     reactive(data_user())
     
   })

@@ -1,4 +1,8 @@
 color_bg <- "white"
+color_yes <- "#002244"
+color_no <- "#009FDA"
+colors_rounds <- c("#053657",'#004370','#00538A',
+                   '#0071bc', '#A3DAFF', '#CDE7F9') # from https://theloop.worldbank.org/colors
   #"#F2F3F6"
 
 theme_MLSS <- function(){

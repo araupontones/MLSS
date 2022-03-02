@@ -18,7 +18,7 @@ plot_compare_outcomes <- function(database,
              width = .7) +
     scale_fill_manual(name = name_fill,
                       breaks = c("Yes", "No"),
-                      values = c(alpha("#002244", .9), alpha("#009FDA", .7))
+                      values = c(alpha(color_yes, .9), alpha(color_no, .7))
                       ) +
     labs(y = y_label,
          x = x_label) +
