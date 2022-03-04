@@ -47,6 +47,10 @@ d) District
 
 The lookup tables are stored in `/data/reference/lookups`. There is a specific directory for each level (school, teacher, student)
 
+**check_varNames_rounds.R**
+Checks that the variable names of the files of the upload files is correct. This script is used to communicate the Task Team about missing variables in their files before importing them into the system. The output is an excel sheet called `/data/missing_vars/missing_vars.xlsx`
+
+
 # Guide to create a server
 
 1. Create a droplet in Digital Ocean
@@ -110,12 +114,10 @@ library(tidyr)
 library(shinymanager)
 library(shinyccloaders)
 library(plyr)
-<<<<<<< HEAD
-=======
 library(reactable)
 library(reactablefmtr)
 library(scales)
->>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
+
 ```
 
 9. Assign admin credentials to shiny user
@@ -173,7 +175,7 @@ To ease and motivate a collaborative environment in which different stakeholders
 
 4. Check with WB for the derived Midline and Endline [pending answer]
 5. Import the Midline and Endline and write a protocol to append the three rounds into a single panel data
-6. Check with WB when more data is expected and how these rounds will be called.
+
 7. Write a users' guide to upload the data (considering all the points in the [Importing Protocol](#importing-backend-protocol))
 8. Customize log in page [shinymanager](https://datastorm-open.github.io/shinymanager/)
 
@@ -185,22 +187,12 @@ To ease and motivate a collaborative environment in which different stakeholders
 
 20. Let the WB know that the teacher data does not have division_nam and district_nam
 
-21. Change labels of fill variables using lookups
 
 
 23. Ask world bank mail of administrator
 
-<<<<<<< HEAD
-=======
-24. Change colors of bars in table
 
->>>>>>> a744f8fdd4c80e6cda7d0b34ac1792b0d300d27c
+24. Create district page
 
 
-
-## things to review
-
-a) error messages
-b) stop if error
-c) reactivity of datasets
 d) reduce size of data (to csv maybe of json possible)

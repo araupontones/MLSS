@@ -4,3 +4,4 @@
 .Ruserdata
 
 find . -size +100M | cat >> .gitignore
+data/missing_vars/.
