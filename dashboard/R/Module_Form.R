@@ -24,7 +24,7 @@ uiForm <- function(id, compare_codes, rounds,dirLookUps,nivel, divisions){
     
     selectInput(NS(id,"round"), "Round", choices = rounds, multiple = T, selected = rounds),
     
-    selectInput(NS(id,"plot_type"), "Plot Type", choices =  c("Bar Plot","Box Plot", "Density Plot")),
+    selectInput(NS(id,"plot_type"), "Plot Type", choices =  c("Line Plot", "Bar Plot","Box Plot", "Density Plot")),
     
     actionButton(NS(id,"go"), "Create Plot",class="btn btn-secondary")
     
@@ -286,10 +286,10 @@ serverForm <-  function(id, inputs, dirLookUps ) {
         
         if(inputs$only_bar()){
           
-          updateSelectInput(session, "plot_type", choices =  c("Bar Plot"))
+          updateSelectInput(session, "plot_type", choices =  c("Line Plot","Bar Plot"))
         } else {
           
-          updateSelectInput(session, "plot_type", choices =  c("Bar Plot","Box Plot", "Density Plot"))
+          updateSelectInput(session, "plot_type", choices =  c("Line Plot","Bar Plot","Box Plot", "Density Plot"))
         }
         
         

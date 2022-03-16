@@ -1,9 +1,16 @@
 color_bg <- "white"
 color_yes <- "#002244"
 color_no <- "#009FDA"
+
+# from https://theloop.worldbank.org/colors
+
+#blue pallete
 colors_rounds <- c("#053657",'#004370','#00538A',
-                   '#0071bc', '#A3DAFF', '#CDE7F9') # from https://theloop.worldbank.org/colors
-  #"#F2F3F6"
+                   '#0071bc', '#A3DAFF', '#CDE7F9')
+
+#colorfull palete
+colors_rounds_rainbow <-c("#00538A",'#296B4D','#AC016D',
+                 '#B12911', '#01707E', '#DF9C02') 
 
 theme_MLSS <- function(){
   
@@ -11,6 +18,7 @@ theme_MLSS <- function(){
         #legend
         legend.position = 'top',
         legend.background = element_rect(fill = color_bg),
+        legend.key = element_rect(fill = NA),
         #legend.title = element_blank(),
         #background
         panel.background = element_rect(fill = color_bg),

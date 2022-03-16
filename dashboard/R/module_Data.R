@@ -23,7 +23,11 @@ serverData <-  function(id, inputs, dirImports ) {
           group_by_at(c(inputs$group_vars(), "fill")) %>%
           summarise(mean = mean(targetvar, na.rm = T),
                     n = sum(!is.na(targetvar)), .groups = 'drop') %>%
-          mutate(color = if_else(fill =="Yes", color_yes, color_no)) %>%
+          mutate(color = if_else(fill =="Yes", color_yes, color_no),
+                 fill = factor(fill,
+                               levels = c("Yes", "No")
+                 )
+                 ) %>%
           filter(!is.na(fill))
         
         #if user does not want to compare outcomes by characteristics ----------------
@@ -50,7 +54,7 @@ serverData <-  function(id, inputs, dirImports ) {
           
         }
         
-        if(inputs$plot_type() == "Bar Plot"){
+        if(inputs$plot_type() %in% c("Bar Plot", "Line Plot")){
           
           data_reactive <- data_reactive %>% 
             group_by_at(inputs$group_vars()) %>%
@@ -78,7 +82,7 @@ serverData <-  function(id, inputs, dirImports ) {
     
     title_table <- eventReactive(data_user(),{
       
-      if(inputs$plot_type()== "Bar Plot"){
+      if(inputs$plot_type() %in% c("Bar Plot", "Line Plot")){
         
         title <- tags$div(
           tags$hr(),
@@ -127,7 +131,10 @@ serverData <-  function(id, inputs, dirImports ) {
       
       req(inputs$go(), cancelOutput = T)
       
-      if(inputs$compare_by_chars() & !inputs$binary_indicator()){
+      if(!inputs$plot_type() %in% c("Bar Plot", "Line Plot")){
+        
+        
+      } else if(inputs$compare_by_chars() & !inputs$binary_indicator()){
         
         
         reactable_compare(data_table, inputs$compare_var_label(), inputs$var_label(), level = id)

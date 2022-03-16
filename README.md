@@ -195,4 +195,7 @@ To ease and motivate a collaborative environment in which different stakeholders
 24. Create district page
 
 
-d) reduce size of data (to csv maybe of json possible)
+
+
+
+

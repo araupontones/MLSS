@@ -1,3 +1,5 @@
+library(dplyr)
+library(tidyr)
 dir_lookups <- "C:/repositaries/1.work/MLSS/data/reference/lookups"
 
 #define parameters
@@ -25,12 +27,12 @@ read_files <- lapply(rounds, function(round){
  list_niveles <- lapply(niveles, function(nivel){
    
    
-   data_look_up <- import(file.path(dir_lookups, nivel,  glue::glue("target_vars_{nivel}.csv"))) %>%
+   data_look_up <- rio::import(file.path(dir_lookups, nivel,  glue::glue("target_vars_{nivel}.csv"))) %>%
      select(var_name, label)
    
    #data imported -----------
    infile <- list.files(db, pattern = glue::glue("{nivel}"), full.names = T)[1]
-   data_upload <- import(infile)
+   data_upload <- rio::import(infile)
    
    print(paste(nivel, (nrow(data_upload))))
    #Compare variable names
@@ -68,7 +70,7 @@ names(read_files) <- rounds
 
 #append rounds
 missing_all_rounds <- do.call(rbind,read_files)
+View(missing_all_rounds)
 
-
-
-export(missing_all_rounds, file.path("data/missing_vars/missing_vars.xlsx"))
+View(missing_all_rounds)
+rio::export(missing_all_rounds, file.path("data/missing_vars/missing_vars.xlsx"), overwrite=T)

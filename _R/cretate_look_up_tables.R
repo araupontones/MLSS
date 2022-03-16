@@ -5,7 +5,7 @@ library(dplyr)
 library(tidyr)
 
 #import school data to get districts and divisions
-school_ref <- rio::import("data/imports/Baseline/school.rds")
+school_ref <- rio::import("data/imports/Round 1/school.rds")
 
 
 #URL of google sheet

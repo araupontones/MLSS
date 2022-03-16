@@ -7,32 +7,42 @@ plotServer <-  function(id, inputs, database ) {
       #bar plots =============================================================
       if(inputs$plot_type() == "Bar Plot"){
         
-        
-        #if user selects to compare by other variable
-        if(inputs$by_other_var()){
+        #if compare across time for Malawi of Province level
+        if(inputs$by_other_var() & inputs$x_var_plot()$across_time){
+          
+          
+          plot <- plot_compare_outcomes_time(database = database(),
+                                             name_fill = inputs$compare_var_label(),
+                                             y_label =  inputs$var_label(),
+                                             level = id,
+                                             plot_type = inputs$plot_type()
+          )
+          
+          #if user selects to compare by other variable but between districts
+        } else if(inputs$by_other_var() & !inputs$x_var_plot()$across_time){
           
           
           plot <- plot_compare_outcomes(database = database(),
                                         x = inputs$display(),
-                                        #x = inputs$x_var_plot()$x,
                                         name_fill = inputs$compare_var(),
                                         y_label =  inputs$var_label(),
                                         x_label = inputs$x_var_plot()$x_lab
           ) +
-           guides(fill = guide_legend(title = 
-                                        paste(str_to_title(id),inputs$compare_var_label()),
-                                      title.position = "top",
-                                      title.hjust = 0.5
-                                      )
-                  )
+            guides(fill = guide_legend(title = 
+                                         paste(str_to_title(id),inputs$compare_var_label()),
+                                       title.position = "top",
+                                       title.hjust = 0.5
+            )
+            )
           
+          #if doesnt want to compare
         } else{
           
           plot <- plot_bar(database = database(),
                            x = inputs$display(),
-                           #x = inputs$x_var_plot()$x,
                            y_label =  inputs$var_label(),
-                           x_label  = inputs$x_var_plot()$x_lab
+                           x_label  = inputs$x_var_plot()$x_lab,
+                           across_time = inputs$x_var_plot()$across_time
           ) +
             theme(legend.title = element_blank())
         }
@@ -40,6 +50,53 @@ plotServer <-  function(id, inputs, database ) {
         
         
       }
+      
+      
+      
+      #Line plots =============================================================
+      
+      
+      if(inputs$plot_type() == "Line Plot"){
+        
+        #if compare across time for Malawi of Province level
+        if(inputs$by_other_var() & inputs$x_var_plot()$across_time){
+          
+          
+          plot <- plot_compare_outcomes_time(database = database(),
+                                             name_fill = inputs$compare_var_label(),
+                                             y_label =  inputs$var_label(),
+                                             level = id,
+                                             plot_type = inputs$plot_type()
+          )
+          
+          #if user selects to compare by other variable but between districts
+        } else if(inputs$by_other_var() & !inputs$x_var_plot()$across_time){
+          
+          
+          plot <- plot_line_compare(database = database(),
+                            display = inputs$display(),
+                            level = id,
+                            legend = inputs$compare_var_label(),
+                            y_label =  inputs$var_label()
+                            )
+                           
+          
+      
+        } else{
+          
+          plot <- plot_line(database(),
+                            display = inputs$display(),
+                            y_label = inputs$var_label())
+          
+          
+        }
+        
+        
+        
+      }
+      
+      
+      
       
       #Box plots =============================================================
       
@@ -49,9 +106,9 @@ plotServer <-  function(id, inputs, database ) {
         plot<-plot_box(database= database(),
                        by_time = inputs$x_var_plot()$across_time,
                        x = inputs$display(),
-                       #x = inputs$x_var_plot()$x,
                        y_label = inputs$var_label(),
-                       x_label =inputs$x_var_plot()$x_lab
+                       x_label =inputs$x_var_plot()$x_lab,
+                       across_time = inputs$x_var_plot()$across_time
         )
         
         
