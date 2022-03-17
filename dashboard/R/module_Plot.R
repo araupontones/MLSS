@@ -126,7 +126,7 @@ plotServer <-  function(id, inputs, database ) {
       }
       
       
-      if(inputs$binary_indicator()){
+      if(inputs$binary_indicator() | inputs$percentage_indicator()){
         
         plot <- plot +
           scale_y_continuous(limits= c(0:1),

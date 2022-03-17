@@ -46,6 +46,7 @@ outputForm <- function(id, dirLookUps){
     
     dropdowns_v <- rio::import(file.path(dirLookUps, id, glue::glue("dropdown_vars_{id}.csv")))
     binary_vars <- dropdowns_v %>% filter(type == "binary")
+    percentage_vars <- dropdowns_v %>% filter(type == "percentage")
     divisions_lkp <- rio::import(file.path(dirLookUps, "divisions.csv"))
     divisions_v <- c("Malawi",divisions_lkp[["division_nam"]])
     
@@ -191,6 +192,7 @@ outputForm <- function(id, dirLookUps){
       
       #enabling conditions
       binary_indicator = reactive({input$indicator} %in% binary_vars$var_name),
+      percentage_indicator = reactive({input$indicator} %in% percentage_vars$var_name),
       compare_by_chars = compare_by_chars,
       compare_var_label = compare_var_label,
       only_bar = only_bar,

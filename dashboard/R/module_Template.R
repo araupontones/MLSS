@@ -14,7 +14,7 @@ uiTemplate <- function(id, dirLookUps, database){
                    uiForm(id, dirLookUps = dirLookUps, rounds = rounds_v, divisions = divisions_v)
                   
                    ),
-      mainPanel(width = 7,
+      mainPanel(width = 8,
                uiOutput(NS(id,"header")),
                 shinycssloaders::withSpinner(plotOutput(NS(id, "plot")), type = 5, color = "black"),
                uiOutput(NS(id,"title_table")),

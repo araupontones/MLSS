@@ -140,7 +140,7 @@ serverData <-  function(id, inputs, dirImports ) {
         reactable_compare(data_table, inputs$compare_var_label(), inputs$var_label(), level = id)
         
         
-      } else if(inputs$binary_indicator()) {
+      } else if(inputs$binary_indicator() | inputs$percentage_indicator()) {
         
         
         reactable_bar_binary(data_table, inputs$var_label())

@@ -55,7 +55,8 @@ create_lookups <- sapply(niveles, function(x){
   #lookup of vars that go in dropdown menu
   dropdown_vars <- target_vars %>%
     filter(dropdown) %>%
-    select(-c(format, Dashboard, Filter))
+    select(-c(format, Dashboard, Filter)) %>%
+    mutate(label = str_to_sentence(label))
 
   rio::export(dropdown_vars, file.path(exdir, glue::glue("dropdown_vars_{x}.csv")))
   
@@ -64,6 +65,8 @@ create_lookups <- sapply(niveles, function(x){
   
 
   })
+
+
 
 # create lookups for divisions, districts, and schools =========================
 
