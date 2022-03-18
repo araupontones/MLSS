@@ -173,19 +173,12 @@ To ease and motivate a collaborative environment in which different stakeholders
 ## Thigs to do
 
 
-4. Check with WB for the derived Midline and Endline [pending answer]
-5. Import the Midline and Endline and write a protocol to append the three rounds into a single panel data
+
+
 
 7. Write a users' guide to upload the data (considering all the points in the [Importing Protocol](#importing-backend-protocol))
 8. Customize log in page [shinymanager](https://datastorm-open.github.io/shinymanager/)
 
-
-11. Ask WB for description of indicators
-
-
-19. Confirm with WB which variables require % labels in Y axis (apart from binary)
-
-20. Let the WB know that the teacher data does not have division_nam and district_nam
 
 
 
@@ -194,8 +187,8 @@ To ease and motivate a collaborative environment in which different stakeholders
 
 24. Create district page
 
-
-
+Switch table to top of chart
+Change line plot when only one round is selected
 
 
 
