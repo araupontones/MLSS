@@ -20,7 +20,7 @@ saveData <- function(id, confirmDirs, vars_ok,inputs, survey_levels, dirLookUps)
     
    
     #create directory for this round
-    observeEvent(saveDir(),{
+    save_file <- eventReactive(saveDir(),{
       
      if(!dir.exists(saveDir())){
        
@@ -69,18 +69,31 @@ saveData <- function(id, confirmDirs, vars_ok,inputs, survey_levels, dirLookUps)
         
         #define exfile
         exfile <- file.path(confirmDirs$dir_uploads(), paste0(nivel,".rds"))
-         rio::export(data_upload, exfile)
+         
+        
 
          #delete temp file
          unlink(tempofile)
+         
+         rio::export(data_upload, exfile)
+        
 
       })
       
       
-      
+     
       
       
     })
+    
+  
+    data_saved <-eventReactive(saveDir(),{
+      
+      "OK"
+      
+    })
+    
+    save_file
    
   })
   

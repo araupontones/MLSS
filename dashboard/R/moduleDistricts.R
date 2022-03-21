@@ -92,7 +92,7 @@ serverDistricts <-  function(id, dirImports ) {
                   Round = colDef(maxWidth = 100),
                   Indicator = colDef(minWidth = 180),
                   value = colDef(maxWidth = 75, name = input$d_district),
-                  N = colDef(maxWidth = 75, align = 'center', name = paste("N", input$d_district, sep = "-")),
+                  N = colDef(maxWidth = 100, align = 'center', name = paste("N", input$d_district, sep = "-")),
                   `National Average` = colDef(align = "right")
                   
                 ),

@@ -5,7 +5,8 @@
 
 
 append_versions <- function(nivel,
-                            dir_imports){
+                            dir_imports,
+                            dir_lkps){
   
   #message(dir_imports)
   
@@ -21,11 +22,19 @@ append_versions <- function(nivel,
   #list all rounds of this file 
   files <- list.files(dir_imports, recursive = T, full.names = T, pattern =  find_this)
   
+  #data_lookup
+  data_look_up <- import(file.path(dir_lkps, nivel,  glue::glue("target_vars_{nivel}.csv")))
   
+  
+  
+  #names of reference vars
+  
+  reference_vars <- data_look_up$var_name
   
   
   #append all rounds into a single file
-  all_rounds <- lapply(files, function(x){rio::import(x)})
+  all_rounds <- lapply(files, function(x){rio::import(x) %>% select(all_of(c(reference_vars, "round", "district_nam", "division_nam")))})
+  
   appended_rounds <- do.call(rbind, all_rounds)
   
   #export file to appended

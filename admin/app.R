@@ -118,14 +118,37 @@ server <- function(input, output, session) {
     
     req(vars_ok$student_vars() == "OK")
     
+    
+    
     #save and append data ------------------------------------------------------
-    saveData("form", confirmDirs, vars_ok, inputs, survey_levels, dirLookUps)
+    save_data <-saveData("form", confirmDirs, vars_ok, inputs, survey_levels, dirLookUps)
     
-    showNotification(paste("Appending rounds"), type = "message")
+    observeEvent(save_data(), {
+      
+      print(save_data())
+    })
     
-    append_rounds <- lapply(survey_levels, append_versions, dir_imports = dirImports)
+    req(!is.null(save_data()))
+    
+    showNotification(paste("Appending rounds"), type = "message", duration = 10)
+    
+    append_rounds <- lapply(survey_levels, append_versions, dir_imports = dirImports, dir_lkps = dirLookUps)
     
     #say thanks to the user
+    req(!is.null(append_rounds))
+    
+    
+    #create table for districts -----------------------------------------------
+    
+    table_districts <- create_district_table (dir_lks = dirLookUps,
+                           dir_imports = dirImports,
+                           exfile_districts = "district.rds")
+    
+    
+    showNotification(paste("Creating table for ditricts"), type = "message", duration = 15)
+    
+    req(!is.null(table_districts))
+    
     modal_success <- modalDialog(
       HTML(paste("Data has been updated succesfully!")),
       title = "Thank you!",
