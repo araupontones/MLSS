@@ -21,7 +21,7 @@ dirStyles <- file.path(project_path, "html/css")
 school_data <- rio::import(file.path(dirImports, "school.rds"))
 teacher_data <- rio::import(file.path(dirImports, "teacher.rds"))
 student_data <- rio::import(file.path(dirImports, "student.rds"))
-
+choices_division <- sort(unique(school_data$division_nam))
 
 
 ui <- fluidPage(
@@ -36,7 +36,7 @@ ui <- fluidPage(
                       dirLookUps,
                       school_data)
              ),
-    tabPanel("Teacher",
+    tabPanel("Teachers",
              uiTemplate("teacher",
                       dirLookUps,
                       teacher_data)
@@ -45,7 +45,10 @@ ui <- fluidPage(
              uiTemplate("student",
                       dirLookUps,
                       student_data)
-             )
+             ),
+    tabPanel("Districts",
+             uiDistricts("district",
+                         choices_division))
   ),
   
  
@@ -99,6 +102,7 @@ server <- function(input, output, session) {
   
 
   
+  serverDistricts("district", dirImports)
 
   
   }
