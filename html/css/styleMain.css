@@ -26,15 +26,20 @@ position: relative;
   font-size: 5rem;
 }
 
+
 /* Intro------------------------------------------------------------------*/
 .container-intro{
-  margin: 50px auto 20px;
-  width: 90%;
+  margin-bottom: 100px;
 
 }
 
+.cover-pic{
+  width: 90%;
+}
+
 .intro{
-  font-size: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
 
 }
 
@@ -46,7 +51,7 @@ position: relative;
 
 /*Footer-----------------------------------------------------------------------*/
 .container-footer{
-  background-color: black;
+  background-color: #3E0B08;
   color:white;
   font-family: 'Roboto', sans-serif;
   margin-top: 40px;

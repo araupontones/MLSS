@@ -33,7 +33,7 @@ plot_bar  <- function(database,
   
   plot <- plot +
     labs(y = y_label,
-         x = x_label) +
+         x = "") +
     scale_fill_manual(name = "Round",
                       values = alpha(colors_rounds, .9)
                       )+

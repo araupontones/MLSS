@@ -11,10 +11,14 @@ uiDistricts <- function(id, choices_division){
       sidebarPanel(width = 3, class = "form",
                    selectInput(NS(id,"d_division"), "Divisions", choices = choices_division),
                    
-                   selectInput(NS(id,"d_district"), "Districts", choices = c("a"))
+                   selectInput(NS(id,"d_district"), "Districts of key MESIP interventions", choices = c("Dowa"))
                    ),
       
       mainPanel(width = 8,
+                tags$p("The MLSS sample is nationally representative at division level. However,
+                       the sample is representative at district level for 12 districts which
+                       were the focus of key MESIP interventions. This section presents 
+                       indicators for those 12 districts."),
                 uiOutput(NS(id,"header_district")),
                 reactableOutput(NS(id,"table_districts"))
                 )
@@ -37,9 +41,11 @@ serverDistricts <-  function(id, dirImports ) {
     #update form ==============================================================
     observeEvent(data_divisions(), {
       
+      
+      
       district_choices <- unique(data_divisions()$district_nam)
       
-      updateSelectInput(session, "d_district", "Districts", choices = district_choices)
+      updateSelectInput(session, "d_district", "Districts of key MESIP interventions", choices = district_choices)
       
       
     })
@@ -91,8 +97,8 @@ serverDistricts <-  function(id, dirImports ) {
                   Level = colDef(maxWidth = 100),
                   Round = colDef(maxWidth = 100),
                   Indicator = colDef(minWidth = 180),
-                  value = colDef(maxWidth = 75, name = input$d_district),
-                  N = colDef(maxWidth = 100, align = 'center', name = paste("N", input$d_district, sep = "-")),
+                  value = colDef(maxWidth = 100, name = input$d_district),
+                  N = colDef(maxWidth = 120, align = 'center', name = paste("N", input$d_district, sep = "-")),
                   `National Average` = colDef(align = "right")
                   
                 ),

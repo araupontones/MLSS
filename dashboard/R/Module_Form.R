@@ -81,9 +81,9 @@ outputForm <- function(id, dirLookUps){
         divs <- divisions_v[-1]
         
       } else if({input$division != "Malawi" & {input$display} == "district_nam"}){
-
+        
         divs <- {input$division}
-
+        
       }
       
       
@@ -297,12 +297,10 @@ serverForm <-  function(id, inputs, dirLookUps ) {
         
       }
       
-      
-      
-      
-      
     })
     
+    
+   
     
   })
   

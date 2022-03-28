@@ -86,7 +86,7 @@ serverData <-  function(id, inputs, dirImports ) {
         
         title <- tags$div(
           tags$hr(),
-          tags$h4("Summary table"),
+          tags$h4("Summary table", class = "text-center" ),
           tags$br(),
           
         )
@@ -120,9 +120,23 @@ serverData <-  function(id, inputs, dirImports ) {
     my_table <- eventReactive(data_user(),{
       
       
-      data_table <- data_user()
+      #remove division nam if districts is selected 
+      names_data <- names(data_user())
+      has_district <- length(which(names_data == "district_nam"))
       
-      #change names in table
+      
+      if(has_district == 1){
+        
+        data_table <- data_user() %>% select(-division_nam)
+      } else {
+        
+        data_table <- data_user()
+      }
+     
+      
+      
+      
+      #change names in table to make table more apealing
       names(data_table)[which(names(data_table) == "round")] <- "Round"
       names(data_table)[which(names(data_table) == "division_nam")] <- "Division"
       names(data_table)[which(names(data_table) == "district_nam")] <- "District"

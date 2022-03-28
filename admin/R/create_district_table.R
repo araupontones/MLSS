@@ -82,6 +82,12 @@ create_district_table <- function(dir_lks,
   
   
   
+  #define mesip districts ----------------------------------------------------
+  
+  mesip_lkp <- rio::import(file.path(dir_lks, "districts_mesip.csv"))
+  districts_mesip <- sort(unique(mesip_lkp$district_nam))
+  print(districts_mesip)
+  
   #Create table for districts ====================================================
   
   #define levels parameters
@@ -180,9 +186,10 @@ create_district_table <- function(dir_lks,
   
   
   names(sum_districts) <- levels
-  district_data <- tibble(do.call(rbind, sum_districts))
+  district_data <- tibble(do.call(rbind, sum_districts)) %>%
+    filter(district_nam %in% districts_mesip)
   
-  rio::export(district_data, exfile_districts)
+  rio::export(district_data, file.path(dir_imports, exfile_districts))
   
 }
   

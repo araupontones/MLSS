@@ -185,9 +185,7 @@ To ease and motivate a collaborative environment in which different stakeholders
 23. Ask world bank mail of administrator
 
 
-24. Create district page
 
-Switch table to top of chart
 Change line plot when only one round is selected
 
 

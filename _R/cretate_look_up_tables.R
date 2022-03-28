@@ -5,7 +5,7 @@ library(dplyr)
 library(tidyr)
 
 #import school data to get districts and divisions
-school_ref <- rio::import("data/imports/Round 1/school.rds")
+school_ref <- rio::import("data/imports/school.rds")
 
 
 #URL of google sheet
@@ -14,6 +14,10 @@ url_gsh <- "https://docs.google.com/spreadsheets/d/1S2X-fXJ0hb5r0m5JUury7I7Yqg0I
 
 dir_lookups = "data/reference/lookups"
 niveles <- c("school", "teacher", "student")
+
+districts_mesip <- c("Chikwawa", "Dedza", "Kasungu", "Lilongwe Rural West", 
+                     "Machinga", "Mangochi", "Mzimba South", "Thyolo", "Dowa", 
+                     "Mulanje", "Nkhotakota", "Rumphi")
 
 
 #create directory for each level (schol, teacher, students)
@@ -67,6 +71,19 @@ create_lookups <- sapply(niveles, function(x){
   })
 
 
+
+
+districts_MESIP <- school_ref %>%
+  select(division_nam, district_nam) %>%
+  filter(district_nam %in% districts_mesip) %>%
+  group_by(division_nam, district_nam) %>%
+  slice(1) %>%
+  ungroup()
+
+rio::export(districts_MESIP, file.path(dir_lookups, "districts_mesip.csv"))
+
+
+View(districts_MESIP)
 
 # create lookups for divisions, districts, and schools =========================
 

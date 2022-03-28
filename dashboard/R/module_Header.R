@@ -3,14 +3,44 @@ serverHeader <-  function(id, inputs) {
   moduleServer(id, function(input, output, session) {
     
     
+    #header of the selected division -------------------------------------------
+    title_division <- eventReactive(inputs$display(),{
+      
+      selected <- inputs$display()
+      
+      if(selected == "round") {
+        
+        text <- inputs$division()
+        
+      } else if (selected == "division_nam" & inputs$division() == "Malawi"){
+        
+        text <- paste("Divisions of", inputs$division())
+        
+      } else if (selected == "division_nam" & inputs$division() != "Malawi"){
+        
+        text <- paste(inputs$division(), "VS other divisions of Malawi")
+        
+      } else{
+        
+        text <- paste("Districts of", inputs$division())
+      }
+        
+       
+      
+      
+    }) 
     
+    
+    
+    
+    #text of header ------------------------------------------------------------
     text_header <- eventReactive(inputs$go(),
                                  
                                  if(inputs$by_other_var()){
                                    
                                    
                                    tags$div(
-                                     tags$h3(inputs$division()),
+                                     tags$h3(title_division()),
                                      tags$h4(inputs$var_label()),
                                      tags$p(class = "compare-text",
                                             paste0("Wether ", id), 
@@ -22,7 +52,7 @@ serverHeader <-  function(id, inputs) {
                                  } else{
                                    
                                    tags$div(
-                                     tags$h3(inputs$division()),
+                                     tags$h3(title_division()),
                                      tags$h4(inputs$var_label())
                                    )
                                    

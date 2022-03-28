@@ -23,6 +23,9 @@ teacher_data <- rio::import(file.path(dirImports, "teacher.rds"))
 student_data <- rio::import(file.path(dirImports, "student.rds"))
 choices_division <- sort(unique(school_data$division_nam))
 
+districts_mesip <- rio::import(file.path(dirLookUps, "districts_mesip.csv"))
+choices_divisions_mesip <- sort(unique(districts_mesip$division_nam))
+
 
 ui <- fluidPage(
    uiLinks("links"),
@@ -46,9 +49,9 @@ ui <- fluidPage(
                       dirLookUps,
                       student_data)
              ),
-    tabPanel("Districts",
+    tabPanel("Key MESIP Districts",
              uiDistricts("district",
-                         choices_division))
+                         choices_divisions_mesip))
   ),
   
  

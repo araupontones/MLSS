@@ -51,7 +51,8 @@ plot_line <- function(database = database(),
   plot <- plot + 
     scale_fill_manual(values =  colors_rounds) +
     scale_color_manual(values =  colors_rounds) +
-    labs(y = y_label )
+    labs(y = y_label,
+         x = "")
   
   
 }

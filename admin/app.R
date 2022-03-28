@@ -137,7 +137,7 @@ server <- function(input, output, session) {
     #say thanks to the user
     req(!is.null(append_rounds))
     
-    
+   
     #create table for districts -----------------------------------------------
     
     table_districts <- create_district_table (dir_lks = dirLookUps,
