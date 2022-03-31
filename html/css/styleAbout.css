@@ -50,7 +50,7 @@ background-image: url("../imgs/classRoom_low.jpg");
 
 /*Footer-----------------------------------------------------------------------*/
 .container-footer{
-  background-color: black;
+  background-color: #3E0A08;
   color:white;
   font-family: 'Roboto', sans-serif;
   margin-top: 40px;
@@ -110,7 +110,7 @@ background-image: url("../imgs/classRoom_low.jpg");
   }
 
   .container-title{
-  
+
   background-size: 100%;
   height: 250px;
   position: relative;

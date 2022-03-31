@@ -6,7 +6,8 @@ body{
 /*Navbar-----------------------------------------------------------------------*/
 .navbar{
   background-color: white !important;
-  text-align: right;
+  border-bottom: 5px solid #F0A85C;
+  margin-bottom: 12px;
 }
 
 .nav-item{
@@ -22,14 +23,14 @@ position: relative;
 }
 
 .title{
-  color: white;
+  color: #3E0A08;
   font-size: 5rem;
 }
 
 
 /* Intro------------------------------------------------------------------*/
 .container-intro{
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 
 }
 
@@ -88,8 +89,7 @@ position: relative;
   }
 
   .title{
-    color: white;
-    font-size: 4rem;
+      font-size: 4rem;
   }
 
 
@@ -106,8 +106,8 @@ position: relative;
   }
 
   .title{
-    color: white;
-    font-size: 3rem;
+
+    font-size: 2rem;
   }
 
   .container-title{

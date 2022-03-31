@@ -4,7 +4,7 @@ library(tidyr)
 library(stringr)
 library(ggplot2)
 library(shinyjs)
-library(reactable)
+library(reactable) 
 library(reactablefmtr)
 library(glue)
 
@@ -29,27 +29,31 @@ choices_divisions_mesip <- sort(unique(districts_mesip$division_nam))
 
 ui <- fluidPage(
    uiLinks("links"),
-  navbarPage(
+  navbarPage(id = "tabs",
     tags$a("Malawi Longitudinal School Survey", href = "http://198.211.96.106/", target = "_blank",class = 'brand'),
     collapsible = T,
     
     #the id of each level is used to defined the 
     tabPanel("Schools",
+             value = 'school',
              uiTemplate("school",
                       dirLookUps,
                       school_data)
              ),
     tabPanel("Teachers",
+             value = "teacher",
              uiTemplate("teacher",
                       dirLookUps,
                       teacher_data)
              ),
     tabPanel("Students",
+             value = "student",
              uiTemplate("student",
                       dirLookUps,
                       student_data)
              ),
     tabPanel("Key MESIP Districts",
+             value = "district",
              uiDistricts("district",
                          choices_divisions_mesip))
   ),

@@ -1,6 +1,8 @@
 color_bg <- "white"
+color_strip <- "#3E0B08" #same color as color of text header
 color_yes <- "#002244"
 color_no <- "#009FDA"
+color_line <- "#F0A85C" #same color as bg of form
 
 # from https://theloop.worldbank.org/colors
 
@@ -33,7 +35,7 @@ theme_MLSS <- function(){
         axis.text = element_text(size = 12),
         #strip
         strip.text = element_text(hjust = 0, color = 'white', size = 12, vjust = 1),
-        strip.background = element_rect(fill = "black")
+        strip.background = element_rect(fill = color_strip)
         
         )
 }

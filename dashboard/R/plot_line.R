@@ -1,4 +1,8 @@
 #geom line
+color_line <- "#F0A85C" #same color as bg of form
+size_points <- 5 
+stroke_size <- 2
+size_line <- 2
 
 
 
@@ -8,45 +12,45 @@ plot_line <- function(database = database(),
                       y_label = inputs$var_label()
                       ){
   
-    if(display == "round"){
     
-    plot <- ggplot(database,
-           aes(x = round,
-               y = mean,
-               group = 1))+
-      geom_line(size = 1,
-                color = "gray")+
-      geom_point(
-        aes(fill = round,
-            color = round),
-        show.legend = F,
-        shape = 21,
-        size = 4
-      ) 
-      
+  
+  if(display == "round"){
+    
+    data_plot <- database
   } else{
-    
     
     data_plot <- database %>%
       rename(wrap_var = display)
-    
-    plot <- ggplot(data_plot,
-           aes(x = round,
-               y = mean,
-               group = 1))+
-      geom_line(size = 1,
-                color = "gray")+
-      geom_point(
-        aes(fill = round,
-            color = round),
-        show.legend = F,
-        shape = 21,
-        size = 4
-      ) +
-      facet_wrap(~ wrap_var)
-    
-    
   }
+  
+  
+  
+  plot <- ggplot(data_plot,
+                 aes(x = round,
+                     y = mean,
+                     group = 1))+
+    geom_line(size = size_line,
+              color = color_line)+
+    geom_point(
+      aes(
+        color = round,
+        fill = round
+      ),
+      alpha = .7,
+      show.legend = F,
+      shape = 21,
+      size = size_points,
+      stroke = stroke_size
+    ) 
+  
+  
+  if(display != "round"){
+    
+    
+    plot <- plot + facet_wrap(~ wrap_var)
+  
+ }
+  
   
   plot <- plot + 
     scale_fill_manual(values =  colors_rounds) +
@@ -54,6 +58,60 @@ plot_line <- function(database = database(),
     labs(y = y_label,
          x = "")
   
+  # 
+  # if(display == "round"){
+  #   
+  #   plot <- ggplot(database,
+  #          aes(x = round,
+  #              y = mean,
+  #              group = 1))+
+  #     geom_line(size = 1,
+  #               color = color_line)+
+  #     geom_point(
+  #       aes(
+  #         #color = round,
+  #         fill = round
+  #          ),
+  #       alpha = .1,
+  #       show.legend = F,
+  #       shape = 21,
+  #       size = size_points,
+  #       stroke = stroke_size
+  #     ) 
+  #     
+  # } else{
+  #   
+  #   
+  #   data_plot <- database %>%
+  #     rename(wrap_var = display)
+  #   
+  #   plot <- ggplot(data_plot,
+  #          aes(x = round,
+  #              y = mean,
+  #              group = 1))+
+  #     geom_line(size = 1,
+  #               color = color_line)+
+  #     geom_point(
+  #       aes( #color = round,
+  #         fill = round
+  #          ),
+  #       alpha = .1,
+  #       show.legend = F,
+  #       shape = 21,
+  #       size = size_points,
+  #       stroke = stroke_size
+  #     ) +
+  #     facet_wrap(~ wrap_var)
+  #   
+  #   
+  # }
+  # 
+  # plot <- plot + 
+  #   scale_fill_manual(values =  colors_rounds) +
+  #   scale_color_manual(values =  colors_rounds) +
+  #   labs(y = y_label,
+  #        x = "")
+  # 
   
 }
 

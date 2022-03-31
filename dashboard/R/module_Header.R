@@ -4,7 +4,7 @@ serverHeader <-  function(id, inputs) {
     
     
     #header of the selected division -------------------------------------------
-    title_division <- eventReactive(inputs$display(),{
+    title_division <- eventReactive(inputs$go(),{
       
       selected <- inputs$display()
       
@@ -39,21 +39,21 @@ serverHeader <-  function(id, inputs) {
                                  if(inputs$by_other_var()){
                                    
                                    
-                                   tags$div(
-                                     tags$h3(title_division()),
-                                     tags$h4(inputs$var_label()),
+                                   tags$div(class = "con containerHeader",
+                                     tags$h3(title_division(), class = "title_division"),
+                                     tags$h4(inputs$var_label(), class = "title_indicator"),
                                      tags$p(class = "compare-text",
                                             paste0("Wether ", id), 
                                             tags$span(class = "yes",inputs$compare_var_label()),
-                                            tags$span(class = "no",  " or not")
+                                            tags$span(class = "no",  " or not.")
                                      )
                                    )
                                    
                                  } else{
                                    
-                                   tags$div(
-                                     tags$h3(title_division()),
-                                     tags$h4(inputs$var_label())
+                                   tags$div(class = "con containerHeader",
+                                     tags$h3(title_division(), class = "title_division"),
+                                     tags$h4(inputs$var_label(), class = "title_indicator")
                                    )
                                    
                                  }

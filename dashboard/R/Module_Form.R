@@ -26,7 +26,7 @@ uiForm <- function(id, compare_codes, rounds,dirLookUps,nivel, divisions){
     
     selectInput(NS(id,"plot_type"), "Plot Type", choices =  c("Line Plot", "Bar Plot","Box Plot", "Density Plot")),
     
-    actionButton(NS(id,"go"), "Create Plot",class="btn btn-secondary")
+    actionButton(NS(id,"go"), "Submit",class="btn btn-secondary")
     
     
     
