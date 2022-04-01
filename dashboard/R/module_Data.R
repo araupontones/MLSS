@@ -4,8 +4,11 @@ serverData <-  function(id, inputs, dirImports ) {
     #import data ------------------------------------------------------------
     database <- rio::import(file.path(dirImports, glue::glue("{id}.rds")))
     
+    print(paste("hola", id))
+    
     data_user <- eventReactive(inputs$go(),{
       
+     
       #to compare with other characteristics ==================================
       if(inputs$compare_by_chars() & !inputs$binary_indicator()){
         

@@ -3,6 +3,7 @@ color_strip <- "#3E0B08" #same color as color of text header
 color_yes <- "#002244"
 color_no <- "#009FDA"
 color_line <- "#F0A85C" #same color as bg of form
+color_spinner <- "#3E0B08"
 
 # from https://theloop.worldbank.org/colors
 

@@ -19,17 +19,13 @@ dirStyles <- file.path(project_path, "html/css")
 
 
 school_data <- rio::import(file.path(dirImports, "school.rds"))
-teacher_data <- rio::import(file.path(dirImports, "teacher.rds"))
-student_data <- rio::import(file.path(dirImports, "student.rds"))
 choices_division <- sort(unique(school_data$division_nam))
-
-districts_mesip <- rio::import(file.path(dirLookUps, "districts_mesip.csv"))
-choices_divisions_mesip <- sort(unique(districts_mesip$division_nam))
 
 
 ui <- fluidPage(
    uiLinks("links"),
   navbarPage(id = "tabs",
+    
     tags$a("Malawi Longitudinal School Survey", href = "http://198.211.96.106/", target = "_blank",class = 'brand'),
     collapsible = T,
     
@@ -38,19 +34,19 @@ ui <- fluidPage(
              value = 'school',
              uiTemplate("school",
                       dirLookUps,
-                      school_data)
+                      dirImports)
              ),
     tabPanel("Teachers",
              value = "teacher",
              uiTemplate("teacher",
                       dirLookUps,
-                      teacher_data)
+                      dirImports)
              ),
     tabPanel("Students",
              value = "student",
              uiTemplate("student",
                       dirLookUps,
-                      student_data)
+                      dirImports)
              ),
     tabPanel("Key MESIP Districts",
              value = "district",
@@ -69,47 +65,71 @@ server <- function(input, output, session) {
   
   inputs <- lapply(niveles, function(x){
     
-    #catch inputs of user
-    inputs<- outputForm(x, dirLookUps)
+    #run only when tab is selected
+    observe({
+      
+      if(input$tabs == x){
+        
+        #catch inputs of user
+        inputs<- outputForm(x, dirLookUps)
+        
+        #reactive form
+        serverForm(x, inputs,dirLookUps)
+        
+        serverHeader(x, inputs)    
+        
+        #reactive data
+        database <- serverData(x, inputs, dirImports)
+        
+        
+        plotServer(x, inputs, database)
+        
+        
+        return(inputs)
+        
+        
+      }
+  
+      
+    })
+    
     
    
     
-    #reactive form
-    serverForm(x, inputs,dirLookUps)
-    
-    serverHeader(x, inputs)    
-    
-    #reactive data
-    database <- serverData(x, inputs, dirImports)
-    
-    
-    plotServer(x, inputs, database)
-    
-    
-    return(inputs)
   })
   
   names(inputs) <- niveles
   
   
 #example to read output =======================================================  
-  observeEvent(inputs$school$go(),{
-    
-    print(paste("Group by:",inputs$school$group_vars()))
-    print(inputs$school$display())
-    print(paste("keep:",inputs$school$keep_divisions()))
-    # print(inputs$school$plot_type())
-    # print(inputs$school$keep_divisions())
-    # print(inputs$school$by_other_var())
-    # print(inputs$school$x_var_plot()$x_lab)
-    # print(inputs$school$var_label())
+  # observeEvent(inputs$school$go(),{
+  #   
+  #   print(paste("Group by:",inputs$school$group_vars()))
+  #   print(inputs$school$display())
+  #   print(paste("keep:",inputs$school$keep_divisions()))
+  #   # print(inputs$school$plot_type())
+  #   # print(inputs$school$keep_divisions())
+  #   # print(inputs$school$by_other_var())
+  #   # print(inputs$school$x_var_plot()$x_lab)
+  #   # print(inputs$school$var_label())
+  #   
+  #   
+  # })
+  
+#run district server only when selected
+  observe({
+   
+    if(input$tabs == "district"){
+      
+      serverDistricts("district", dirImports, dirLookUps)
+      
+    }
     
     
   })
   
-
   
-  serverDistricts("district", dirImports)
+ 
 
   
   }
