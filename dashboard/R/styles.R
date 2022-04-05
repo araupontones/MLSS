@@ -31,9 +31,9 @@ theme_MLSS <- function(){
         panel.grid.major.y = element_line(linetype = "dotted", colour = "black"),
         #axis
         axis.ticks = element_blank(),
-        axis.title.y = element_text(margin = margin(r=20)),
-        axis.title.x = element_text(margin = margin(t=20)),
-        axis.text = element_text(size = 12),
+        axis.title.y = element_text(margin = margin(r=20), size = 14),
+        axis.title.x = element_text(margin = margin(t=20), size = 14),
+        axis.text = element_text(size = 14),
         #strip
         strip.text = element_text(hjust = 0, color = 'white', size = 12, vjust = 1),
         strip.background = element_rect(fill = color_strip)

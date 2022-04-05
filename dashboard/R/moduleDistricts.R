@@ -68,8 +68,12 @@ serverDistricts <-  function(id, dirImports, dirLookUps ) {
     #data for the app ---------------------------------------------------------
     data_start <- reactive({
       
-      print("hola district")
-      rio::import(file.path(dirImports, "district.rds")) 
+      #print("hola district")
+      rio::import(file.path(dirImports, "district.rds")) %>%
+        select(district_nam ,Level, Indicator, Round, value) %>%
+        pivot_wider(id_cols = c(district_nam,Level, Indicator),
+                    names_from = Round,
+                    values_from = value)
     })
     
     
@@ -90,7 +94,7 @@ serverDistricts <-  function(id, dirImports, dirLookUps ) {
       
       db <- data_start() %>%
         filter(district_nam == input$d_district) %>%
-        select(-c(district_nam, division_nam))
+        select(-c(district_nam))
       
       
       db
@@ -147,14 +151,14 @@ serverDistricts <-  function(id, dirImports, dirLookUps ) {
                 columns = list(
                   
                   Level = colDef(maxWidth = 100),
-                  Round = colDef(maxWidth = 100),
-                  Indicator = colDef(minWidth = 180),
-                  value = colDef(maxWidth = 100, name = input$d_district),
-                  N = colDef(maxWidth = 120, align = 'center', name = paste("N", input$d_district, sep = "-")),
-                  `National Average` = colDef(align = "right")
-                  
+                  #Round = colDef(maxWidth = 100),
+                  Indicator = colDef(minWidth = 220)
+                  #value = colDef(maxWidth = 100, name = input$d_district),
+                  #N = colDef(maxWidth = 120, align = 'center', name = paste("N", input$d_district, sep = "-")),
+                  #`National Average` = colDef(align = "right")
+                
                 ),
-                defaultPageSize = 15, 
+                defaultPageSize = 40, 
                 language = reactableLang(
                   searchPlaceholder = "Search Indicator..."
                 ))
