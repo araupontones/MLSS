@@ -26,7 +26,7 @@ ui <- fluidPage(
    uiLinks("links"),
   navbarPage(id = "tabs",
     
-    tags$a("Malawi Longitudinal School Survey", href = "http://198.211.96.106/", target = "_blank",class = 'brand'),
+    tags$a("Malawi Public School Survey", href = "http://198.211.96.106/", target = "_blank",class = 'brand'),
     collapsible = T,
     
     #the id of each level is used to defined the 
