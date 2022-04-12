@@ -58,60 +58,6 @@ plot_line <- function(database = database(),
     labs(y = y_label,
          x = "")
   
-  # 
-  # if(display == "round"){
-  #   
-  #   plot <- ggplot(database,
-  #          aes(x = round,
-  #              y = mean,
-  #              group = 1))+
-  #     geom_line(size = 1,
-  #               color = color_line)+
-  #     geom_point(
-  #       aes(
-  #         #color = round,
-  #         fill = round
-  #          ),
-  #       alpha = .1,
-  #       show.legend = F,
-  #       shape = 21,
-  #       size = size_points,
-  #       stroke = stroke_size
-  #     ) 
-  #     
-  # } else{
-  #   
-  #   
-  #   data_plot <- database %>%
-  #     rename(wrap_var = display)
-  #   
-  #   plot <- ggplot(data_plot,
-  #          aes(x = round,
-  #              y = mean,
-  #              group = 1))+
-  #     geom_line(size = 1,
-  #               color = color_line)+
-  #     geom_point(
-  #       aes( #color = round,
-  #         fill = round
-  #          ),
-  #       alpha = .1,
-  #       show.legend = F,
-  #       shape = 21,
-  #       size = size_points,
-  #       stroke = stroke_size
-  #     ) +
-  #     facet_wrap(~ wrap_var)
-  #   
-  #   
-  # }
-  # 
-  # plot <- plot + 
-  #   scale_fill_manual(values =  colors_rounds) +
-  #   scale_color_manual(values =  colors_rounds) +
-  #   labs(y = y_label,
-  #        x = "")
-  # 
   
 }
 
@@ -135,9 +81,14 @@ plot_line_compare <- function(database = database(),
                      fill = fill)) +
     geom_line(aes(group = fill,
                   color = fill),
+              size = size_line,
               show.legend = F)+
-    geom_point(size = 4,
-               shape = 21) +
+    geom_point(color = color_line,
+               size = 4,
+               shape = 21,
+               shape = 21,
+               size = size_points,
+               stroke = stroke_size) +
     scale_fill_manual(name = paste(str_to_title(level),legend),
                       breaks = c("Yes", "No"),
                       values = c(alpha(color_yes, .9), alpha(color_no, .7))

@@ -43,7 +43,7 @@ serverHeader <-  function(id, inputs) {
                                      tags$h3(title_division(), class = "title_division"),
                                      tags$h4(inputs$var_label(), class = "title_indicator"),
                                      tags$p(class = "compare-text",
-                                            paste0("Wether ", id), 
+                                            paste0("Whether ", id), 
                                             tags$span(class = "yes",inputs$compare_var_label()),
                                             tags$span(class = "no",  " or not.")
                                      )

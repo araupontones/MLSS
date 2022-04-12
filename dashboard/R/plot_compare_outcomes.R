@@ -66,9 +66,12 @@ plot_compare_outcomes_time <- function(database,
    plot <- plot +
      geom_line(aes(group = fill,
                    color = fill),
+               size = size_line,
                show.legend = F)+
      geom_point(shape = 21,
-                size = 4) +
+                size = size_points,
+                stroke = stroke_size,
+                color = color_line) +
      scale_color_manual(values = c(color_yes, color_no))
      
   }

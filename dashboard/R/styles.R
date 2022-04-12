@@ -5,6 +5,12 @@ color_no <- "#009FDA"
 color_line <- "#F0A85C" #same color as bg of form
 color_spinner <- "#3E0B08"
 
+color_line <- "#F0A85C" #same color as bg of form
+size_points <- 5 
+stroke_size <- 2
+size_line <- 2
+
+
 # from https://theloop.worldbank.org/colors
 
 #blue pallete
@@ -22,6 +28,8 @@ theme_MLSS <- function(){
         legend.position = 'top',
         legend.background = element_rect(fill = color_bg),
         legend.key = element_rect(fill = NA),
+        legend.title = element_text(size = 14),
+        legend.text = element_text(size = 14),
         #legend.title = element_blank(),
         #background
         panel.background = element_rect(fill = color_bg),
@@ -35,7 +43,7 @@ theme_MLSS <- function(){
         axis.title.x = element_text(margin = margin(t=20), size = 14),
         axis.text = element_text(size = 14),
         #strip
-        strip.text = element_text(hjust = 0, color = 'white', size = 12, vjust = 1),
+        strip.text = element_text(hjust = 0, color = 'white', size = 15, vjust = 1),
         strip.background = element_rect(fill = color_strip)
         
         )
