@@ -8,7 +8,7 @@ library(tidyr)
 library(shinymanager)
 library(rmarkdown)
 #to allow larger files from users
-options(shiny.maxRequestSize = 30 * 1024^2)
+options(shiny.maxRequestSize = 100 * 1024^2)
 
 #load functions  
 #gmdacr::load_functions("functions")

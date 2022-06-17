@@ -1,314 +1,310 @@
 id,var_name,label,type,label_yes,dropdown,Name dropdown,Description
-007,enrol_std1,Enrollment (std 1),continous,,TRUE,,
-008,enrol_std2,Enrollment (std 2),continous,,TRUE,,
-009,enrol_std3,Enrollment (std 3),continous,,TRUE,,
-010,enrol_std4,Enrollment (std 4),continous,,TRUE,,
-011,enrol_std5,Enrollment (std 5),continous,,TRUE,,
-012,enrol_std6,Enrollment (std 6),continous,,TRUE,,
-013,enrol_std7,Enrollment (std 7),continous,,TRUE,,
-014,enrol_std8,Enrollment (std 8),continous,,TRUE,,
-015,enrol_tot,Total enrolment,continous,,TRUE,,
-016,enrol_lower_tot,Lower primary enrolment,continous,,TRUE,,
-017,enrol_upper_tot,Upper primary enrolment,continous,,TRUE,,
-018,enrol_std1_f,Female enrollment (std 1),continous,,TRUE,,
-019,enrol_std2_f,Female enrollment (std 2),continous,,TRUE,,
-020,enrol_std3_f,Female enrollment (std 3),continous,,TRUE,,
-021,enrol_std4_f,Female enrollment (std 4),continous,,TRUE,,
-022,enrol_std5_f,Female enrollment (std 5),continous,,TRUE,,
-023,enrol_std6_f,Female enrollment (std 6),continous,,TRUE,,
-024,enrol_std7_f,Female enrollment (std 7),continous,,TRUE,,
-025,enrol_std8_f,Female enrollment (std 8),continous,,TRUE,,
+015,enrol_tot,Enrollment (total),continous,,TRUE,,
+016,enrol_lower_tot,Enrollment (lower primary),continous,,TRUE,,
+017,enrol_upper_tot,Enrollment (upper primary),continous,,TRUE,,
+007,enrol_std1,Enrollment (standard 1),continous,,TRUE,,
+008,enrol_std2,Enrollment (standard 2),continous,,TRUE,,
+009,enrol_std3,Enrollment (standard 3),continous,,TRUE,,
+010,enrol_std4,Enrollment (standard 4),continous,,TRUE,,
+011,enrol_std5,Enrollment (standard 5),continous,,TRUE,,
+012,enrol_std6,Enrollment (standard 6),continous,,TRUE,,
+013,enrol_std7,Enrollment (standard 7),continous,,TRUE,,
+014,enrol_std8,Enrollment (standard 8),continous,,TRUE,,
 026,enrol_tot_f,Female enrollment (total),continous,,TRUE,,
-027,enrol_lower_tot_f,Female enrollment (std 1-4),continous,,TRUE,,
-028,enrol_upper_tot_f,Female enrollment (std 4-8),continous,,TRUE,,
-029,enrol_std1_m,Male enrollment (std 1),continous,,TRUE,,
-030,enrol_std2_m,Male enrollment (std 2),continous,,TRUE,,
-031,enrol_std3_m,Male enrollment (std 3),continous,,TRUE,,
-032,enrol_std4_m,Male enrollment (std 4),continous,,TRUE,,
-033,enrol_std5_m,Male enrollment (std 5),continous,,TRUE,,
-034,enrol_std6_m,Male enrollment (std 6),continous,,TRUE,,
-035,enrol_std7_m,Male enrollment (std 7),continous,,TRUE,,
-036,enrol_std8_m,Male enrollment (std 8),continous,,TRUE,,
+027,enrol_lower_tot_f,Female enrollment (lower primary),continous,,TRUE,,
+028,enrol_upper_tot_f,Female enrollment (upper primary),continous,,TRUE,,
+018,enrol_std1_f,Female enrollment (standard 1),continous,,TRUE,,
+019,enrol_std2_f,Female enrollment (standard 2),continous,,TRUE,,
+020,enrol_std3_f,Female enrollment (standard 3),continous,,TRUE,,
+021,enrol_std4_f,Female enrollment (standard 4),continous,,TRUE,,
+022,enrol_std5_f,Female enrollment (standard 5),continous,,TRUE,,
+023,enrol_std6_f,Female enrollment (standard 6),continous,,TRUE,,
+024,enrol_std7_f,Female enrollment (standard 7),continous,,TRUE,,
+025,enrol_std8_f,Female enrollment (standard 8),continous,,TRUE,,
 037,enrol_tot_m,Male enrollment (total),continous,,TRUE,,
-038,enrol_lower_tot_m,Male enrollment (std 1-4),continous,,TRUE,,
-039,enrol_upper_tot_m,Male enrollment (std 4-8),continous,,TRUE,,
-040,output_efficiency_grade4,Output efficiency (std 4),continous,,TRUE,,
-041,output_efficiency_grade8,Output efficiency (std 8),continous,,TRUE,,
-042,output_efficiency_grade4_f,Female output efficiency (std 4),continous,,TRUE,,
-043,output_efficiency_grade8_f,Female output efficiency (std 8),continous,,TRUE,,
-044,output_efficiency_grade4_m,Male output efficiency (std 4),continous,,TRUE,,
-045,output_efficiency_grade8_m,Male output efficiency (std 8),continous,,TRUE,,
+038,enrol_lower_tot_m,Male enrollment (lower primary),continous,,TRUE,,
+039,enrol_upper_tot_m,Male enrollment (upper primary),continous,,TRUE,,
+029,enrol_std1_m,Male enrollment (standard 1),continous,,TRUE,,
+030,enrol_std2_m,Male enrollment (standard 2),continous,,TRUE,,
+031,enrol_std3_m,Male enrollment (standard 3),continous,,TRUE,,
+032,enrol_std4_m,Male enrollment (standard 4),continous,,TRUE,,
+033,enrol_std5_m,Male enrollment (standard 5),continous,,TRUE,,
+034,enrol_std6_m,Male enrollment (standard 6),continous,,TRUE,,
+035,enrol_std7_m,Male enrollment (standard 7),continous,,TRUE,,
+036,enrol_std8_m,Male enrollment (standard 8),continous,,TRUE,,
+040,output_efficiency_grade4,Output efficiency (standard 4),continous,,TRUE,,Number of students enrolled (Standard 4) / Number of students enrolled (Standard 1)
+041,output_efficiency_grade8,Output efficiency (standard 8),continous,,TRUE,,Number of students enrolled (Standard 8) / Number of students enrolled (standard 1)
+042,output_efficiency_grade4_f,Female output efficiency (standard 4),continous,,TRUE,,Number of female students enrolled (Standard 4) / Number of female students enrolled (Standard 1)
+043,output_efficiency_grade8_f,Female output efficiency (standard 8),continous,,TRUE,,Number of female students enrolled (Standard 8) / Number of female students enrolled (Standard 1)
+044,output_efficiency_grade4_m,Male output efficiency (standard 4),continous,,TRUE,,Number of male students enrolled (Standard 4) / Number of male students enrolled (Standard 1)
+045,output_efficiency_grade8_m,Male output efficiency (standard 8),continous,,TRUE,,Number of male students enrolled (Standard 8) / Number of male students enrolled (Standard 1)
 046,num_non_tch_staff,Number of non-teaching staff,continous,,TRUE,,
-047,ptxt_ratio_eng_tot,Pupil:txt ratio english,continous,,TRUE,,
-048,ptxt_ratio_math_tot,Pupil:txt ratio math,continous,,TRUE,,
-049,ptxt_ratio_chi_tot,Pupil:txt ratio chichewa,continous,,TRUE,,
-050,ptxt_ratio_upper,Pupil:txt ratio upper,continous,,TRUE,,
-051,ptxt_ratio_lower_eng,,continous,,TRUE,,
-052,ptxt_ratio_lower_math,,continous,,TRUE,,
-053,ptxt_ratio_lower_chi,,continous,,TRUE,,
-054,ptxt_ratio_upper_eng,,continous,,TRUE,,
-055,ptxt_ratio_upper_math,,continous,,TRUE,,
-056,ptxt_ratio_upper_chi,,continous,,TRUE,,
-057,ptxt_ratio_tot,Pupil-textbook ratio,continous,,TRUE,,
-058,co_edu_sch,Coeducational school gender,binary,is coeducational school gender,TRUE,,
-059,public,"Ownership type: government, non-religious ngo, religious agency",binary,is public,TRUE,,
-060,rmdl_class,School offer remedial classes for poor performing students,binary,offers remedial classes,TRUE,,
-061,rmdl_class_tot,,continous,,TRUE,,
-062,rmdl_class_free_tot,,continous,,TRUE,,
-063,rmdl_classes_freq_tot,,continous,,TRUE,,
-064,rmdl_stu_m_tot,,continous,,TRUE,,
-065,rmdl_stu_f_tot,,continous,,TRUE,,
-066,rmdl_stu_tot_tot,,continous,,TRUE,,
-067,establish_year,Established year,continous,,TRUE,,
+058,co_edu_sch,Coeducational (mixed gender) school,binary,,TRUE,,
+059,public,Is government school (not ngo or religious agency),binary,,TRUE,,
+060,rmdl_class,Remedial classes offered,binary,,TRUE,,
+061,rmdl_class_tot,Share of standards with remedial classes,continous,,TRUE,,Number of standards in which remedial classes are offered by the school / number of standards offered at school
+62,rmdl_class_free_tot,Share of standards with free remedial classes,continous,,TRUE,,Number of standards in which remedial classes are offered for free / number of standards offered at school
+063,rmdl_classes_freq_tot,Remedial classes per month,continous,,TRUE,,
+064,rmdl_stu_m_tot,Male students recieving remedial classes,continous,,TRUE,,
+065,rmdl_stu_f_tot,Female students receiving remedial classes,continous,,TRUE,,
+066,rmdl_stu_tot_tot,Share of students attending remedial classes,continous,,TRUE,,
+067,establish_year,Year school established,continous,,TRUE,,
 069,senior_tch,No. Senior teachers in school,continous,,TRUE,,
 070,std_tch,No. General teachers in school,continous,,TRUE,,
 071,jun_tch,No. Junior teachers in school,continous,,TRUE,,
 072,oth_tch,No. Other teachers in school,continous,,TRUE,,
 073,aux_tch,No. Auxilliary teachers in school,continous,,TRUE,,
-075,female_tch_ratio_std1,"Stardard 1, teachers (% female)",percentage,,TRUE,,
-076,female_tch_ratio_std2,"Stardard 2, teachers (% female)",percentage,,TRUE,,
-077,female_tch_ratio_std3,"Stardard 3, teachers (% female)",percentage,,TRUE,,
-078,female_tch_ratio_std4,"Stardard 4, teachers (% female)",percentage,,TRUE,,
-079,female_tch_ratio_std5,"Stardard 5, teachers (% female)",percentage,,TRUE,,
-080,female_tch_ratio_std6,"Stardard 6, teachers (% female)",percentage,,TRUE,,
-081,female_tch_ratio_std7,"Stardard 7, teachers (% female)",percentage,,TRUE,,
-082,female_tch_ratio_std8,"Stardard 8, teachers (% female)",percentage,,TRUE,,
-083,female_tch_ratio_upper,Number of female teachers in std 5 to std 8 / number of teachers in std 5 to std,percentage,,TRUE,,
-084,female_tch_ratio_lower,Number of female teachers in std 1 to std 4 / number of teachers in std 1 to std,percentage,,TRUE,,
-085,female_tch_ratio_tot,Total number of female teachers / total number of teachers,percentage,,TRUE,,
-086,enrol_PTR_std1,"Standard 1, pupil-teacher ratio",continous,,TRUE,,
-087,enrol_PTR_std1_f,Female enrolment in std1 / number of female teachers in std1,continous,,TRUE,,
-088,enrol_PTR_std2,"Standard 2, pupil-teacher ratio",continous,,TRUE,,
-089,enrol_PTR_std2_f,Female enrolment in std2 / number of female teachers in std2,continous,,TRUE,,
-090,enrol_PTR_std3,"Standard 3, pupil-teacher ratio",continous,,TRUE,,
-091,enrol_PTR_std3_f,Female enrolment in std1 / number of female teachers in std3,continous,,TRUE,,
-092,enrol_PTR_std4,"Standard 4, pupil-teacher ratio",continous,,TRUE,,
-093,enrol_PTR_std4_f,Female enrolment in std4 / number of female teachers in std4,continous,,TRUE,,
-094,enrol_PTR_std5,"Standard 5, pupil-teacher ratio",continous,,TRUE,,
-095,enrol_PTR_std5_f,Female enrolment in std5 / number of female teachers in std5,continous,,TRUE,,
-096,enrol_PTR_std6,"Standard 6, pupil-teacher ratio",continous,,TRUE,,
-097,enrol_PTR_std6_f,Female enrolment in std6 / number of female teachers in std6,continous,,TRUE,,
-098,enrol_PTR_std7,"Standard 7, pupil-teacher ratio",continous,,TRUE,,
-099,enrol_PTR_std7_f,Female enrolment in std7 / number of female teachers in std7,continous,,TRUE,,
-100,enrol_PTR_std8,"Standard 8, pupil-teacher ratio",continous,,TRUE,,
-101,enrol_PTR_std8_f,Female enrolment in std8 / number of female teachers in std8,continous,,TRUE,,
-102,enrol_PTR_tot,Overall pupil-teacher ratio,continous,,TRUE,,
-103,enrol_PTR_tot_f,Total female enrolment / total number of female teachers,continous,,TRUE,,
-104,enrol_PTR_tot_lower,Lower primary pupil-teacher ratio,continous,,TRUE,,
-105,enrol_PTR_tot_upper,Total upper class (std5-std8) enrolment / total number of teachers in upper clas,continous,,TRUE,,
-106,enrol_PTR_tot_lower_f,Total lower class (std1-std4) female enrolment / total number of female teachers,continous,,TRUE,,
-107,enrol_PTR_tot_upper_f,Total upper class (std5-std8) female enrolment / total number of female teachers,continous,,TRUE,,
-108,enrol_PQTR_std1,Enrolment in std1 / number of qualified teachers in std1,continous,,TRUE,,
-109,enrol_PQTR_std2,Enrolment in std2 / number of qualified teachers in std2,continous,,TRUE,,
-110,enrol_PQTR_std3,Enrolment in std3 / number of qualified teachers in std3,continous,,TRUE,,
-111,enrol_PQTR_std4,Enrolment in std4 / number of qualified teachers in std4,continous,,TRUE,,
-112,enrol_PQTR_std5,Enrolment in std5 / number of qualified teachers in std5,continous,,TRUE,,
-113,enrol_PQTR_std6,Enrolment in std6 / number of qualified teachers in std6,continous,,TRUE,,
-114,enrol_PQTR_std7,Enrolment in std7 / number of qualified teachers in std7,continous,,TRUE,,
-115,enrol_PQTR_std8,Enrolment in std8 / number of qualified teachers in std8,continous,,TRUE,,
-116,enrol_PQTR_tot,Total enrolment / total number of qualified teachers,continous,,TRUE,,
-117,enrol_PQTR_tot_lower,Total lower class (std1-std4) enrolment / total number of qualified teachers in,continous,,TRUE,,
-118,enrol_PQTR_tot_upper,Total upper class (std5-std8) enrolment / total number of qualified teachers in,continous,,TRUE,,
-119,PT4_share,(Mean) pt4,continous,,TRUE,,
-120,tenure_sch,Average teacher school tenure (using ht1 roster),continous,,TRUE,,
-121,above_high_qualification,Share of above msce qualification teachers (using ht1 roster),continous,,TRUE,,
-122,tenure,Teacher experience in the education sector,continous,,TRUE,,
-123,abs_rate_tot,Absence rate total (hc),continous,,TRUE,,
-124,abs_rate_std1,Absence rate in std 1 (hc),continous,,TRUE,,
-125,abs_rate_std2,Absence rate in std 2 (hc),continous,,TRUE,,
-126,abs_rate_std3,Absence rate in std 3 (hc),continous,,TRUE,,
-127,abs_rate_std4,Absence rate in std 4 (hc),continous,,TRUE,,
-128,abs_rate_std5,Absence rate in std 5 (hc),continous,,TRUE,,
-129,abs_rate_std6,Absence rate in std 6 (hc),continous,,TRUE,,
-130,abs_rate_std7,Absence rate in std 7 (hc),continous,,TRUE,,
-131,electricity_yes,School has electricity (y or n),binary,has electricity,TRUE,,
+057,ptxt_ratio_tot,Pupil-textbook ratio,continous,,TRUE,,
+049,ptxt_ratio_chi_tot,Pupil-textbook ratio (chichewa) (total),continous,,TRUE,,
+047,ptxt_ratio_eng_tot,Pupil-textbook ratio (english) (total),continous,,TRUE,,
+048,ptxt_ratio_math_tot,Pupil-textbook ratio (maths) (total),continous,,TRUE,,
+053,ptxt_ratio_lower_chi,Pupil-textbook ratio (chichewa) (lower primary),continous,,TRUE,,
+051,ptxt_ratio_lower_eng,Pupil-textbook ratio (english) (lower primary),continous,,TRUE,,
+052,ptxt_ratio_lower_math,Pupil-textbook ratio (maths) (lower primary),continous,,TRUE,,
+050,ptxt_ratio_upper,Pupil-textbook ratio (upper primary ),continous,,TRUE,,
+056,ptxt_ratio_upper_chi,Pupil-textbook ratio (chichewa) (upper primary),continous,,TRUE,,
+054,ptxt_ratio_upper_eng,Pupil-textbook ratio (english) (upper primary),continous,,TRUE,,
+055,ptxt_ratio_upper_math,Pupil-textbook ratio (maths) (upper primary),continous,,TRUE,,
+102,enrol_PTR_tot,Overall pupil-teacher ratio,continous,,TRUE,,Total student enrollment / Total number of teachers
+104,enrol_PTR_tot_lower,Overall pupil-teacher ratio (lower primary),continous,,TRUE,,Total enrollment (Standard 1-Standard 4) / Total number of teachers (Standard 1-Standard 4)
+105,enrol_PTR_tot_upper,Overall pupil-teacher ratio (upper primary),continous,,TRUE,,Total enrollment (Standard 5-Standard 8) / Total number of teachers (Standard 5-Standard 8)
+085,female_tch_ratio_tot,Share of teachers who are female (overall),percentage,,TRUE,,Total number of female teachers / Total number of teachers
+083,female_tch_ratio_lower,Share of teachers who are female (lower primary),percentage,,TRUE,,Number of female teachers  (Standard 1-Standard 4)  / Number of teachers  (Standard 1-Standard 4)
+084,female_tch_ratio_upper,Share of teachers who are female (upper primary),percentage,,TRUE,,Number of female teachers (Standard 5-Standard 8) / Number of teachers (Standard 5-Standard 8)
+075,female_tch_ratio_std1,Share of teachers who are female (standard 1),percentage,,TRUE,,"Stardard 1, teachers (% female)"
+076,female_tch_ratio_std2,Share of teachers who are female (standard 2),percentage,,TRUE,,"Stardard 2, teachers (% female)"
+077,female_tch_ratio_std3,Share of teachers who are female (standard 3),percentage,,TRUE,,"Stardard 3, teachers (% female)"
+078,female_tch_ratio_std4,Share of teachers who are female (standard 4),percentage,,TRUE,,"Stardard 4, teachers (% female)"
+079,female_tch_ratio_std5,Share of teachers who are female (standard 5),percentage,,TRUE,,"Stardard 5, teachers (% female)"
+080,female_tch_ratio_std6,Share of teachers who are female (standard 6),percentage,,TRUE,,"Stardard 6, teachers (% female)"
+081,female_tch_ratio_std7,Share of teachers who are female (standard 7),percentage,,TRUE,,"Stardard 7, teachers (% female)"
+082,female_tch_ratio_std8,Share of teachers who are female (standard 8),percentage,,TRUE,,"Stardard 8, teachers (% female)"
+086,enrol_PTR_std1,Pupil-teacher ratio (standard 1),continous,,TRUE,,Number of students enrolled (Standard 1) / Number of teachers (Standard 1)
+087,enrol_PTR_std2,Pupil-teacher ratio (standard 2),continous,,TRUE,,Number of female students enrolled ( Standard 1) / Number of female teachers ( Standard 1)
+090,enrol_PTR_std3,Pupil-teacher ratio (standard 3),continous,,TRUE,,Number of female students enrolled (Standard 2) / Number of female teachers (Standard 2)
+092,enrol_PTR_std4,Pupil-teacher ratio (standard 4),continous,,TRUE,,Number of students enrolled (Standard 4) / Number of teachers (Standard 4)
+094,enrol_PTR_std5,Pupil-teacher ratio (standard 5),continous,,TRUE,,Number of students enrolled (Standard 5) / Number of teachers (Standard 5)
+096,enrol_PTR_std6,Pupil-teacher ratio (standard 6),continous,,TRUE,,Number of students enrolled (Standard 6) / Number of teachers (Standard 6)
+098,enrol_PTR_std7,Pupil-teacher ratio (standard 7),continous,,TRUE,,Number of students enrolled (Standard 7) / Number of teachers (Standard 7)
+100,enrol_PTR_std8,Pupil-teacher ratio (standard 8),continous,,TRUE,,Number of students enrolled (Standard 8) / Number of teachers (Standard 8)
+103,enrol_PTR_tot_f,Overall female pupil- female teacher ratio,continous,,TRUE,,Total female enrollment / Total number of female teachers
+106,enrol_PTR_tot_lower_f,Overall female pupil- female teacher ratio (lower primary),continous,,TRUE,,Total eemale enrollment (Standard 1-Standard 4) / Number of female teachers (Standard 1-Standard 4)
+107,enrol_PTR_tot_upper_f,Overall female pupil- female teacher ratio (upper primary),continous,,TRUE,,Total female enrollment (Standard 5-Standard 8) / Number of female teachers (Standard 5-Standard 8)
+088,enrol_PTR_std1_f,Female pupil- female teacher ratio (standard 1),continous,,TRUE,,Number of students enrolled (Standard 2) / Number of teachers (Standard 2)
+089,enrol_PTR_std2_f,Female pupil- female teacher ratio (standard 2),continous,,TRUE,,Number of students enrolled (Standard 3) / Number of teachers (Standard 3)
+091,enrol_PTR_std3_f,Female pupil- female teacher ratio (standard 3),continous,,TRUE,,Number of female students enrolled (Standard 3) / Number of female teachers (Standard 3)
+093,enrol_PTR_std4_f,Female pupil- female teacher ratio (standard 4),continous,,TRUE,,Number of female students enrolled (Standard 4) / Number of female teachers (Standard 4)
+095,enrol_PTR_std5_f,Female pupil- female teacher ratio (standard 5),continous,,TRUE,,Number of female students enrolled (Standard 5) / Number of female teachers (Standard 5)
+097,enrol_PTR_std6_f,Female pupil- female teacher ratio (standard 6),continous,,TRUE,,Number of female students enrolled (Standard 6) / Number of female teachers (Standard 6)
+099,enrol_PTR_std7_f,Female pupil- female teacher ratio (standard 7),continous,,TRUE,,Number of female students enrolled (Standard 7) / Number of female teachers (Standard 7)
+101,enrol_PTR_std8_f,Female pupil- female teacher ratio (standard 8),continous,,TRUE,,Number of female students enrolled (Standard 8) / Number of female teachers (Standard 8)
+116,enrol_PQTR_tot,Overall pupil-qualified teacher ratio,continous,,TRUE,,Total class enrollment / Total number of qualified teachers
+117,enrol_PQTR_tot_lower,Overall pupil-qualified teacher ratio (lower primary),continous,,TRUE,,Total lower class (Standard 1-Standard 4) Enrollment / Total number of qualified teachers
+118,enrol_PQTR_tot_upper,Overall pupil-qualified teacher ratio (upper primary),continous,,TRUE,,Total upper class (Standard 5-Standard 8) Enrollment / Total number of qualified teachers
+108,enrol_PQTR_std1,Pupil-qualified teacher ratio (standard 1),continous,,TRUE,,Number of students enrolled (Standard 1) / Number of qualified teachers (Standard 1)
+109,enrol_PQTR_std2,Pupil-qualified teacher ratio (standard 2),continous,,TRUE,,Number of students enrolled (Standard 2) / Number of qualified teachers (Standard 2)
+110,enrol_PQTR_std3,Pupil-qualified teacher ratio (standard 3),continous,,TRUE,,Number of students enrolled (Standard 3) / Number of qualified teachers (Standard 3)
+111,enrol_PQTR_std4,Pupil-qualified teacher ratio (standard 4),continous,,TRUE,,Number of students enrolled (Standard 4) / Number of qualified teachers (Standard 4)
+112,enrol_PQTR_std5,Pupil-qualified teacher ratio (standard 5),continous,,TRUE,,Number of students enrolled (Standard 5) / Number of qualified teachers (Standard 5)
+113,enrol_PQTR_std6,Pupil-qualified teacher ratio (standard 6),continous,,TRUE,,Number of students enrolled (Standard 6) / Number of qualified teachers (Standard 6)
+114,enrol_PQTR_std7,Pupil-qualified teacher ratio (standard 7),continous,,TRUE,,Number of students enrolled (Standard 7) / Number of qualified teachers (Standard 7)
+115,enrol_PQTR_std8,Pupil-qualified teacher ratio (standard 8),continous,,TRUE,,Number of students enrolled (Standard 8) / Number of qualified teachers (Standard 8)
+119,PT4_share,Share of junior teachers,continous,,TRUE,,Number of PT4 teachers / Total number of teachers
+120,tenure_sch,Average teacher tenure at school,continous,,TRUE,,
+121,above_high_qualification,Share of teachers with qualification above msce,continous,,TRUE,,
+122,tenure,Average teacher time in teaching profession,continous,,TRUE,,
+123,abs_rate_tot,Absence rate total (observed),continous,,TRUE,,Share of students enrolled in school which were not found present on day of MLSS data collection
+124,abs_rate_std1,Absence rate (standard 1) (observed),continous,,TRUE,,Share of students enrolled in grade which were not found present on day of MLSS data collection
+125,abs_rate_std2,Absence rate (standard 2) (observed),continous,,TRUE,,Share of students enrolled in grade which were not found present on day of MLSS data collection
+126,abs_rate_std3,Absence rate (standard 3) (observed),continous,,TRUE,,Share of students enrolled in grade which were not found present on day of MLSS data collection
+127,abs_rate_std4,Absence rate (standard 4) (observed),continous,,TRUE,,Share of students enrolled in grade which were not found present on day of MLSS data collection
+128,abs_rate_std5,Absence rate (standard 5) (observed),continous,,TRUE,,Share of students enrolled in grade which were not found present on day of MLSS data collection
+129,abs_rate_std6,Absence rate (standard 6) (observed),continous,,TRUE,,Share of students enrolled in grade which were not found present on day of MLSS data collection
+130,abs_rate_std7,Absence rate (standard 7) (observed),continous,,TRUE,,Share of students enrolled in grade which were not found present on day of MLSS data collection
+131,electricity_yes,School has electricity (reported),binary,,TRUE,,School has electricity reported by the head teacher
 132,num_water_points,Number of water points,continous,,TRUE,,
-133,quality_water,Quality of drinking water spots,continous,,TRUE,,
-134,electricity_yes_sfo,Electricity,binary,has electricity,TRUE,,
-135,enrol_pupil_toilet_ratio_tot,Total pupil enrolment / total number of functional toilets for boys and girls,continous,,TRUE,,
-136,enrol_num_func_toilet_per_stu,Total number of functional toilets for boys and girls / total pupil enrolment,continous,,TRUE,,
-137,enrol_pupil_toilet_ratio_girl,Total female enrolment / number of toilets for girls available,continous,,TRUE,,
-138,enrol_pupil_toilet_ratio_boy,Total male enrolment / number of toilets for boys available,continous,,TRUE,,
-139,electricity,Electricity line to the school (y or n),binary,has electricity line,TRUE,,
-140,num_drink_water_spots,Number of drinking water spots,continous,,TRUE,,
-141,block_condi_complete_bad,School blocks need to be completely rebuilt,binary,needs to completely rebuild,TRUE,,
-142,block_condi_part_major,School block' major parts need to be reparied,binary,major parts need to be repaired,TRUE,,
-143,block_condi_part_minor,School block' minor parts need to be reparied,binary,minor parts need to be repaired,TRUE,,
-144,block_condi_good,School block is in a good condition,binary,is in a good condition,TRUE,,
-145,tch_house_available,School has teacher housing,binary,has teacher housing,TRUE,,
-146,office_yes,School has ht/dht/teacher/offices (y or n),binary,has ht/dht/teacher offices,TRUE,,
-147,staff_room_yes,School has staff rooms (y or n),binary,has staff room,TRUE,,
-148,lib_yes,School has library rooms (y or n),binary,has library room,TRUE,,
-150,storage_room_yes,School has storage rooms  (y or n),binary,has storage room,TRUE,,
-151,wall_yes,(Mean) wall_yes,percentage,,TRUE,,
-152,wall_fine,(Mean) wall_fine,percentage,,TRUE,,
-153,wall_paint,(Mean) wall_paint,percentage,,TRUE,,
-154,display_on_wall,(Mean) display_on_wall,percentage,,TRUE,,
-155,instr_on_wall,(Mean) instr_on_wall,percentage,,TRUE,,
-156,LM_share,(Mean) lm_share,percentage,,TRUE,,
-157,chair_share,(Mean) chair_share,percentage,,TRUE,,
-158,uniform_share,(Mean) uniform_share,percentage,,TRUE,,
-159,permanent_class_share,(Mean) permanent_class_share,percentage,,TRUE,,
-160,temporary_class_share,(Mean) temporary_class_share,percentage,,TRUE,,
-161,open_air_class_share,(Mean) open_air_class_share,percentage,,TRUE,,
-162,tch_present_clas,Teacher present in class,percentage,,TRUE,,
-163,tch_present_tch,Teacher present & teaching,percentage,,TRUE,,
-164,PCR_std1,,continous,,TRUE,,
-165,PCR_std2,,continous,,TRUE,,
-166,PCR_std3,,continous,,TRUE,,
-167,PCR_std4,,continous,,TRUE,,
-168,PCR_std5,,continous,,TRUE,,
-169,PCR_std6,,continous,,TRUE,,
-170,PCR_std7,,continous,,TRUE,,
-171,PCR_std8,,continous,,TRUE,,
-172,PCR_tot,Overall pupil-classroom ratio,continous,,TRUE,,
-173,PCR_lower,Lower primary pupil-classroom ratio,continous,,TRUE,,
-174,PCR_upper,Upper primary pupil-classroom ratio,continous,,TRUE,,
-175,class_size_lower,Class size lower (enrol approach),continous,,TRUE,,
-176,class_size_upper_57,Class size upper (enrol approach),continous,,TRUE,,
-177,hc_class_size_std1,Class size std 1 (hc approach),continous,,TRUE,,
-178,hc_class_size_std2,Class size std 2 (hc approach),continous,,TRUE,,
-179,hc_class_size_std3,Class size std 3 (hc approach),continous,,TRUE,,
-180,hc_class_size_std4,Class size std 4 (hc approach),continous,,TRUE,,
-181,hc_class_size_std5,Class size std 5 (hc approach),continous,,TRUE,,
-182,hc_class_size_std6,Class size std 6 (hc approach),continous,,TRUE,,
-183,hc_class_size_std7,Class size std 7 (hc approach),continous,,TRUE,,
-184,hc_class_size_tot,Class size std total (hc approach),continous,,TRUE,,
-185,hc_PTR_std1,Ptr std 1 (hc),continous,,TRUE,,
-186,hc_PTR_std2,Ptr std 2 (hc),continous,,TRUE,,
-187,hc_PTR_std3,Ptr std 3 (hc),continous,,TRUE,,
-188,hc_PTR_std4,Ptr std 4 (hc),continous,,TRUE,,
-189,hc_PTR_std5,Ptr std 5 (hc),continous,,TRUE,,
-190,hc_PTR_std6,Ptr std 6 (hc),continous,,TRUE,,
-191,hc_PTR_std7,Ptr std 7 (hc),continous,,TRUE,,
-192,hc_PTR_tot,Ptr total (hc),continous,,TRUE,,
-193,rr_std1,Repetition rate std 1,continous,,TRUE,,
-194,rr_std1_f,Female repetition rate std 1,continous,,TRUE,,
-195,rr_std1_m,Male repetition rate std 1,continous,,TRUE,,
-196,rr_std2,Repetition rate std 2,continous,,TRUE,,
-197,rr_std2_f,Female repetition rate std 2,continous,,TRUE,,
-198,rr_std2_m,Male repetition rate std 2,continous,,TRUE,,
-199,rr_std3,Repetition rate std 3,continous,,TRUE,,
-200,rr_std3_f,Female repetition rate std 3,continous,,TRUE,,
-201,rr_std3_m,Male repetition rate std 3,continous,,TRUE,,
-202,rr_std4,Repetition rate std 4,continous,,TRUE,,
-203,rr_std4_f,Female repetition rate std 4,continous,,TRUE,,
-204,rr_std4_m,Male repetition rate std 4,continous,,TRUE,,
-205,rr_std5,Repetition rate std 5,continous,,TRUE,,
-206,rr_std5_f,Female repetition rate std 5,continous,,TRUE,,
-207,rr_std5_m,Male repetition rate std 5,continous,,TRUE,,
-208,rr_std6,Repetition rate std 6,continous,,TRUE,,
-209,rr_std6_f,Female repetition rate std 6,continous,,TRUE,,
-210,rr_std6_m,Male repetition rate std 6,continous,,TRUE,,
-211,rr_std7,Repetition rate std 7,continous,,TRUE,,
-212,rr_std7_f,Female repetition rate std 7,continous,,TRUE,,
-213,rr_std7_m,Male repetition rate std 7,continous,,TRUE,,
-214,rr_std8,Repetition rate std 8,continous,,TRUE,,
-215,rr_std8_f,Female repetition rate std 8,continous,,TRUE,,
-216,rr_std8_m,Male repetition rate std 8,continous,,TRUE,,
-217,rr_tot,Repetition rate total,continous,,TRUE,,
-218,rr_lower_pri,Lower primary repetition rate,continous,,TRUE,,
-219,rr_upper_pri,Upper primary repetition rate,continous,,TRUE,,
-220,rr_tot_f,Female repetition rate total,continous,,TRUE,,
-221,rr_lower_pri_f,Female repetition rate lower,continous,,TRUE,,
-222,rr_upper_pri_f,Female repetition rate upper,continous,,TRUE,,
-223,rr_tot_m,Male repetition rate total,continous,,TRUE,,
-224,rr_lower_pri_m,Male repetition rate lower,continous,,TRUE,,
-225,rr_upper_pri_m,Male repetition rate upper,continous,,TRUE,,
-226,dr_std1,Dropout rate std 1,continous,,TRUE,,
-227,dr_std1_f,Female dropout rate std 1,continous,,TRUE,,
-228,dr_std1_m,Male dropout rate std 1,continous,,TRUE,,
-229,dr_std2,Dropout rate std 2,continous,,TRUE,,
-230,dr_std2_f,Female dropout rate std 2,continous,,TRUE,,
-231,dr_std2_m,Male dropout rate std 2,continous,,TRUE,,
-232,dr_std3,Dropout rate std 3,continous,,TRUE,,
-233,dr_std3_f,Female dropout rate std 3,continous,,TRUE,,
-234,dr_std3_m,Male dropout rate std 3,continous,,TRUE,,
-235,dr_std4,Dropout rate std 4,continous,,TRUE,,
-236,dr_std4_f,Female dropout rate std 4,continous,,TRUE,,
-237,dr_std4_m,Male dropout rate std 4,continous,,TRUE,,
-238,dr_std5,Dropout rate std 5,continous,,TRUE,,
-239,dr_std5_f,Female dropout rate std 5,continous,,TRUE,,
-240,dr_std5_m,Male dropout rate std 5,continous,,TRUE,,
-241,dr_std6,Dropout rate std 6,continous,,TRUE,,
-242,dr_std6_f,Female dropout rate std 6,continous,,TRUE,,
-243,dr_std6_m,Male dropout rate std 6,continous,,TRUE,,
-244,dr_std7,Dropout rate std 7,continous,,TRUE,,
-245,dr_std7_f,Female dropout rate std 7,continous,,TRUE,,
-246,dr_std7_m,Male dropout rate std 7,continous,,TRUE,,
-247,dr_std8,Dropout rate std 8,continous,,TRUE,,
-248,dr_std8_f,Female dropout rate std 8,continous,,TRUE,,
-249,dr_std8_m,Male dropout rate std 8,continous,,TRUE,,
-250,dr_tot,Dropout rate total,continous,,TRUE,,
-251,dr_lower_pri,Lower primary dropout rate,continous,,TRUE,,
-252,dr_upper_pri,Upper primary dropout rate,continous,,TRUE,,
-253,dr_tot_f,Female dropout rate total,continous,,TRUE,,
-254,dr_lower_pri_f,Female dropout rate lower,continous,,TRUE,,
-255,dr_upper_pri_f,Female dropout rate upper,continous,,TRUE,,
-256,dr_tot_m,Male dropout rate total,continous,,TRUE,,
-257,dr_lower_pri_m,Male dropout rate lower,continous,,TRUE,,
-258,dr_upper_pri_m,Male dropout rate upper,continous,,TRUE,,
-259,abs_rate_std1_dov,Absence rate std 1 (day of visit),continous,,TRUE,,
-260,abs_rate_std1_f_dov,Female absence rate std 1 (day of visit),continous,,TRUE,,
-261,abs_rate_std1_m_dov,Male absence rate std 1 (day of visit),continous,,TRUE,,
-262,abs_rate_std2_dov,Absence rate std 2 (day of visit),continous,,TRUE,,
-263,abs_rate_std2_f_dov,Female absence rate std 2 (day of visit),continous,,TRUE,,
-264,abs_rate_std2_m_dov,Male absence rate std 2 (day of visit),continous,,TRUE,,
-265,abs_rate_std3_dov,Absence rate std 3 (day of visit),continous,,TRUE,,
-266,abs_rate_std3_f_dov,Female absence rate std 3 (day of visit),continous,,TRUE,,
-267,abs_rate_std3_m_dov,Male absence rate std 3 (day of visit),continous,,TRUE,,
-268,abs_rate_std4_dov,Absence rate std 4 (day of visit),continous,,TRUE,,
-269,abs_rate_std4_f_dov,Female absence rate std 4 (day of visit),continous,,TRUE,,
-270,abs_rate_std4_m_dov,Male absence rate std 4 (day of visit),continous,,TRUE,,
-271,abs_rate_std5_dov,Absence rate std 5 (day of visit),continous,,TRUE,,
-272,abs_rate_std5_f_dov,Female absence rate std 5 (day of visit),continous,,TRUE,,
-273,abs_rate_std5_m_dov,Male absence rate std 5 (day of visit),continous,,TRUE,,
-274,abs_rate_std6_dov,Absence rate std 6 (day of visit),continous,,TRUE,,
-275,abs_rate_std6_f_dov,Female absence rate std 6 (day of visit),continous,,TRUE,,
-276,abs_rate_std6_m_dov,Male absence rate std 6 (day of visit),continous,,TRUE,,
-277,abs_rate_std7_dov,Absence rate std 7 (day of visit),continous,,TRUE,,
-278,abs_rate_std7_f_dov,Female absence rate std 7 (day of visit),continous,,TRUE,,
-279,abs_rate_std7_m_dov,Male absence rate std 7 (day of visit),continous,,TRUE,,
-280,abs_rate_std8_dov,Absence rate std 8 (day of visit),continous,,TRUE,,
-281,abs_rate_std8_f_dov,Female absence rate std 8 (day of visit),continous,,TRUE,,
-282,abs_rate_std8_m_dov,Male absence rate std 8 (day of visit),continous,,TRUE,,
-283,abs_rate_tot_dov,Absence rate total (day of visit),continous,,TRUE,,
-284,abs_rate_tot_f_dov,Female absence rate total (day of visit),continous,,TRUE,,
-285,abs_rate_tot_m_dov,Male absence rate total (day of visit),continous,,TRUE,,
-286,abs_rate_upper_dov,Absence rate upper (day of visit),continous,,TRUE,,
-287,abs_rate_lower_dov,Absence rate upper (day of visit),continous,,TRUE,,
-288,abs_rate_upper_f_dov,Female absence rate upper (day of visit),continous,,TRUE,,
-289,abs_rate_upper_m_dov,Male absence rate upper (day of visit),continous,,TRUE,,
-290,abs_rate_lower_f_dov,Female absence rate lower (day of visit),continous,,TRUE,,
-291,abs_rate_lower_m_dov,Male absence rate lower (day of visit),continous,,TRUE,,
-292,English_klg_score,(Mean) english_klg_score,continous,,TRUE,,
-293,Math_klg_score,(Mean) math_klg_score,continous,,TRUE,,
-294,Chi_klg_score,(Mean) chi_klg_score,continous,,TRUE,,
-295,total_klg_score,(Mean) total_klg_score,continous,,TRUE,,
-296,EnglishTotal_Percent,(Mean) englishtotal_percent,continous,,TRUE,,
-297,MathsTotal_Percent,(Mean) mathstotal_percent,continous,,TRUE,,
-298,ChichewaTotal_Percent,(Mean) chichewatotal_percent,continous,,TRUE,,
-299,Total_percent,Total percent,continous,,TRUE,,
-300,EnglishTotal_Percent_m,Englishtotal_percent_m,continous,,TRUE,,
-301,MathsTotal_Percent_m,Mathstotal_percent_m,continous,,TRUE,,
-302,ChichewaTotal_Percent_m,Chichewatotal_percent_m,continous,,TRUE,,
-303,EnglishTotal_Percent_f,Englishtotal_percent_f,continous,,TRUE,,
-304,MathsTotal_Percent_f,Mathstotal_percent_f,continous,,TRUE,,
-305,ChichewaTotal_Percent_f,Chichewatotal_percent_f,continous,,TRUE,,
-306,Total_percent_m,Total_percent_m,continous,,TRUE,,
-307,Total_percent_f,Total_percent_f,continous,,TRUE,,
-308,English_klg_score_m,1 english_klg_score,continous,,TRUE,,
-309,Math_klg_score_m,1 math_klg_score,continous,,TRUE,,
-310,Chi_klg_score_m,1 chi_klg_score,continous,,TRUE,,
-311,total_klg_score_m,1 total_klg_score,continous,,TRUE,,
-312,English_klg_score_f,2 english_klg_score,continous,,TRUE,,
-313,Math_klg_score_f,2 math_klg_score,continous,,TRUE,,
-314,Chi_klg_score_f,2 chi_klg_score,continous,,TRUE,,
-315,total_klg_score_f,2 total_klg_score,continous,,TRUE,,
-316,dist_quintiles,Distance to nearest trading centre quintile,continous,,TRUE,,
-317,SR_grade5,Sr grade 5,continous,,TRUE,,
-318,SR_grade5_f,Sr grade 5 f,continous,,TRUE,,
-319,SR_grade5_m,Sr grade 5 m,continous,,TRUE,,
-320,SR_grade7,Sr grade 7,continous,,TRUE,,
-321,SR_grade7_f,Sr grade 7 f,continous,,TRUE,,
-322,SR_grade7_m,Sr grade 7 m,continous,,TRUE,,
+133,quality_water,Quality of drinking water points,continous,,TRUE,,"0- No water, 1-Poor quality water (e.g. borehole), 2-Good quality water (e.g. piped)"
+134,electricity_yes_sfo,School has electricity (observed),binary,,TRUE,,School has electricity observed by the enumerator
+135,enrol_pupil_toilet_ratio_tot,Pupil-toilet ratio,continous,,TRUE,,Total pupil enrollment / Total number of toilets for boys and girls
+136,enrol_num_func_toilet_per_stu,Pupil-functional toilet ratio,continous,,TRUE,,Total pupil enrollment / Total number of functional toilets for boys and girls
+137,enrol_pupil_toilet_ratio_girl,Female pupil-female toilet ratio,continous,,TRUE,,Total female enrollment / Number of toilets for girls available
+138,enrol_pupil_toilet_ratio_boy,Male pupil-male toilet ratio,continous,,TRUE,,Total male enrollment / Number of toilets for boys available
+139,electricity,Electricity line runs to the school,binary,,TRUE,,School has a  electricity line
+140,num_drink_water_spots,Number of drinking water points,continous,,TRUE,,
+141,Quality_school,Condition of school buildings,continous,,TRUE,,Condition of majority of school blocks: 0- Need to be completely rebuilt/major repairs needed ; 1-Minor parts need to be repaired; 2- Good Condition
+145,tch_house_available,School has teacher housing,binary,,TRUE,,
+146,office_yes,School has headteacher's offices,binary,,TRUE,,
+147,staff_room_yes,School has staff rooms,binary,,TRUE,,
+148,lib_yes,School has library,binary,,TRUE,,
+150,storage_room_yes,School has storage room(s),binary,,TRUE,,
+151,wall_yes,Share of classrooms with walls,percentage,,TRUE,,
+152,wall_fine,Share of classrooms with walls in fine condition,percentage,,TRUE,,
+153,wall_paint,Share of classrooms with painted walls,percentage,,TRUE,,
+154,display_on_wall,Share of classrooms with children's work displayed on the walls,percentage,,TRUE,,
+155,instr_on_wall,Share of classrooms with instructional materials on the walls,percentage,,TRUE,,"Instructional materials include maps, posters, etc."
+156,LM_share,Share of classrooms with learning materials corner,percentage,,TRUE,,
+157,chair_share,Share of students seated on a chair,percentage,,TRUE,,
+158,uniform_share,Share of students with uniform,percentage,,TRUE,,
+159,permanent_class_share,Share of classes that are in permanent classrooms,percentage,,TRUE,,
+160,temporary_class_share,Share of classes that are in temporary classrooms,percentage,,TRUE,,"Temporary classrooms are tents or made of plastic sheeting, grass/reeds, etc"
+161,open_air_class_share,Share of classes that are in open air,percentage,,TRUE,,
+162,tch_present_clas,Teacher present in class,percentage,,TRUE,,Share of classes in which teacher was found present when enumerator entered
+163,tch_present_tch,Teacher present and teaching,percentage,,TRUE,,Share of classes in which teacher was found present and teaching when enumerator entered
+172,PCR_tot,Pupil-classroom ratio (overall),continous,,TRUE,,
+173,PCR_lower,Pupil-classroom ratio (lower primary),continous,,TRUE,,
+174,PCR_upper,Pupil-classroom ratio (upper primary),continous,,TRUE,,
+164,PCR_std1,Pupil-classroom ratio (standard 1),continous,,TRUE,,
+165,PCR_std2,Pupil-classroom ratio (standard 2),continous,,TRUE,,
+166,PCR_std3,Pupil-classroom ratio (standard 3),continous,,TRUE,,
+167,PCR_std4,Pupil-classroom ratio (standard 4),continous,,TRUE,,
+168,PCR_std5,Pupil-classroom ratio (standard 5),continous,,TRUE,,
+169,PCR_std6,Pupil-classroom ratio (standard 6),continous,,TRUE,,
+170,PCR_std7,Pupil-classroom ratio (standard 7),continous,,TRUE,,
+171,PCR_std8,Pupil-classroom ratio (standard 8),continous,,TRUE,,
+184,hc_class_size_tot,Class size (observed) (overall),continous,,TRUE,,Average number of students present in a class on day of observation
+177,hc_class_size_std1,Class size (observed) (standard 1),continous,,TRUE,,Average number of students present (Standard 1) class on day of visit
+178,hc_class_size_std2,Class size (observed) (standard 2),continous,,TRUE,,Average number of students present (Standard 2) class on day of visit
+179,hc_class_size_std3,Class size (observed) (standard 3),continous,,TRUE,,Average number of students present (Standard 3) class on day of visit
+180,hc_class_size_std4,Class size (observed) (standard 4),continous,,TRUE,,Average number of students present (Standard 4) class on day of visit
+181,hc_class_size_std5,Class size (observed) (standard 5),continous,,TRUE,,Average number of students present (Standard 5) class on day of visit
+182,hc_class_size_std6,Class size (observed) (standard 6),continous,,TRUE,,Average number of students present (Standard 6) class on day of visit
+183,hc_class_size_std7,Class size (observed) (standard 7),continous,,TRUE,,Average number of students present (Standard 7) class on day of visit
+192,hc_PTR_tot,Observed ptr (overall) (observed),continous,,TRUE,,Number of students observed present on day of visit / Number of teachers
+185,hc_PTR_std1,Observed ptr (standard 1),continous,,TRUE,,Number of students observed present on day of visit (Standard 1) / Number of teachers (Standard 1)
+186,hc_PTR_std2,Observed ptr (standard 2) (observed),continous,,TRUE,,Number of students observed present on day of visit (Standard 2) / Number of teachers (Standard 2)
+187,hc_PTR_std3,Observed ptr (standard 3) (observed),continous,,TRUE,,Number of students observed present on day of visit (Standard 3) / Number of teachers (Standard 3)
+188,hc_PTR_std4,Observed ptr (standard 4) (observed),continous,,TRUE,,Number of students observed present on day of visit (Standard 4) / Number of teachers (Standard 4)
+189,hc_PTR_std5,Observed ptr (standard 5) (observed),continous,,TRUE,,Number of students observed present on day of visit (Standard 5) / Number of teachers (Standard 5)
+190,hc_PTR_std6,Observed ptr (standard 6) (observed),continous,,TRUE,,Number of students observed present on day of visit (Standard 6) / Number of teachers (Standard 6)
+191,hc_PTR_std7,Observed ptr (standard 7) (observed),continous,,TRUE,,Number of students observed present on day of visit (Standard 7) / Number of teachers (Standard 7)
+217,rr_tot,Repetition rate (overall),continous,,TRUE,,
+218,rr_lower_pri,Repetition rate (lower primary),continous,,TRUE,,
+219,rr_upper_pri,Repetition rate (upper primary),continous,,TRUE,,
+193,rr_std1,Repetition rate (standard 1),continous,,TRUE,,
+196,rr_std2,Repetition rate (standard 2),continous,,TRUE,,
+199,rr_std3,Repetition rate (standard 3),continous,,TRUE,,
+202,rr_std4,Repetition rate (standard 4),continous,,TRUE,,
+205,rr_std5,Repetition rate (standard 5),continous,,TRUE,,
+208,rr_std6,Repetition rate (standard 6),continous,,TRUE,,
+211,rr_std7,Repetition rate (standard 7),continous,,TRUE,,
+214,rr_std8,Repetition rate (standard 8),continous,,TRUE,,
+220,rr_tot_f,Female repetition rate (overall),continous,,TRUE,,
+221,rr_lower_pri_f,Female repetition rate (lower primary),continous,,TRUE,,
+222,rr_upper_pri_f,Female repetition rate (upper primary),continous,,TRUE,,
+195,rr_std1_f,Female repetition rate (standard 1),continous,,TRUE,,
+197,rr_std2_f,Female repetition rate (standard 2),continous,,TRUE,,
+200,rr_std3_f,Female repetition rate (standard 3),continous,,TRUE,,
+203,rr_std4_f,Female repetition rate (standard 4),continous,,TRUE,,
+206,rr_std5_f,Female repetition rate (standard 5),continous,,TRUE,,
+209,rr_std6_f,Female repetition rate (standard 6),continous,,TRUE,,
+212,rr_std7_f,Female repetition rate (standard 7),continous,,TRUE,,
+215,rr_std8_f,Female repetition rate (standard 8),continous,,TRUE,,
+223,rr_tot_m,Male repetition rate (overall),continous,,TRUE,,
+224,rr_lower_pri_m,Male repetition rate (lower primary),continous,,TRUE,,
+225,rr_upper_pri_m,Male repetition rate (upper primary),continous,,TRUE,,
+194,rr_std1_m,Male repetition rate (standard 1),continous,,TRUE,,
+198,rr_std2_m,Male repetition rate (standard 3),continous,,TRUE,,
+201,rr_std3_m,Male repetition rate (standard 3),continous,,TRUE,,
+204,rr_std4_m,Male repetition rate (standard 4),continous,,TRUE,,
+207,rr_std5_m,Male repetition rate (standard 5),continous,,TRUE,,
+210,rr_std6_m,Male repetition rate (standard 6),continous,,TRUE,,
+213,rr_std7_m,Male repetition rate (standard 7),continous,,TRUE,,
+216,rr_std8_m,Male repetition rate (standard 8),continous,,TRUE,,
+250,dr_tot,Dropout rate (overall),continous,,TRUE,,
+251,dr_lower_pri,Dropout rate (lower primary),continous,,TRUE,,
+252,dr_upper_pri,Dropout rate (upper primary),continous,,TRUE,,
+226,dr_std1,Dropout rate (standard 1),continous,,TRUE,,
+229,dr_std2,Dropout rate (standard 2),continous,,TRUE,,
+232,dr_std3,Dropout rate (standard 1),continous,,TRUE,,
+235,dr_std4,Dropout rate (standard 4),continous,,TRUE,,
+238,dr_std5,Dropout rate (standard 5),continous,,TRUE,,
+241,dr_std6,Dropout rate (standard 6),continous,,TRUE,,
+244,dr_std7,Dropout rate (standard 7),continous,,TRUE,,
+247,dr_std8,Dropout rate (standard 8),continous,,TRUE,,
+253,dr_tot_f,Female dropout rate (overall),continous,,TRUE,,
+254,dr_lower_pri_f,Female dropout rate (lower primary),continous,,TRUE,,
+255,dr_upper_pri_f,Female dropout rate(upper primary),continous,,TRUE,,
+227,dr_std1_f,Female dropout rate (standard 1),continous,,TRUE,,
+230,dr_std2_f,Female dropout rate (standard 2),continous,,TRUE,,
+233,dr_std3_f,Female dropout rate (standard 3),continous,,TRUE,,
+236,dr_std4_f,Female dropout rate (standard 4),continous,,TRUE,,
+239,dr_std5_f,Female dropout rate (standard 5),continous,,TRUE,,
+242,dr_std6_f,Female dropout rate (standard 6),continous,,TRUE,,
+245,dr_std7_f,Female dropout rate (standard 7),continous,,TRUE,,
+248,dr_std8_f,Female dropout rate (standard 8),continous,,TRUE,,
+256,dr_tot_m,Male dropout rate (overall),continous,,TRUE,,
+257,dr_lower_pri_m,Male dropout rate( lower primary),continous,,TRUE,,
+258,dr_upper_pri_m,Male dropout rate (upper primary),continous,,TRUE,,
+228,dr_std1_m,Male dropout rate (standard 1),continous,,TRUE,,
+231,dr_std2_m,Male dropout rate (standard 2),continous,,TRUE,,
+234,dr_std3_m,Male dropout rate (standard 3),continous,,TRUE,,
+237,dr_std4_m,Male dropout rate (standard 4),continous,,TRUE,,
+240,dr_std5_m,Male dropout rate (standard 5),continous,,TRUE,,
+243,dr_std6_m,Male dropout rate (standard 6),continous,,TRUE,,
+246,dr_std7_m,Male dropout rate (standard 7),continous,,TRUE,,
+249,dr_std8_m,Male dropout rate (standard 8),continous,,TRUE,,
+283,abs_rate_tot_dov,"Absence rate overall (day of visit, records based)",continous,,TRUE,,Total students absent on day of visit / Total students enrolled
+287,abs_rate_lower_dov,"Absence rate (lower primary) (day of visit, records based)",continous,,TRUE,,Total students (Standard 1-Standard 4) present on day of visit / Total students enrolled for (Standard 1- Standard 4)
+286,abs_rate_upper_dov,"Absence rate (upper primary) (day of visit, records based)",continous,,TRUE,,Total students (Standard 5-Standard 8) absent on day of visit / Total students enrolled for (Standard 5- Standard 8)
+259,abs_rate_std1_dov,"Absence rate (standard 1) (day of visit, records based)",continous,,TRUE,,Total students absent (Standard 1) on day of visit / Total students enrolled (Standard 1)
+262,abs_rate_std2_dov,"Absence rate (standard 2) (day of visit, records based)",continous,,TRUE,,Total students absent (Standard 2) on day of visit / Total students enrolled (Standard 2)
+265,abs_rate_std3_dov,"Absence rate (standard 3) (day of visit, records based)",continous,,TRUE,,Total students absent (Standard 3) on day of visit / Total students enrolled (Standard 3)
+268,abs_rate_std4_dov,"Absence rate (standard 4) (day of visit, records based)",continous,,TRUE,,Total students absent (Standard 4) on day of visit / Total students enrolled (Standard 4)
+271,abs_rate_std5_dov,"Absence rate (standard 5) (day of visit, records based)",continous,,TRUE,,Total students absent (Standard 5) on day of visit / Total students enrolled (Standard 5)
+274,abs_rate_std6_dov,"Absence rate (standard 6) (day of visit, records based)",continous,,TRUE,,Total students absent (Standard 6) on day of visit / Total students enrolled (Standard 6)
+277,abs_rate_std7_dov,"Absence rate(standard 7) (day of visit, records based)",continous,,TRUE,,Total students absent (Standard 7) on day of visit / Total students enrolled (Standard 7)
+280,abs_rate_std8_dov,"Absence rate (standard 8) (day of visit, records based)",continous,,TRUE,,Total students absent (Standard 8) on day of visit / Total students enrolled (Standard 8)
+284,abs_rate_tot_f_dov,"Female absence rate (day of visit, records based)",continous,,TRUE,,Total female students absent on day of visit / Total female students enrolled
+290,abs_rate_lower_f_dov,"Female absence rate(lower primary) (day of visit, records based)",continous,,TRUE,,Total female students (Standard 1-Standard 4) present on day of visit / Total female students enrolled (Standard 1- Standard 4)
+288,abs_rate_upper_f_dov,"Female absence rate(upper primary) (day of visit, records based)",continous,,TRUE,,Total female students (Standard 5-Standard 8) absent on day of visit / Total female students enrolled (Standard 5- Standard 8)
+260,abs_rate_std1_f_dov,"Female absence rate (standard 1) (day of visit, records based)",continous,,TRUE,,Total female students absent (Standard 1) on day of visit / Total female students enrolled (Standard 1)
+263,abs_rate_std2_f_dov,"Female absence rate (standard 2) (day of visit, records based)",continous,,TRUE,,Total female students absent (Standard 2) on day of visit / Total female students enrolled (Standard 2)
+266,abs_rate_std3_f_dov,"Female absence rate (standard 3) (day of visit, records based)",continous,,TRUE,,Total female students absent (Standard 3) on day of visit / Total female students enrolled (Standard 3)
+269,abs_rate_std4_f_dov,"Female absence rate (standard 4) (day of visit, records based)",continous,,TRUE,,Total female students absent (Standard 4) on day of visit / Total female students enrolled (Standard 4)
+272,abs_rate_std5_f_dov,"Female absence rate (standard 5) (day of visit, records based)",continous,,TRUE,,Total female students absent (Standard 5) on day of visit / Total female students enrolled (Standard 5)
+275,abs_rate_std6_f_dov,"Female absence rate (standard 6) (day of visit, records based)",continous,,TRUE,,Total female students absent (Standard 6) on day of visit / Total female students enrolled (Standard 6)
+278,abs_rate_std7_f_dov,"Female absence rate (standard 7) (day of visit, records based)",continous,,TRUE,,Total female students absent (Standard 7) on day of visit / Total female students enrolled (Standard 7)
+281,abs_rate_std8_f_dov,"Female absence rate (standard 8) (day of visit, records based)",continous,,TRUE,,Total female students absent (Standard 8) on day of visit / Total female students enrolled (Standard 8)
+285,abs_rate_tot_m_dov,"Male absence rate(day of visit, records based)",continous,,TRUE,,Total male students absent on day of visit / Total male students enrolled
+291,abs_rate_lower_m_dov,"Male absence rate(lower primary) (day of visit, records based)",continous,,TRUE,,Total male students (Standard 1-Standard 4) absent on day of visit / Total male students enrolled (Standard 1- Standard 4)
+289,abs_rate_upper_m_dov,"Male absence rate(upper primary) (day of visit, records based)",continous,,TRUE,,Total male students (Standard 5-Standard 8) absent on day of visit / Total male students enrolled (Standard 5- Standard 8)
+261,abs_rate_std1_m_dov,"Male absence rate (standard 1) (day of visit, records based)",continous,,TRUE,,Total male students absent (Standard 1) on day of visit / Total male students enrolled (Standard 1)
+264,abs_rate_std2_m_dov,"Male absence rate (standard 2) (day of visit, records based)",continous,,TRUE,,Total male students absent (Standard 2) on day of visit / Total male students enrolled (Standard 2)
+267,abs_rate_std3_m_dov,"Male absence rate (standard 3) (day of visit, records based)",continous,,TRUE,,Total male students absent (Standard 3) on day of visit / Total male students enrolled (Standard 3)
+270,abs_rate_std4_m_dov,"Male absence rate (standard 4) (day of visit, records based)",continous,,TRUE,,Total male students absent (Standard 4) on day of visit / Total male students enrolled (Standard 4)
+273,abs_rate_std5_m_dov,"Male absence rate (standard 5) (day of visit, records based)",continous,,TRUE,,Total male students absent (Standard 5) on day of visit / Total male students enrolled (Standard 5)
+276,abs_rate_std6_m_dov,"Male absence rate (standard 6) (day of visit, records based)",continous,,TRUE,,Total male students absent (Standard 6) on day of visit / Total male students enrolled (Standard 6)
+279,abs_rate_std7_m_dov,"Male absence rate (standard 7) (day of visit, records based)",continous,,TRUE,,Total male students absent (Standard 7) on day of visit / Total male students enrolled (Standard 7)
+282,abs_rate_std8_m_dov,"Male absence rate (standard 8) (day of visit, records based)",continous,,TRUE,,Total male students absent (Standard 8) on day of visit / Total male students enrolled (Standard 8)
+293,total_klg_score,Mean knowledge score (chichewa),continous,,TRUE,,Knowledge score scaled from percent correct using item response theory. Mean-centered at 500.
+295,Chi_klg_score,Mean knowledge score (math),continous,,TRUE,,Knowledge score scaled from percent correct using item response theory. Mean-centered at 500.
+294,English_klg_score,Mean knowledge score (total),continous,,TRUE,,Knowledge score scaled from percent correct using item response theory. Mean-centered at 500.
+292,Math_klg_score,Mean knowledge score (english),continous,,TRUE,,Knowledge score scaled from percent correct using item response theory. Mean-centered at 500.
+299,Total_percent,Mean percent correct (total),continous,,TRUE,,
+298,ChichewaTotal_Percent,Mean percent correct (chichewa),continous,,TRUE,,
+296,EnglishTotal_Percent,Mean percent correct (english),continous,,TRUE,,
+297,MathsTotal_Percent,Mean percent correct (math),continous,,TRUE,,
+307,Total_percent_f,Mean percent correct (total) (female),continous,,TRUE,,
+305,ChichewaTotal_Percent_f,Mean percent correct (chichewa) (female),continous,,TRUE,,
+303,EnglishTotal_Percent_f,Mean percent correct (english) (female),continous,,TRUE,,
+304,MathsTotal_Percent_f,Mean percent correct (math) (female),continous,,TRUE,,
+306,Total_percent_m,Mean percent correct (total) (male),continous,,TRUE,,
+302,ChichewaTotal_Percent_m,Mean percent correct (chichewa) (male),continous,,TRUE,,
+300,EnglishTotal_Percent_m,Mean percent correct (english) (male),continous,,TRUE,,
+301,MathsTotal_Percent_m,Mean percent correct (math) (male),continous,,TRUE,,
+308,English_klg_score_m,Mean knowledge score (english) (male),continous,,TRUE,,Knowledge score scaled from percent correct using item response theory. Mean-centered at 500.
+315,total_klg_score_f,Mean knowledge score (total) (female),continous,,TRUE,,Knowledge score scaled from percent correct using item response theory. Mean-centered at 500.
+314,Chi_klg_score_f,Mean knowledge score (chichewa) (female),continous,,TRUE,,Knowledge score scaled from percent correct using item response theory. Mean-centered at 500.
+312,English_klg_score_f,Mean knowledge score (english) (female),continous,,TRUE,,Knowledge score scaled from percent correct using item response theory. Mean-centered at 500.
+313,Math_klg_score_f,Mean knowledge score (math) (female),continous,,TRUE,,Knowledge score scaled from percent correct using item response theory. Mean-centered at 500.
+311,total_klg_score_m,Mean knowledge score (total) (male),continous,,TRUE,,Knowledge score scaled from percent correct using item response theory. Mean-centered at 500.
+310,Chi_klg_score_m,Mean knowledge score (chichewa) (male),continous,,TRUE,,Knowledge score scaled from percent correct using item response theory. Mean-centered at 500.
+309,Math_klg_score_m,Mean knowledge score (math) (male),continous,,TRUE,,Knowledge score scaled from percent correct using item response theory. Mean-centered at 500.
+316,km_to_nid,Distance to nearest trading centre,continous,,TRUE,,Distance (Euclidean/'as the crow flies') from the school to the nearest tradiing center
+NEW,remote_school,School is remote school,binary,,TRUE,,School is in furthest one-fifth of schools from nearest trading center
+317,SR_grade5,Survival rate (standard 5),continous,,TRUE,,Enrollment (Standard 5) / Enrollment (Standard 1)
+320,SR_grade7,Survival rate (standard 7),continous,,TRUE,,Enrollment (Standard 7) / Enrollment (Standard 1)
+318,SR_grade5_f,Survival rate (standard 5) (female),continous,,TRUE,,Female enrollment (Standard 5) / Female enrollment (Standard 1)
+321,SR_grade7_f,Survival rate (standard 7) (female),continous,,TRUE,,Female enrollment (Standard 7) / Female enrollment (Standard 1)
+319,SR_grade5_m,Survival rate (standard 5) (male),continous,,TRUE,,Male enrollment (Standard 5) / Male enrollment (Standard 1)
+322,SR_grade7_m,Survival rate (standard 7) (male),continous,,TRUE,,Male enrollment (Standard 7) / Male enrollment (Standard 1)

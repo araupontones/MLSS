@@ -1,27 +1,27 @@
-id,var_name,label,format,Dashboard,Filter,type,label_yes,dropdown,Description_Dashboard,Name dropdown,Description
-001,school_id,school id,%10.0g,TRUE,,id,,FALSE,,,
-002,teacher_id,teacher id,%8.0g,TRUE,,id,,FALSE,,,
-003,time_prepare_lesson,time spent on preparing lesson plan (in hours),%9.0g,TRUE,,continous,,TRUE,,,
-004,time_tch_stu,Time spent teaching students,%9.0g,TRUE,,continous,,TRUE,,,
-005,time_mark_hw,Time spent marking homework,%9.0g,TRUE,,continous,,TRUE,,,
-006,time_sch_adm,Time spent on school admin,%9.0g,TRUE,,continous,,TRUE,,,
-007,time_help_oth,Time spent helping others,%9.0g,TRUE,,continous,,TRUE,,,
-008,time_other,Time spent on other activities,%9.0g,TRUE,,continous,,TRUE,,,
-009,ht_observe,,%37.0g,TRUE,,binary,HT observe,TRUE,,,
-010,tch_reward,,%15.0g,TRUE,,binary,has been rewarded,TRUE,,,
-011,basic_qualification,Teacher has basic qualifications,%9.0g,TRUE,,binary,has basic qualifications,TRUE,,,
-012,above_high_qualification,Teacher has above high-school qualifications,%9.0g,TRUE,,binary,has above high-school qualifications,TRUE,,,
-013,tch_trained,Teacher trained,%9.0g,TRUE,,binary,is trained,TRUE,,,
-014,unpaid_claim_yes,teacher has unpaid claim including salary delays,%9.0g,TRUE,,binary,has unpaid claim including salary delays,TRUE,,,
-015,salary_delay_yes,Salary has been delayed,%9.0g,TRUE,,binary,salary has been delayed in the past 12 months,TRUE,,,
-016,num_salary_delay,number of salary delays in the past 12 months,%9.0g,TRUE,,continous,,TRUE,,,
-017,in_service_train,Received in-service training,%9.0g,TRUE,,binary,has received in-service training,TRUE,,,
-018,EnglishTotal_Percent,English percent score,%9.0g,TRUE,,continous,,TRUE,,,
-019,MathsTotal_Percent,Math percent score,%9.0g,TRUE,,continous,,TRUE,,,
-020,ChichewaTotal_Percent,Chichewa percent score,%9.0g,TRUE,,continous,,TRUE,,,
-021,Total_score_percent_tch,Total percent score,%9.0g,TRUE,,continous,,TRUE,,,
-022,ENG_hard_item_percent,English hard item percent score,%9.0g,TRUE,,continous,,TRUE,,,
-023,MATH_hard_item_percent,Math hard item percent score,%9.0g,TRUE,,continous,,TRUE,,,
-024,tch_female,Teacher female,%9.0g,TRUE,,binary,is female,TRUE,,,
-025,ODL,Highest level of teacher training is ODL,%9.0g,TRUE,,binary,highest level of teacher training is ODL,TRUE,,,
-026,IPTE,Highest level of teacher training is IPTE,%9.0g,TRUE,,binary,highest level of teacher training is IPTE,TRUE,,,
+id,var_name,label,format,Dashboard,Filter,type,label_yes,dropdown,Name dropdown,Description
+001,school_id,school id,%10.0g,TRUE,,id,,FALSE,,
+002,teacher_id,teacher id,%8.0g,TRUE,,id,,FALSE,,
+003,time_prepare_lesson,Time spent each day preparing lesson plan (in hours),%9.0g,TRUE,,continous,,TRUE,,
+004,time_tch_stu,Time spent each day teaching students (in hours),%9.0g,TRUE,,continous,,TRUE,,
+005,time_mark_hw,Time spent each day marking homework (in hours),%9.0g,TRUE,,continous,,TRUE,,
+006,time_sch_adm,Time spent each day on school admin (in hours),%9.0g,TRUE,,continous,,TRUE,,
+007,time_help_oth,Time spent each day helping other teachers (in hours),%9.0g,TRUE,,continous,,TRUE,,
+008,time_other,Time spent each day on other activities (in hours),%9.0g,TRUE,,continous,,TRUE,,
+009,ht_observe,Head teacher observes teacher's lessons at least 1-2 times per month,%37.0g,TRUE,,binary,,TRUE,,
+010,tch_reward,Teacher has been rewarded for good performance,%15.0g,TRUE,,binary,,TRUE,,
+011,basic_qualification,Teacher has only basic qualifications,%9.0g,TRUE,,binary,,TRUE,,Teacher has completed Primary School Leaving Certificate Examination (PSLCE) or Junior Secondary Certificate but not Malawi Secondary Certificate of Education (MSCE)
+012,above_high_qualification,Teacher has above high-school qualifications,%9.0g,TRUE,,binary,,TRUE,,Teacher has completed Malawi Secondary Certificate of Education (MSCE)
+013,tch_trained,Teacher has received pre-service training,%9.0g,TRUE,,binary,,TRUE,,
+014,unpaid_claim_yes,"Teacher has unpaid claims, including salary delays",%9.0g,TRUE,,binary,,TRUE,,
+015,salary_delay_yes,Teacher has experienced salary delays in last 12 months,%9.0g,TRUE,,binary,,TRUE,,
+016,num_salary_delay,Number of salary delays in the past 12 months,%9.0g,TRUE,,continous,,TRUE,,
+017,in_service_train,Teacher has received in-service training in the last two years,%9.0g,TRUE,,binary,,TRUE,,
+018,EnglishTotal_Percent,Percent correct (English),%9.0g,TRUE,,continous,,TRUE,,Teachers complete the same assessment as students as a validation exercise
+019,MathsTotal_Percent,Percent correct (Math),%9.0g,TRUE,,continous,,TRUE,,Teachers complete the same assessment as students as a validation exercise
+020,ChichewaTotal_Percent,Percent correct (Chichewa),%9.0g,TRUE,,continous,,TRUE,,Teachers complete the same assessment as students as a validation exercise
+021,Total_score_percent_tch,Percent correct (Total),%9.0g,TRUE,,continous,,TRUE,,Teachers complete the same assessment as students as a validation exercise
+022,ENG_hard_item_percent,Percent of higher level items correct (English),%9.0g,TRUE,,continous,,TRUE,,DROP
+023,MATH_hard_item_percent,Percent of higher level items correct (Math),%9.0g,TRUE,,continous,,TRUE,,DROP
+024,tch_female,Teacher is female,%9.0g,TRUE,,binary,,TRUE,,
+025,ODL,Highest level of teacher training is ODL,%9.0g,TRUE,,binary,,TRUE,,ODL = Open Distance Learning
+026,IPTE,Highest level of teacher training is IPTE,%9.0g,TRUE,,binary,,TRUE,,IPTE = Initial Primary Teaching Education

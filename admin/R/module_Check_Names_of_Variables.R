@@ -62,7 +62,7 @@ checkVarNames <- function(id, file_info, dirLookUps){
                                                      id_button = "close_error_teacher_names",
                                                      nivel = "teacher")
       
-      showModal(modal_error_school_names)
+      showModal(modal_error_teacher_names)
       shinyFeedback::feedbackDanger("upload", teacher_vars()!="OK", "Check variable names of teacher file")
       
     })
@@ -97,7 +97,7 @@ checkVarNames <- function(id, file_info, dirLookUps){
                                                       id_button = "close_error_student_names",
                                                       nivel = "student")
       
-      showModal(modal_error_school_names)
+      showModal(modal_error_student_names)
       shinyFeedback::feedbackDanger("upload", student_vars()!="OK", "Check variable names of student file")
       
     })
