@@ -1,47 +1,95 @@
 school_id,division_num,division_nam,district_num,district_nam
 1,1,Northern,1,Chitipa
+1,1,Northern,1,Chitipa
+2,1,Northern,1,Chitipa
 2,1,Northern,1,Chitipa
 3,1,Northern,1,Chitipa
 4,1,Northern,1,Chitipa
 5,1,Northern,1,Chitipa
+5,1,Northern,1,Chitipa
+6,1,Northern,1,Chitipa
 6,1,Northern,1,Chitipa
 7,3,Central Western,16,Lilongwe Rural East
 8,1,Northern,1,Chitipa
+8,1,Northern,1,Chitipa
+9,1,Northern,1,Chitipa
 9,1,Northern,1,Chitipa
 10,1,Northern,1,Chitipa
+10,1,Northern,1,Chitipa
 11,1,Northern,1,Chitipa
+11,1,Northern,1,Chitipa
+12,1,Northern,1,Chitipa
 12,1,Northern,1,Chitipa
 13,1,Northern,1,Chitipa
 14,2,Central Eastern,10,Nkhotakota
+14,2,Central Eastern,10,Nkhotakota
+14,2,Central Eastern,10,Nkhotakota
 15,1,Northern,2,Karonga
+15,1,Northern,2,Karonga
+16,1,Northern,2,Karonga
 16,1,Northern,2,Karonga
 17,1,Northern,2,Karonga
 18,1,Northern,2,Karonga
+18,1,Northern,2,Karonga
+19,1,Northern,2,Karonga
 19,1,Northern,2,Karonga
 20,1,Northern,2,Karonga
 21,1,Northern,2,Karonga
+21,1,Northern,2,Karonga
 22,1,Northern,2,Karonga
 23,1,Northern,2,Karonga
+23,1,Northern,2,Karonga
 25,1,Northern,2,Karonga
+26,1,Northern,2,Karonga
 26,1,Northern,2,Karonga
 27,1,Northern,2,Karonga
 28,1,Northern,2,Karonga
 29,1,Northern,3,Rumphi
+29,1,Northern,3,Rumphi
+29,1,Northern,3,Rumphi
+30,1,Northern,7,Nkhata Bay
 30,1,Northern,7,Nkhata Bay
 32,1,Northern,3,Rumphi
+32,1,Northern,3,Rumphi
+32,1,Northern,3,Rumphi
+33,1,Northern,3,Rumphi
+33,1,Northern,3,Rumphi
 33,1,Northern,3,Rumphi
 34,1,Northern,3,Rumphi
+34,1,Northern,3,Rumphi
+34,1,Northern,3,Rumphi
+35,1,Northern,3,Rumphi
+35,1,Northern,3,Rumphi
 35,1,Northern,3,Rumphi
 36,1,Northern,3,Rumphi
+36,1,Northern,3,Rumphi
+36,1,Northern,3,Rumphi
+37,1,Northern,3,Rumphi
+37,1,Northern,3,Rumphi
 37,1,Northern,3,Rumphi
 38,1,Northern,3,Rumphi
+38,1,Northern,3,Rumphi
+38,1,Northern,3,Rumphi
+39,1,Northern,3,Rumphi
+39,1,Northern,3,Rumphi
 39,1,Northern,3,Rumphi
 40,1,Northern,3,Rumphi
+40,1,Northern,3,Rumphi
+40,1,Northern,3,Rumphi
+41,1,Northern,3,Rumphi
 41,1,Northern,3,Rumphi
 42,1,Northern,3,Rumphi
+42,1,Northern,3,Rumphi
+42,1,Northern,3,Rumphi
+43,1,Northern,3,Rumphi
+43,1,Northern,3,Rumphi
 43,1,Northern,3,Rumphi
 44,1,Northern,3,Rumphi
+44,1,Northern,3,Rumphi
 45,2,Central Eastern,10,Nkhotakota
+45,2,Central Eastern,10,Nkhotakota
+45,2,Central Eastern,10,Nkhotakota
+47,1,Northern,4,Mzimba North
 47,1,Northern,4,Mzimba North
 48,1,Northern,4,Mzimba North
 49,1,Northern,4,Mzimba North
@@ -49,50 +97,107 @@ school_id,division_num,division_nam,district_num,district_nam
 51,1,Northern,4,Mzimba North
 52,1,Northern,4,Mzimba North
 53,1,Northern,4,Mzimba North
+53,1,Northern,4,Mzimba North
+54,1,Northern,4,Mzimba North
 54,1,Northern,4,Mzimba North
 55,1,Northern,4,Mzimba North
 56,1,Northern,4,Mzimba North
 57,1,Northern,4,Mzimba North
+57,1,Northern,4,Mzimba North
+58,1,Northern,4,Mzimba North
 58,1,Northern,4,Mzimba North
 59,1,Northern,4,Mzimba North
 60,1,Northern,4,Mzimba North
+60,1,Northern,4,Mzimba North
+61,1,Northern,4,Mzimba North
 61,1,Northern,4,Mzimba North
 62,1,Northern,4,Mzimba North
+62,1,Northern,4,Mzimba North
+63,1,Northern,4,Mzimba North
 63,1,Northern,4,Mzimba North
 64,1,Northern,4,Mzimba North
 65,1,Northern,4,Mzimba North
+65,1,Northern,4,Mzimba North
+66,2,Central Eastern,9,Kasungu
 66,2,Central Eastern,9,Kasungu
 68,2,Central Eastern,12,Ntchisi
+68,2,Central Eastern,12,Ntchisi
+69,1,Northern,5,Mzimba South
+69,1,Northern,5,Mzimba South
 69,1,Northern,5,Mzimba South
 70,1,Northern,5,Mzimba South
+70,1,Northern,5,Mzimba South
+70,1,Northern,5,Mzimba South
+71,1,Northern,5,Mzimba South
+71,1,Northern,5,Mzimba South
 71,1,Northern,5,Mzimba South
 72,1,Northern,5,Mzimba South
+72,1,Northern,5,Mzimba South
+72,1,Northern,5,Mzimba South
+73,1,Northern,5,Mzimba South
+73,1,Northern,5,Mzimba South
 73,1,Northern,5,Mzimba South
 74,1,Northern,5,Mzimba South
+74,1,Northern,5,Mzimba South
+74,1,Northern,5,Mzimba South
+75,1,Northern,5,Mzimba South
+75,1,Northern,5,Mzimba South
 75,1,Northern,5,Mzimba South
 76,1,Northern,5,Mzimba South
+76,1,Northern,5,Mzimba South
+76,1,Northern,5,Mzimba South
+77,1,Northern,5,Mzimba South
+77,1,Northern,5,Mzimba South
 77,1,Northern,5,Mzimba South
 79,1,Northern,5,Mzimba South
+79,1,Northern,5,Mzimba South
+80,6,Shire Highlands,33,Phalombe
 80,6,Shire Highlands,33,Phalombe
 81,1,Northern,5,Mzimba South
+81,1,Northern,5,Mzimba South
+81,1,Northern,5,Mzimba South
+82,1,Northern,5,Mzimba South
+82,1,Northern,5,Mzimba South
 82,1,Northern,5,Mzimba South
 83,1,Northern,5,Mzimba South
+83,1,Northern,5,Mzimba South
+84,1,Northern,5,Mzimba South
 84,1,Northern,5,Mzimba South
 85,1,Northern,5,Mzimba South
+85,1,Northern,5,Mzimba South
+85,1,Northern,5,Mzimba South
+86,1,Northern,5,Mzimba South
 86,1,Northern,5,Mzimba South
 87,1,Northern,5,Mzimba South
+87,1,Northern,5,Mzimba South
+87,1,Northern,5,Mzimba South
+88,1,Northern,5,Mzimba South
 88,1,Northern,5,Mzimba South
 89,1,Northern,5,Mzimba South
+89,1,Northern,5,Mzimba South
+90,3,Central Western,17,Lilongwe Rural West
 90,3,Central Western,17,Lilongwe Rural West
 91,2,Central Eastern,11,Dowa
+91,2,Central Eastern,11,Dowa
+91,2,Central Eastern,11,Dowa
+92,2,Central Eastern,10,Nkhotakota
+92,2,Central Eastern,10,Nkhotakota
 92,2,Central Eastern,10,Nkhotakota
 93,2,Central Eastern,10,Nkhotakota
+93,2,Central Eastern,10,Nkhotakota
+93,2,Central Eastern,10,Nkhotakota
 95,3,Central Western,19,Ntcheu
+96,2,Central Eastern,11,Dowa
+96,2,Central Eastern,11,Dowa
 97,1,Northern,7,Nkhata Bay
 98,1,Northern,7,Nkhata Bay
+98,1,Northern,7,Nkhata Bay
+99,1,Northern,7,Nkhata Bay
 99,1,Northern,7,Nkhata Bay
 100,1,Northern,7,Nkhata Bay
 101,1,Northern,7,Nkhata Bay
+101,1,Northern,7,Nkhata Bay
+102,1,Northern,7,Nkhata Bay
 102,1,Northern,7,Nkhata Bay
 103,1,Northern,7,Nkhata Bay
 104,1,Northern,7,Nkhata Bay
@@ -100,232 +205,508 @@ school_id,division_num,division_nam,district_num,district_nam
 106,1,Northern,7,Nkhata Bay
 107,1,Northern,7,Nkhata Bay
 108,1,Northern,7,Nkhata Bay
+108,1,Northern,7,Nkhata Bay
+109,1,Northern,7,Nkhata Bay
 109,1,Northern,7,Nkhata Bay
 110,1,Northern,7,Nkhata Bay
+112,6,Shire Highlands,31,Thyolo
 112,6,Shire Highlands,31,Thyolo
 113,1,Northern,8,Likoma
 114,1,Northern,8,Likoma
 115,1,Northern,8,Likoma
 116,6,Shire Highlands,33,Phalombe
+116,6,Shire Highlands,33,Phalombe
+118,2,Central Eastern,9,Kasungu
+118,2,Central Eastern,9,Kasungu
 118,2,Central Eastern,9,Kasungu
 119,2,Central Eastern,9,Kasungu
+119,2,Central Eastern,9,Kasungu
+119,2,Central Eastern,9,Kasungu
+120,2,Central Eastern,9,Kasungu
 120,2,Central Eastern,9,Kasungu
 121,2,Central Eastern,9,Kasungu
+121,2,Central Eastern,9,Kasungu
+121,2,Central Eastern,9,Kasungu
+122,2,Central Eastern,9,Kasungu
+122,2,Central Eastern,9,Kasungu
 122,2,Central Eastern,9,Kasungu
 123,2,Central Eastern,9,Kasungu
+123,2,Central Eastern,9,Kasungu
+123,2,Central Eastern,9,Kasungu
+124,2,Central Eastern,9,Kasungu
+124,2,Central Eastern,9,Kasungu
 124,2,Central Eastern,9,Kasungu
 125,2,Central Eastern,9,Kasungu
+125,2,Central Eastern,9,Kasungu
+125,2,Central Eastern,9,Kasungu
+126,2,Central Eastern,9,Kasungu
+126,2,Central Eastern,9,Kasungu
 126,2,Central Eastern,9,Kasungu
 127,2,Central Eastern,9,Kasungu
+127,2,Central Eastern,9,Kasungu
+127,2,Central Eastern,9,Kasungu
+128,2,Central Eastern,9,Kasungu
+128,2,Central Eastern,9,Kasungu
 128,2,Central Eastern,9,Kasungu
 129,2,Central Eastern,9,Kasungu
+129,2,Central Eastern,9,Kasungu
+129,2,Central Eastern,9,Kasungu
+130,2,Central Eastern,9,Kasungu
+130,2,Central Eastern,9,Kasungu
 130,2,Central Eastern,9,Kasungu
 131,2,Central Eastern,9,Kasungu
+131,2,Central Eastern,9,Kasungu
+132,2,Central Eastern,9,Kasungu
+132,2,Central Eastern,9,Kasungu
 132,2,Central Eastern,9,Kasungu
 133,2,Central Eastern,9,Kasungu
+133,2,Central Eastern,9,Kasungu
+133,2,Central Eastern,9,Kasungu
+134,2,Central Eastern,9,Kasungu
+134,2,Central Eastern,9,Kasungu
 134,2,Central Eastern,9,Kasungu
 135,2,Central Eastern,9,Kasungu
+135,2,Central Eastern,9,Kasungu
+135,2,Central Eastern,9,Kasungu
+136,2,Central Eastern,9,Kasungu
+136,2,Central Eastern,9,Kasungu
 136,2,Central Eastern,9,Kasungu
 138,2,Central Eastern,11,Dowa
+138,2,Central Eastern,11,Dowa
+138,2,Central Eastern,11,Dowa
+139,2,Central Eastern,10,Nkhotakota
+139,2,Central Eastern,10,Nkhotakota
 139,2,Central Eastern,10,Nkhotakota
 140,2,Central Eastern,10,Nkhotakota
+140,2,Central Eastern,10,Nkhotakota
+140,2,Central Eastern,10,Nkhotakota
+141,2,Central Eastern,10,Nkhotakota
+141,2,Central Eastern,10,Nkhotakota
 141,2,Central Eastern,10,Nkhotakota
 142,2,Central Eastern,10,Nkhotakota
+142,2,Central Eastern,10,Nkhotakota
+142,2,Central Eastern,10,Nkhotakota
+143,2,Central Eastern,10,Nkhotakota
+143,2,Central Eastern,10,Nkhotakota
 143,2,Central Eastern,10,Nkhotakota
 144,2,Central Eastern,10,Nkhotakota
+144,2,Central Eastern,10,Nkhotakota
+144,2,Central Eastern,10,Nkhotakota
+145,2,Central Eastern,10,Nkhotakota
+145,2,Central Eastern,10,Nkhotakota
 145,2,Central Eastern,10,Nkhotakota
 146,2,Central Eastern,10,Nkhotakota
+146,2,Central Eastern,10,Nkhotakota
+146,2,Central Eastern,10,Nkhotakota
+147,2,Central Eastern,10,Nkhotakota
+147,2,Central Eastern,10,Nkhotakota
 147,2,Central Eastern,10,Nkhotakota
 148,2,Central Eastern,10,Nkhotakota
+148,2,Central Eastern,10,Nkhotakota
+148,2,Central Eastern,10,Nkhotakota
 149,3,Central Western,17,Lilongwe Rural West
+149,3,Central Western,17,Lilongwe Rural West
+150,3,Central Western,16,Lilongwe Rural East
+151,2,Central Eastern,11,Dowa
+151,2,Central Eastern,11,Dowa
 151,2,Central Eastern,11,Dowa
 152,2,Central Eastern,11,Dowa
+152,2,Central Eastern,11,Dowa
+152,2,Central Eastern,11,Dowa
+153,2,Central Eastern,11,Dowa
+153,2,Central Eastern,11,Dowa
 153,2,Central Eastern,11,Dowa
 154,2,Central Eastern,11,Dowa
+154,2,Central Eastern,11,Dowa
+154,2,Central Eastern,11,Dowa
+155,2,Central Eastern,11,Dowa
+155,2,Central Eastern,11,Dowa
 155,2,Central Eastern,11,Dowa
 156,2,Central Eastern,11,Dowa
+156,2,Central Eastern,11,Dowa
+156,2,Central Eastern,11,Dowa
+157,2,Central Eastern,11,Dowa
+157,2,Central Eastern,11,Dowa
 157,2,Central Eastern,11,Dowa
 158,2,Central Eastern,11,Dowa
+158,2,Central Eastern,11,Dowa
+158,2,Central Eastern,11,Dowa
+159,2,Central Eastern,11,Dowa
+159,2,Central Eastern,11,Dowa
 159,2,Central Eastern,11,Dowa
 160,2,Central Eastern,11,Dowa
+160,2,Central Eastern,11,Dowa
+160,2,Central Eastern,11,Dowa
+161,2,Central Eastern,11,Dowa
+161,2,Central Eastern,11,Dowa
 161,2,Central Eastern,11,Dowa
 162,2,Central Eastern,11,Dowa
+162,2,Central Eastern,11,Dowa
+162,2,Central Eastern,11,Dowa
+163,2,Central Eastern,11,Dowa
+163,2,Central Eastern,11,Dowa
 163,2,Central Eastern,11,Dowa
 164,2,Central Eastern,11,Dowa
+164,2,Central Eastern,11,Dowa
+164,2,Central Eastern,11,Dowa
+166,1,Northern,7,Nkhata Bay
 166,1,Northern,7,Nkhata Bay
 167,2,Central Eastern,12,Ntchisi
+167,2,Central Eastern,12,Ntchisi
+168,2,Central Eastern,12,Ntchisi
 168,2,Central Eastern,12,Ntchisi
 169,2,Central Eastern,12,Ntchisi
 170,2,Central Eastern,12,Ntchisi
 171,2,Central Eastern,12,Ntchisi
+171,2,Central Eastern,12,Ntchisi
 172,2,Central Eastern,12,Ntchisi
+173,2,Central Eastern,12,Ntchisi
 173,2,Central Eastern,12,Ntchisi
 174,2,Central Eastern,12,Ntchisi
 175,2,Central Eastern,12,Ntchisi
 176,2,Central Eastern,12,Ntchisi
+177,1,Northern,1,Chitipa
 179,2,Central Eastern,13,Salima
 180,2,Central Eastern,13,Salima
 181,2,Central Eastern,13,Salima
 182,2,Central Eastern,13,Salima
+182,2,Central Eastern,13,Salima
+183,2,Central Eastern,13,Salima
 183,2,Central Eastern,13,Salima
 184,2,Central Eastern,13,Salima
+184,2,Central Eastern,13,Salima
+185,2,Central Eastern,13,Salima
 185,2,Central Eastern,13,Salima
 186,2,Central Eastern,13,Salima
 187,2,Central Eastern,13,Salima
+187,2,Central Eastern,13,Salima
+188,2,Central Eastern,13,Salima
 188,2,Central Eastern,13,Salima
 189,2,Central Eastern,11,Dowa
+189,2,Central Eastern,11,Dowa
+189,2,Central Eastern,11,Dowa
+191,3,Central Western,14,Mchinji
 191,3,Central Western,14,Mchinji
 192,3,Central Western,14,Mchinji
+192,3,Central Western,14,Mchinji
+193,3,Central Western,14,Mchinji
 193,3,Central Western,14,Mchinji
 194,3,Central Western,14,Mchinji
+194,3,Central Western,14,Mchinji
 195,3,Central Western,14,Mchinji
+195,3,Central Western,14,Mchinji
+196,3,Central Western,14,Mchinji
 196,3,Central Western,14,Mchinji
 197,3,Central Western,14,Mchinji
 198,3,Central Western,14,Mchinji
 199,3,Central Western,14,Mchinji
 200,3,Central Western,14,Mchinji
 201,3,Central Western,14,Mchinji
+201,3,Central Western,14,Mchinji
+202,1,Northern,3,Rumphi
+202,1,Northern,3,Rumphi
+203,1,Northern,3,Rumphi
+203,1,Northern,3,Rumphi
 203,1,Northern,3,Rumphi
 204,1,Northern,2,Karonga
 205,3,Central Western,19,Ntcheu
+206,1,Northern,8,Likoma
 208,1,Northern,1,Chitipa
+208,1,Northern,1,Chitipa
+209,5,Southern Western,34,Neno
 209,5,Southern Western,34,Neno
 210,3,Central Western,16,Lilongwe Rural East
 211,3,Central Western,16,Lilongwe Rural East
 212,3,Central Western,16,Lilongwe Rural East
+212,3,Central Western,16,Lilongwe Rural East
 213,3,Central Western,16,Lilongwe Rural East
+214,3,Central Western,16,Lilongwe Rural East
 214,3,Central Western,16,Lilongwe Rural East
 215,3,Central Western,16,Lilongwe Rural East
 216,3,Central Western,16,Lilongwe Rural East
 217,3,Central Western,16,Lilongwe Rural East
+217,3,Central Western,16,Lilongwe Rural East
+218,3,Central Western,16,Lilongwe Rural East
 218,3,Central Western,16,Lilongwe Rural East
 219,3,Central Western,16,Lilongwe Rural East
+219,3,Central Western,16,Lilongwe Rural East
 220,3,Central Western,16,Lilongwe Rural East
+221,3,Central Western,16,Lilongwe Rural East
 221,3,Central Western,16,Lilongwe Rural East
 222,3,Central Western,16,Lilongwe Rural East
 223,3,Central Western,16,Lilongwe Rural East
 224,3,Central Western,16,Lilongwe Rural East
+224,3,Central Western,16,Lilongwe Rural East
+225,3,Central Western,16,Lilongwe Rural East
 225,3,Central Western,16,Lilongwe Rural East
 226,3,Central Western,16,Lilongwe Rural East
 227,3,Central Western,16,Lilongwe Rural East
+227,3,Central Western,16,Lilongwe Rural East
+228,3,Central Western,16,Lilongwe Rural East
 228,3,Central Western,16,Lilongwe Rural East
 229,1,Northern,7,Nkhata Bay
+230,1,Northern,2,Karonga
+231,3,Central Western,17,Lilongwe Rural West
+231,3,Central Western,17,Lilongwe Rural West
 231,3,Central Western,17,Lilongwe Rural West
 232,3,Central Western,17,Lilongwe Rural West
+232,3,Central Western,17,Lilongwe Rural West
+232,3,Central Western,17,Lilongwe Rural West
+233,3,Central Western,17,Lilongwe Rural West
+233,3,Central Western,17,Lilongwe Rural West
 233,3,Central Western,17,Lilongwe Rural West
 234,3,Central Western,17,Lilongwe Rural West
+234,3,Central Western,17,Lilongwe Rural West
+235,3,Central Western,17,Lilongwe Rural West
+235,3,Central Western,17,Lilongwe Rural West
 235,3,Central Western,17,Lilongwe Rural West
 236,3,Central Western,17,Lilongwe Rural West
+236,3,Central Western,17,Lilongwe Rural West
+236,3,Central Western,17,Lilongwe Rural West
+237,3,Central Western,17,Lilongwe Rural West
+237,3,Central Western,17,Lilongwe Rural West
 237,3,Central Western,17,Lilongwe Rural West
 238,3,Central Western,17,Lilongwe Rural West
+238,3,Central Western,17,Lilongwe Rural West
+239,3,Central Western,17,Lilongwe Rural West
 239,3,Central Western,17,Lilongwe Rural West
 240,3,Central Western,17,Lilongwe Rural West
+240,3,Central Western,17,Lilongwe Rural West
+240,3,Central Western,17,Lilongwe Rural West
+241,3,Central Western,17,Lilongwe Rural West
 241,3,Central Western,17,Lilongwe Rural West
 242,3,Central Western,17,Lilongwe Rural West
+242,3,Central Western,17,Lilongwe Rural West
+242,3,Central Western,17,Lilongwe Rural West
+243,3,Central Western,17,Lilongwe Rural West
 243,3,Central Western,17,Lilongwe Rural West
 244,3,Central Western,17,Lilongwe Rural West
+244,3,Central Western,17,Lilongwe Rural West
+245,3,Central Western,17,Lilongwe Rural West
+245,3,Central Western,17,Lilongwe Rural West
 245,3,Central Western,17,Lilongwe Rural West
 246,3,Central Western,17,Lilongwe Rural West
+246,3,Central Western,17,Lilongwe Rural West
+246,3,Central Western,17,Lilongwe Rural West
+247,3,Central Western,17,Lilongwe Rural West
 247,3,Central Western,17,Lilongwe Rural West
 248,3,Central Western,17,Lilongwe Rural West
+248,3,Central Western,17,Lilongwe Rural West
+248,3,Central Western,17,Lilongwe Rural West
+249,3,Central Western,17,Lilongwe Rural West
+249,3,Central Western,17,Lilongwe Rural West
 249,3,Central Western,17,Lilongwe Rural West
 250,3,Central Western,17,Lilongwe Rural West
+250,3,Central Western,17,Lilongwe Rural West
+250,3,Central Western,17,Lilongwe Rural West
+251,3,Central Western,17,Lilongwe Rural West
 251,3,Central Western,17,Lilongwe Rural West
 252,3,Central Western,17,Lilongwe Rural West
+252,3,Central Western,17,Lilongwe Rural West
+253,3,Central Western,17,Lilongwe Rural West
+253,3,Central Western,17,Lilongwe Rural West
 253,3,Central Western,17,Lilongwe Rural West
 255,6,Shire Highlands,33,Phalombe
+255,6,Shire Highlands,33,Phalombe
+256,3,Central Western,18,Dedza
+256,3,Central Western,18,Dedza
 256,3,Central Western,18,Dedza
 257,3,Central Western,18,Dedza
+257,3,Central Western,18,Dedza
+258,3,Central Western,18,Dedza
+258,3,Central Western,18,Dedza
 258,3,Central Western,18,Dedza
 259,3,Central Western,18,Dedza
+259,3,Central Western,18,Dedza
+259,3,Central Western,18,Dedza
+260,3,Central Western,18,Dedza
 260,3,Central Western,18,Dedza
 261,3,Central Western,18,Dedza
+261,3,Central Western,18,Dedza
+262,3,Central Western,18,Dedza
+262,3,Central Western,18,Dedza
 262,3,Central Western,18,Dedza
 263,3,Central Western,18,Dedza
+263,3,Central Western,18,Dedza
+263,3,Central Western,18,Dedza
+264,3,Central Western,18,Dedza
+264,3,Central Western,18,Dedza
 264,3,Central Western,18,Dedza
 265,3,Central Western,18,Dedza
+265,3,Central Western,18,Dedza
+265,3,Central Western,18,Dedza
+266,3,Central Western,18,Dedza
+266,3,Central Western,18,Dedza
 266,3,Central Western,18,Dedza
 267,3,Central Western,18,Dedza
+267,3,Central Western,18,Dedza
+267,3,Central Western,18,Dedza
+268,3,Central Western,18,Dedza
+268,3,Central Western,18,Dedza
 268,3,Central Western,18,Dedza
 269,3,Central Western,18,Dedza
+269,3,Central Western,18,Dedza
 270,3,Central Western,18,Dedza
+270,3,Central Western,18,Dedza
+270,3,Central Western,18,Dedza
+271,3,Central Western,14,Mchinji
+272,3,Central Western,19,Ntcheu
 272,3,Central Western,19,Ntcheu
 273,3,Central Western,19,Ntcheu
+273,3,Central Western,19,Ntcheu
 274,3,Central Western,19,Ntcheu
+275,3,Central Western,19,Ntcheu
 275,3,Central Western,19,Ntcheu
 276,3,Central Western,19,Ntcheu
 277,3,Central Western,19,Ntcheu
 278,3,Central Western,19,Ntcheu
 279,3,Central Western,19,Ntcheu
 280,3,Central Western,19,Ntcheu
+280,3,Central Western,19,Ntcheu
 281,3,Central Western,19,Ntcheu
+282,3,Central Western,19,Ntcheu
 282,3,Central Western,19,Ntcheu
 283,3,Central Western,19,Ntcheu
 284,3,Central Western,19,Ntcheu
+284,3,Central Western,19,Ntcheu
+285,3,Central Western,19,Ntcheu
 285,3,Central Western,19,Ntcheu
 286,3,Central Western,19,Ntcheu
 287,3,Central Western,19,Ntcheu
 288,3,Central Western,19,Ntcheu
 289,3,Central Western,19,Ntcheu
 290,3,Central Western,19,Ntcheu
+290,3,Central Western,19,Ntcheu
 291,3,Central Western,19,Ntcheu
 292,3,Central Western,19,Ntcheu
 293,3,Central Western,19,Ntcheu
+293,3,Central Western,19,Ntcheu
 294,3,Central Western,19,Ntcheu
 295,2,Central Eastern,11,Dowa
+295,2,Central Eastern,11,Dowa
+295,2,Central Eastern,11,Dowa
+297,4,Southern Eastern,20,Mangochi
+297,4,Southern Eastern,20,Mangochi
 297,4,Southern Eastern,20,Mangochi
 298,4,Southern Eastern,20,Mangochi
+298,4,Southern Eastern,20,Mangochi
+298,4,Southern Eastern,20,Mangochi
+299,4,Southern Eastern,20,Mangochi
+299,4,Southern Eastern,20,Mangochi
 299,4,Southern Eastern,20,Mangochi
 300,4,Southern Eastern,20,Mangochi
+300,4,Southern Eastern,20,Mangochi
+300,4,Southern Eastern,20,Mangochi
+301,4,Southern Eastern,20,Mangochi
+301,4,Southern Eastern,20,Mangochi
 301,4,Southern Eastern,20,Mangochi
 302,4,Southern Eastern,20,Mangochi
+302,4,Southern Eastern,20,Mangochi
+302,4,Southern Eastern,20,Mangochi
+303,4,Southern Eastern,20,Mangochi
+303,4,Southern Eastern,20,Mangochi
 303,4,Southern Eastern,20,Mangochi
 304,4,Southern Eastern,20,Mangochi
+304,4,Southern Eastern,20,Mangochi
+304,4,Southern Eastern,20,Mangochi
+305,4,Southern Eastern,20,Mangochi
+305,4,Southern Eastern,20,Mangochi
 305,4,Southern Eastern,20,Mangochi
 306,4,Southern Eastern,20,Mangochi
+306,4,Southern Eastern,20,Mangochi
+306,4,Southern Eastern,20,Mangochi
+307,4,Southern Eastern,20,Mangochi
+307,4,Southern Eastern,20,Mangochi
 307,4,Southern Eastern,20,Mangochi
 308,4,Southern Eastern,20,Mangochi
+308,4,Southern Eastern,20,Mangochi
+308,4,Southern Eastern,20,Mangochi
 309,1,Northern,4,Mzimba North
+309,1,Northern,4,Mzimba North
+310,5,Southern Western,29,Nsanje
+311,4,Southern Eastern,21,Balaka
 311,4,Southern Eastern,21,Balaka
 312,4,Southern Eastern,21,Balaka
 313,4,Southern Eastern,21,Balaka
 314,4,Southern Eastern,21,Balaka
+314,4,Southern Eastern,21,Balaka
 315,4,Southern Eastern,21,Balaka
+316,4,Southern Eastern,21,Balaka
 316,4,Southern Eastern,21,Balaka
 317,4,Southern Eastern,21,Balaka
 318,6,Shire Highlands,32,Mulanje
+318,6,Shire Highlands,32,Mulanje
+318,6,Shire Highlands,32,Mulanje
+319,4,Southern Eastern,21,Balaka
 319,4,Southern Eastern,21,Balaka
 320,4,Southern Eastern,21,Balaka
 321,4,Southern Eastern,21,Balaka
 322,3,Central Western,14,Mchinji
+322,3,Central Western,14,Mchinji
+323,6,Shire Highlands,30,Chiradzulu
+324,4,Southern Eastern,22,Machinga
 324,4,Southern Eastern,22,Machinga
 325,4,Southern Eastern,22,Machinga
+325,4,Southern Eastern,22,Machinga
+325,4,Southern Eastern,22,Machinga
+326,4,Southern Eastern,22,Machinga
+326,4,Southern Eastern,22,Machinga
 326,4,Southern Eastern,22,Machinga
 327,4,Southern Eastern,22,Machinga
+327,4,Southern Eastern,22,Machinga
+327,4,Southern Eastern,22,Machinga
+328,4,Southern Eastern,22,Machinga
+328,4,Southern Eastern,22,Machinga
 328,4,Southern Eastern,22,Machinga
 329,4,Southern Eastern,22,Machinga
+329,4,Southern Eastern,22,Machinga
+329,4,Southern Eastern,22,Machinga
+330,4,Southern Eastern,22,Machinga
+330,4,Southern Eastern,22,Machinga
 330,4,Southern Eastern,22,Machinga
 331,4,Southern Eastern,22,Machinga
+331,4,Southern Eastern,22,Machinga
+332,4,Southern Eastern,22,Machinga
 332,4,Southern Eastern,22,Machinga
 333,4,Southern Eastern,22,Machinga
+333,4,Southern Eastern,22,Machinga
+334,2,Central Eastern,11,Dowa
+334,2,Central Eastern,11,Dowa
 334,2,Central Eastern,11,Dowa
 336,2,Central Eastern,10,Nkhotakota
+336,2,Central Eastern,10,Nkhotakota
+336,2,Central Eastern,10,Nkhotakota
+337,2,Central Eastern,11,Dowa
+337,2,Central Eastern,11,Dowa
 338,2,Central Eastern,12,Ntchisi
+338,2,Central Eastern,12,Ntchisi
+339,4,Southern Eastern,24,Zomba Rural
 339,4,Southern Eastern,24,Zomba Rural
 340,4,Southern Eastern,24,Zomba Rural
 341,4,Southern Eastern,24,Zomba Rural
 342,4,Southern Eastern,24,Zomba Rural
 343,4,Southern Eastern,24,Zomba Rural
+343,4,Southern Eastern,24,Zomba Rural
+344,4,Southern Eastern,24,Zomba Rural
 344,4,Southern Eastern,24,Zomba Rural
 345,4,Southern Eastern,24,Zomba Rural
 346,4,Southern Eastern,24,Zomba Rural
+346,4,Southern Eastern,24,Zomba Rural
+347,4,Southern Eastern,24,Zomba Rural
 347,4,Southern Eastern,24,Zomba Rural
 348,4,Southern Eastern,24,Zomba Rural
 349,4,Southern Eastern,24,Zomba Rural
 350,3,Central Western,19,Ntcheu
+350,3,Central Western,19,Ntcheu
+351,2,Central Eastern,11,Dowa
+351,2,Central Eastern,11,Dowa
 351,2,Central Eastern,11,Dowa
 352,2,Central Eastern,11,Dowa
+352,2,Central Eastern,11,Dowa
+352,2,Central Eastern,11,Dowa
+353,3,Central Western,19,Ntcheu
 355,3,Central Western,19,Ntcheu
+356,5,Southern Western,26,Blantyre Rural
 356,5,Southern Western,26,Blantyre Rural
 357,5,Southern Western,26,Blantyre Rural
 358,5,Southern Western,26,Blantyre Rural
@@ -336,156 +717,334 @@ school_id,division_num,division_nam,district_num,district_nam
 363,5,Southern Western,26,Blantyre Rural
 364,5,Southern Western,26,Blantyre Rural
 365,5,Southern Western,26,Blantyre Rural
+365,5,Southern Western,26,Blantyre Rural
 367,2,Central Eastern,11,Dowa
+367,2,Central Eastern,11,Dowa
+367,2,Central Eastern,11,Dowa
+368,5,Southern Western,27,Mwanza
 368,5,Southern Western,27,Mwanza
 369,5,Southern Western,27,Mwanza
 370,5,Southern Western,27,Mwanza
+370,5,Southern Western,27,Mwanza
 371,5,Southern Western,27,Mwanza
 372,5,Southern Western,27,Mwanza
+372,5,Southern Western,27,Mwanza
+373,5,Southern Western,27,Mwanza
 373,5,Southern Western,27,Mwanza
 374,5,Southern Western,27,Mwanza
 375,5,Southern Western,27,Mwanza
 376,5,Southern Western,27,Mwanza
 377,5,Southern Western,27,Mwanza
 380,5,Southern Western,28,Chikwawa
+380,5,Southern Western,28,Chikwawa
+380,5,Southern Western,28,Chikwawa
+381,5,Southern Western,28,Chikwawa
+381,5,Southern Western,28,Chikwawa
 381,5,Southern Western,28,Chikwawa
 382,5,Southern Western,28,Chikwawa
+382,5,Southern Western,28,Chikwawa
+382,5,Southern Western,28,Chikwawa
+383,5,Southern Western,28,Chikwawa
+383,5,Southern Western,28,Chikwawa
 383,5,Southern Western,28,Chikwawa
 384,5,Southern Western,28,Chikwawa
+384,5,Southern Western,28,Chikwawa
+384,5,Southern Western,28,Chikwawa
+385,5,Southern Western,28,Chikwawa
+385,5,Southern Western,28,Chikwawa
 385,5,Southern Western,28,Chikwawa
 386,5,Southern Western,28,Chikwawa
+386,5,Southern Western,28,Chikwawa
+386,5,Southern Western,28,Chikwawa
+387,5,Southern Western,28,Chikwawa
+387,5,Southern Western,28,Chikwawa
 387,5,Southern Western,28,Chikwawa
 388,5,Southern Western,28,Chikwawa
+388,5,Southern Western,28,Chikwawa
+388,5,Southern Western,28,Chikwawa
+389,5,Southern Western,28,Chikwawa
+389,5,Southern Western,28,Chikwawa
 389,5,Southern Western,28,Chikwawa
 390,5,Southern Western,28,Chikwawa
+390,5,Southern Western,28,Chikwawa
+390,5,Southern Western,28,Chikwawa
+392,3,Central Western,19,Ntcheu
 392,3,Central Western,19,Ntcheu
 393,5,Southern Western,29,Nsanje
+393,5,Southern Western,29,Nsanje
+394,5,Southern Western,29,Nsanje
 394,5,Southern Western,29,Nsanje
 395,5,Southern Western,29,Nsanje
 396,5,Southern Western,29,Nsanje
 397,5,Southern Western,29,Nsanje
 398,5,Southern Western,29,Nsanje
 399,5,Southern Western,29,Nsanje
+399,5,Southern Western,29,Nsanje
 400,5,Southern Western,29,Nsanje
 401,5,Southern Western,29,Nsanje
 402,5,Southern Western,29,Nsanje
 403,5,Southern Western,29,Nsanje
+403,5,Southern Western,29,Nsanje
 404,3,Central Western,16,Lilongwe Rural East
+405,1,Northern,3,Rumphi
+405,1,Northern,3,Rumphi
 405,1,Northern,3,Rumphi
 406,5,Southern Western,34,Neno
 407,5,Southern Western,34,Neno
 408,5,Southern Western,34,Neno
 409,5,Southern Western,34,Neno
+409,5,Southern Western,34,Neno
 410,5,Southern Western,34,Neno
+410,5,Southern Western,34,Neno
+411,5,Southern Western,34,Neno
 411,5,Southern Western,34,Neno
 412,5,Southern Western,34,Neno
 413,5,Southern Western,34,Neno
+413,5,Southern Western,34,Neno
 414,5,Southern Western,34,Neno
+415,5,Southern Western,34,Neno
 415,5,Southern Western,34,Neno
 416,5,Southern Western,34,Neno
 417,2,Central Eastern,11,Dowa
+417,2,Central Eastern,11,Dowa
+417,2,Central Eastern,11,Dowa
+419,6,Shire Highlands,30,Chiradzulu
 419,6,Shire Highlands,30,Chiradzulu
 420,6,Shire Highlands,30,Chiradzulu
 421,6,Shire Highlands,30,Chiradzulu
 422,6,Shire Highlands,30,Chiradzulu
+422,6,Shire Highlands,30,Chiradzulu
 423,6,Shire Highlands,30,Chiradzulu
 424,6,Shire Highlands,30,Chiradzulu
 425,6,Shire Highlands,30,Chiradzulu
+425,6,Shire Highlands,30,Chiradzulu
 426,6,Shire Highlands,30,Chiradzulu
+427,6,Shire Highlands,30,Chiradzulu
 427,6,Shire Highlands,30,Chiradzulu
 428,6,Shire Highlands,30,Chiradzulu
 429,2,Central Eastern,10,Nkhotakota
+429,2,Central Eastern,10,Nkhotakota
+429,2,Central Eastern,10,Nkhotakota
+431,6,Shire Highlands,31,Thyolo
+431,6,Shire Highlands,31,Thyolo
 431,6,Shire Highlands,31,Thyolo
 432,6,Shire Highlands,31,Thyolo
+432,6,Shire Highlands,31,Thyolo
+432,6,Shire Highlands,31,Thyolo
+433,2,Central Eastern,11,Dowa
+433,2,Central Eastern,11,Dowa
 433,2,Central Eastern,11,Dowa
 434,6,Shire Highlands,31,Thyolo
+434,6,Shire Highlands,31,Thyolo
+434,6,Shire Highlands,31,Thyolo
+435,6,Shire Highlands,31,Thyolo
+435,6,Shire Highlands,31,Thyolo
 435,6,Shire Highlands,31,Thyolo
 436,6,Shire Highlands,31,Thyolo
+436,6,Shire Highlands,31,Thyolo
+437,6,Shire Highlands,31,Thyolo
+437,6,Shire Highlands,31,Thyolo
 437,6,Shire Highlands,31,Thyolo
 438,6,Shire Highlands,31,Thyolo
+438,6,Shire Highlands,31,Thyolo
+438,6,Shire Highlands,31,Thyolo
+439,6,Shire Highlands,31,Thyolo
 439,6,Shire Highlands,31,Thyolo
 440,6,Shire Highlands,31,Thyolo
+440,6,Shire Highlands,31,Thyolo
+440,6,Shire Highlands,31,Thyolo
 441,6,Shire Highlands,31,Thyolo
+441,6,Shire Highlands,31,Thyolo
+441,6,Shire Highlands,31,Thyolo
+442,2,Central Eastern,10,Nkhotakota
+442,2,Central Eastern,10,Nkhotakota
 442,2,Central Eastern,10,Nkhotakota
 443,3,Central Western,14,Mchinji
 444,6,Shire Highlands,32,Mulanje
+444,6,Shire Highlands,32,Mulanje
+444,6,Shire Highlands,32,Mulanje
 445,6,Shire Highlands,32,Mulanje
+445,6,Shire Highlands,32,Mulanje
+445,6,Shire Highlands,32,Mulanje
+446,1,Northern,4,Mzimba North
+447,6,Shire Highlands,32,Mulanje
+447,6,Shire Highlands,32,Mulanje
 447,6,Shire Highlands,32,Mulanje
 448,6,Shire Highlands,32,Mulanje
+448,6,Shire Highlands,32,Mulanje
+448,6,Shire Highlands,32,Mulanje
+449,6,Shire Highlands,32,Mulanje
 449,6,Shire Highlands,32,Mulanje
 450,6,Shire Highlands,32,Mulanje
+450,6,Shire Highlands,32,Mulanje
+451,6,Shire Highlands,32,Mulanje
+451,6,Shire Highlands,32,Mulanje
 451,6,Shire Highlands,32,Mulanje
 452,6,Shire Highlands,32,Mulanje
+452,6,Shire Highlands,32,Mulanje
+452,6,Shire Highlands,32,Mulanje
+453,6,Shire Highlands,32,Mulanje
+453,6,Shire Highlands,32,Mulanje
 453,6,Shire Highlands,32,Mulanje
 454,6,Shire Highlands,32,Mulanje
+454,6,Shire Highlands,32,Mulanje
+455,2,Central Eastern,9,Kasungu
 455,2,Central Eastern,9,Kasungu
 456,3,Central Western,14,Mchinji
+456,3,Central Western,14,Mchinji
 457,6,Shire Highlands,33,Phalombe
+459,6,Shire Highlands,33,Phalombe
 459,6,Shire Highlands,33,Phalombe
 460,6,Shire Highlands,33,Phalombe
 461,6,Shire Highlands,33,Phalombe
 462,6,Shire Highlands,33,Phalombe
 463,6,Shire Highlands,33,Phalombe
+463,6,Shire Highlands,33,Phalombe
 464,6,Shire Highlands,33,Phalombe
+465,6,Shire Highlands,33,Phalombe
 465,6,Shire Highlands,33,Phalombe
 466,6,Shire Highlands,33,Phalombe
 467,6,Shire Highlands,33,Phalombe
+468,2,Central Eastern,12,Ntchisi
+469,1,Northern,4,Mzimba North
 469,1,Northern,4,Mzimba North
 470,1,Northern,2,Karonga
 471,1,Northern,2,Karonga
 472,1,Northern,4,Mzimba North
+472,1,Northern,4,Mzimba North
+473,1,Northern,4,Mzimba North
 473,1,Northern,4,Mzimba North
 474,1,Northern,5,Mzimba South
+474,1,Northern,5,Mzimba South
+475,1,Northern,5,Mzimba South
 475,1,Northern,5,Mzimba South
 476,1,Northern,5,Mzimba South
+476,1,Northern,5,Mzimba South
+476,1,Northern,5,Mzimba South
+477,1,Northern,5,Mzimba South
 477,1,Northern,5,Mzimba South
 478,1,Northern,5,Mzimba South
+478,1,Northern,5,Mzimba South
+478,1,Northern,5,Mzimba South
+479,1,Northern,5,Mzimba South
+479,1,Northern,5,Mzimba South
 479,1,Northern,5,Mzimba South
 480,1,Northern,5,Mzimba South
+480,1,Northern,5,Mzimba South
+480,1,Northern,5,Mzimba South
+481,1,Northern,5,Mzimba South
+481,1,Northern,5,Mzimba South
 481,1,Northern,5,Mzimba South
 482,1,Northern,5,Mzimba South
+482,1,Northern,5,Mzimba South
+482,1,Northern,5,Mzimba South
+483,1,Northern,5,Mzimba South
+483,1,Northern,5,Mzimba South
 483,1,Northern,5,Mzimba South
 484,1,Northern,5,Mzimba South
+484,1,Northern,5,Mzimba South
+484,1,Northern,5,Mzimba South
+485,1,Northern,5,Mzimba South
+485,1,Northern,5,Mzimba South
 485,1,Northern,5,Mzimba South
 486,1,Northern,5,Mzimba South
+486,1,Northern,5,Mzimba South
+486,1,Northern,5,Mzimba South
+487,1,Northern,5,Mzimba South
+487,1,Northern,5,Mzimba South
 487,1,Northern,5,Mzimba South
 488,1,Northern,5,Mzimba South
+488,1,Northern,5,Mzimba South
+488,1,Northern,5,Mzimba South
+489,1,Northern,5,Mzimba South
 489,1,Northern,5,Mzimba South
 490,1,Northern,5,Mzimba South
+490,1,Northern,5,Mzimba South
+490,1,Northern,5,Mzimba South
+491,1,Northern,5,Mzimba South
+491,1,Northern,5,Mzimba South
 491,1,Northern,5,Mzimba South
 492,1,Northern,5,Mzimba South
+492,1,Northern,5,Mzimba South
+493,1,Northern,5,Mzimba South
+493,1,Northern,5,Mzimba South
 493,1,Northern,5,Mzimba South
 494,1,Northern,5,Mzimba South
+494,1,Northern,5,Mzimba South
+495,1,Northern,5,Mzimba South
+495,1,Northern,5,Mzimba South
 495,1,Northern,5,Mzimba South
 496,1,Northern,5,Mzimba South
+496,1,Northern,5,Mzimba South
+496,1,Northern,5,Mzimba South
+497,1,Northern,5,Mzimba South
 497,1,Northern,5,Mzimba South
 498,1,Northern,6,Mzuzu City
 499,1,Northern,6,Mzuzu City
 500,1,Northern,6,Mzuzu City
 501,1,Northern,6,Mzuzu City
 502,1,Northern,6,Mzuzu City
+502,1,Northern,6,Mzuzu City
+503,1,Northern,6,Mzuzu City
 503,1,Northern,6,Mzuzu City
 504,2,Central Eastern,9,Kasungu
+504,2,Central Eastern,9,Kasungu
+504,2,Central Eastern,9,Kasungu
+505,2,Central Eastern,9,Kasungu
+505,2,Central Eastern,9,Kasungu
 505,2,Central Eastern,9,Kasungu
 506,2,Central Eastern,9,Kasungu
+506,2,Central Eastern,9,Kasungu
+506,2,Central Eastern,9,Kasungu
+507,2,Central Eastern,9,Kasungu
+507,2,Central Eastern,9,Kasungu
 507,2,Central Eastern,9,Kasungu
 508,2,Central Eastern,9,Kasungu
+508,2,Central Eastern,9,Kasungu
+508,2,Central Eastern,9,Kasungu
+509,2,Central Eastern,9,Kasungu
+509,2,Central Eastern,9,Kasungu
 509,2,Central Eastern,9,Kasungu
 510,2,Central Eastern,9,Kasungu
+510,2,Central Eastern,9,Kasungu
+510,2,Central Eastern,9,Kasungu
+511,2,Central Eastern,9,Kasungu
+511,2,Central Eastern,9,Kasungu
 511,2,Central Eastern,9,Kasungu
 512,2,Central Eastern,9,Kasungu
+512,2,Central Eastern,9,Kasungu
+512,2,Central Eastern,9,Kasungu
+513,2,Central Eastern,9,Kasungu
+513,2,Central Eastern,9,Kasungu
 513,2,Central Eastern,9,Kasungu
 514,2,Central Eastern,9,Kasungu
+514,2,Central Eastern,9,Kasungu
+514,2,Central Eastern,9,Kasungu
+515,2,Central Eastern,9,Kasungu
 515,2,Central Eastern,9,Kasungu
 516,2,Central Eastern,9,Kasungu
+516,2,Central Eastern,9,Kasungu
+517,2,Central Eastern,9,Kasungu
 517,2,Central Eastern,9,Kasungu
 518,2,Central Eastern,9,Kasungu
+518,2,Central Eastern,9,Kasungu
+518,2,Central Eastern,9,Kasungu
+519,2,Central Eastern,9,Kasungu
+519,2,Central Eastern,9,Kasungu
 519,2,Central Eastern,9,Kasungu
 520,2,Central Eastern,9,Kasungu
+520,2,Central Eastern,9,Kasungu
+520,2,Central Eastern,9,Kasungu
+521,2,Central Eastern,9,Kasungu
 521,2,Central Eastern,9,Kasungu
 522,2,Central Eastern,9,Kasungu
+522,2,Central Eastern,9,Kasungu
+522,2,Central Eastern,9,Kasungu
+523,2,Central Eastern,9,Kasungu
+523,2,Central Eastern,9,Kasungu
 523,2,Central Eastern,9,Kasungu
 524,3,Central Western,14,Mchinji
+525,3,Central Western,15,Lilongwe City
 525,3,Central Western,15,Lilongwe City
 526,3,Central Western,15,Lilongwe City
 527,3,Central Western,15,Lilongwe City
@@ -495,257 +1054,739 @@ school_id,division_num,division_nam,district_num,district_nam
 531,3,Central Western,15,Lilongwe City
 532,3,Central Western,15,Lilongwe City
 533,3,Central Western,15,Lilongwe City
+533,3,Central Western,15,Lilongwe City
 534,3,Central Western,15,Lilongwe City
 535,3,Central Western,15,Lilongwe City
+535,3,Central Western,15,Lilongwe City
+536,3,Central Western,17,Lilongwe Rural West
+536,3,Central Western,17,Lilongwe Rural West
 536,3,Central Western,17,Lilongwe Rural West
 537,3,Central Western,17,Lilongwe Rural West
+537,3,Central Western,17,Lilongwe Rural West
+537,3,Central Western,17,Lilongwe Rural West
+538,3,Central Western,17,Lilongwe Rural West
+538,3,Central Western,17,Lilongwe Rural West
 538,3,Central Western,17,Lilongwe Rural West
 539,3,Central Western,17,Lilongwe Rural West
+539,3,Central Western,17,Lilongwe Rural West
+539,3,Central Western,17,Lilongwe Rural West
+540,3,Central Western,17,Lilongwe Rural West
 540,3,Central Western,17,Lilongwe Rural West
 541,3,Central Western,17,Lilongwe Rural West
+541,3,Central Western,17,Lilongwe Rural West
+541,3,Central Western,17,Lilongwe Rural West
+542,3,Central Western,17,Lilongwe Rural West
+542,3,Central Western,17,Lilongwe Rural West
 542,3,Central Western,17,Lilongwe Rural West
 543,3,Central Western,17,Lilongwe Rural West
+543,3,Central Western,17,Lilongwe Rural West
+543,3,Central Western,17,Lilongwe Rural West
+544,3,Central Western,17,Lilongwe Rural West
+544,3,Central Western,17,Lilongwe Rural West
 544,3,Central Western,17,Lilongwe Rural West
 545,3,Central Western,17,Lilongwe Rural West
+545,3,Central Western,17,Lilongwe Rural West
+545,3,Central Western,17,Lilongwe Rural West
+546,3,Central Western,17,Lilongwe Rural West
 546,3,Central Western,17,Lilongwe Rural West
 547,3,Central Western,17,Lilongwe Rural West
+547,3,Central Western,17,Lilongwe Rural West
+547,3,Central Western,17,Lilongwe Rural West
+548,3,Central Western,17,Lilongwe Rural West
+548,3,Central Western,17,Lilongwe Rural West
 548,3,Central Western,17,Lilongwe Rural West
 549,3,Central Western,17,Lilongwe Rural West
+549,3,Central Western,17,Lilongwe Rural West
+549,3,Central Western,17,Lilongwe Rural West
+550,3,Central Western,17,Lilongwe Rural West
+550,3,Central Western,17,Lilongwe Rural West
 550,3,Central Western,17,Lilongwe Rural West
 551,3,Central Western,17,Lilongwe Rural West
+551,3,Central Western,17,Lilongwe Rural West
+551,3,Central Western,17,Lilongwe Rural West
+552,3,Central Western,17,Lilongwe Rural West
+552,3,Central Western,17,Lilongwe Rural West
 552,3,Central Western,17,Lilongwe Rural West
 553,3,Central Western,17,Lilongwe Rural West
+553,3,Central Western,17,Lilongwe Rural West
+553,3,Central Western,17,Lilongwe Rural West
+554,3,Central Western,17,Lilongwe Rural West
+554,3,Central Western,17,Lilongwe Rural West
 554,3,Central Western,17,Lilongwe Rural West
 555,3,Central Western,17,Lilongwe Rural West
+555,3,Central Western,17,Lilongwe Rural West
+555,3,Central Western,17,Lilongwe Rural West
+556,3,Central Western,17,Lilongwe Rural West
+556,3,Central Western,17,Lilongwe Rural West
 556,3,Central Western,17,Lilongwe Rural West
 557,3,Central Western,17,Lilongwe Rural West
+557,3,Central Western,17,Lilongwe Rural West
+557,3,Central Western,17,Lilongwe Rural West
+558,3,Central Western,17,Lilongwe Rural West
+558,3,Central Western,17,Lilongwe Rural West
 558,3,Central Western,17,Lilongwe Rural West
 559,3,Central Western,17,Lilongwe Rural West
+559,3,Central Western,17,Lilongwe Rural West
+559,3,Central Western,17,Lilongwe Rural West
+560,3,Central Western,17,Lilongwe Rural West
 560,3,Central Western,17,Lilongwe Rural West
 561,3,Central Western,18,Dedza
+561,3,Central Western,18,Dedza
+561,3,Central Western,18,Dedza
+562,3,Central Western,18,Dedza
+562,3,Central Western,18,Dedza
 562,3,Central Western,18,Dedza
 563,3,Central Western,18,Dedza
+563,3,Central Western,18,Dedza
+563,3,Central Western,18,Dedza
+564,3,Central Western,18,Dedza
+564,3,Central Western,18,Dedza
 564,3,Central Western,18,Dedza
 565,3,Central Western,18,Dedza
+565,3,Central Western,18,Dedza
+565,3,Central Western,18,Dedza
+566,3,Central Western,18,Dedza
+566,3,Central Western,18,Dedza
 566,3,Central Western,18,Dedza
 567,3,Central Western,18,Dedza
+567,3,Central Western,18,Dedza
+567,3,Central Western,18,Dedza
+568,3,Central Western,18,Dedza
+568,3,Central Western,18,Dedza
 568,3,Central Western,18,Dedza
 569,2,Central Eastern,11,Dowa
+569,2,Central Eastern,11,Dowa
+569,2,Central Eastern,11,Dowa
+570,3,Central Western,18,Dedza
+570,3,Central Western,18,Dedza
 570,3,Central Western,18,Dedza
 571,3,Central Western,18,Dedza
+571,3,Central Western,18,Dedza
+571,3,Central Western,18,Dedza
+572,3,Central Western,18,Dedza
+572,3,Central Western,18,Dedza
 572,3,Central Western,18,Dedza
 573,3,Central Western,18,Dedza
+573,3,Central Western,18,Dedza
+573,3,Central Western,18,Dedza
+574,3,Central Western,18,Dedza
+574,3,Central Western,18,Dedza
 574,3,Central Western,18,Dedza
 575,3,Central Western,18,Dedza
+575,3,Central Western,18,Dedza
+575,3,Central Western,18,Dedza
+576,4,Southern Eastern,20,Mangochi
+576,4,Southern Eastern,20,Mangochi
 576,4,Southern Eastern,20,Mangochi
 577,4,Southern Eastern,20,Mangochi
+577,4,Southern Eastern,20,Mangochi
+578,4,Southern Eastern,20,Mangochi
+578,4,Southern Eastern,20,Mangochi
 578,4,Southern Eastern,20,Mangochi
 579,4,Southern Eastern,20,Mangochi
+579,4,Southern Eastern,20,Mangochi
+579,4,Southern Eastern,20,Mangochi
+580,4,Southern Eastern,20,Mangochi
+580,4,Southern Eastern,20,Mangochi
 580,4,Southern Eastern,20,Mangochi
 581,4,Southern Eastern,20,Mangochi
+581,4,Southern Eastern,20,Mangochi
+581,4,Southern Eastern,20,Mangochi
+582,4,Southern Eastern,20,Mangochi
+582,4,Southern Eastern,20,Mangochi
 582,4,Southern Eastern,20,Mangochi
 583,4,Southern Eastern,20,Mangochi
+583,4,Southern Eastern,20,Mangochi
+583,4,Southern Eastern,20,Mangochi
+584,4,Southern Eastern,20,Mangochi
+584,4,Southern Eastern,20,Mangochi
 584,4,Southern Eastern,20,Mangochi
 585,4,Southern Eastern,20,Mangochi
+585,4,Southern Eastern,20,Mangochi
+586,4,Southern Eastern,20,Mangochi
 586,4,Southern Eastern,20,Mangochi
 587,4,Southern Eastern,20,Mangochi
+587,4,Southern Eastern,20,Mangochi
+588,4,Southern Eastern,20,Mangochi
 588,4,Southern Eastern,20,Mangochi
 589,4,Southern Eastern,21,Balaka
+589,4,Southern Eastern,21,Balaka
+590,4,Southern Eastern,22,Machinga
 590,4,Southern Eastern,22,Machinga
 591,4,Southern Eastern,22,Machinga
+591,4,Southern Eastern,22,Machinga
+591,4,Southern Eastern,22,Machinga
+592,4,Southern Eastern,22,Machinga
 592,4,Southern Eastern,22,Machinga
 593,4,Southern Eastern,22,Machinga
+593,4,Southern Eastern,22,Machinga
+594,4,Southern Eastern,22,Machinga
+594,4,Southern Eastern,22,Machinga
 594,4,Southern Eastern,22,Machinga
 595,4,Southern Eastern,22,Machinga
+595,4,Southern Eastern,22,Machinga
+595,4,Southern Eastern,22,Machinga
+596,4,Southern Eastern,22,Machinga
 596,4,Southern Eastern,22,Machinga
 597,4,Southern Eastern,22,Machinga
+597,4,Southern Eastern,22,Machinga
+598,4,Southern Eastern,22,Machinga
+598,4,Southern Eastern,22,Machinga
 598,4,Southern Eastern,22,Machinga
 599,4,Southern Eastern,22,Machinga
+599,4,Southern Eastern,22,Machinga
+600,4,Southern Eastern,22,Machinga
 600,4,Southern Eastern,22,Machinga
 601,4,Southern Eastern,22,Machinga
+601,4,Southern Eastern,22,Machinga
+601,4,Southern Eastern,22,Machinga
+602,4,Southern Eastern,23,Zomba Urban
 602,4,Southern Eastern,23,Zomba Urban
 603,4,Southern Eastern,23,Zomba Urban
+604,4,Southern Eastern,23,Zomba Urban
 604,4,Southern Eastern,23,Zomba Urban
 605,4,Southern Eastern,23,Zomba Urban
 606,4,Southern Eastern,23,Zomba Urban
 607,4,Southern Eastern,24,Zomba Rural
+607,4,Southern Eastern,24,Zomba Rural
 608,4,Southern Eastern,24,Zomba Rural
 609,5,Southern Western,25,Blantyre City
+609,5,Southern Western,25,Blantyre City
+610,5,Southern Western,25,Blantyre City
 610,5,Southern Western,25,Blantyre City
 611,5,Southern Western,25,Blantyre City
 612,5,Southern Western,25,Blantyre City
+612,5,Southern Western,25,Blantyre City
 613,5,Southern Western,25,Blantyre City
+614,5,Southern Western,25,Blantyre City
 614,5,Southern Western,25,Blantyre City
 615,5,Southern Western,25,Blantyre City
 616,5,Southern Western,25,Blantyre City
+616,5,Southern Western,25,Blantyre City
+617,5,Southern Western,28,Chikwawa
+617,5,Southern Western,28,Chikwawa
 617,5,Southern Western,28,Chikwawa
 618,5,Southern Western,28,Chikwawa
+618,5,Southern Western,28,Chikwawa
+618,5,Southern Western,28,Chikwawa
+619,5,Southern Western,28,Chikwawa
 619,5,Southern Western,28,Chikwawa
 620,5,Southern Western,28,Chikwawa
+620,5,Southern Western,28,Chikwawa
+621,5,Southern Western,28,Chikwawa
+621,5,Southern Western,28,Chikwawa
 621,5,Southern Western,28,Chikwawa
 622,5,Southern Western,28,Chikwawa
+622,5,Southern Western,28,Chikwawa
+622,5,Southern Western,28,Chikwawa
+623,5,Southern Western,28,Chikwawa
+623,5,Southern Western,28,Chikwawa
 623,5,Southern Western,28,Chikwawa
 624,5,Southern Western,28,Chikwawa
+624,5,Southern Western,28,Chikwawa
+624,5,Southern Western,28,Chikwawa
+625,5,Southern Western,28,Chikwawa
+625,5,Southern Western,28,Chikwawa
 625,5,Southern Western,28,Chikwawa
 626,5,Southern Western,28,Chikwawa
+626,5,Southern Western,28,Chikwawa
+626,5,Southern Western,28,Chikwawa
+627,5,Southern Western,28,Chikwawa
+627,5,Southern Western,28,Chikwawa
 627,5,Southern Western,28,Chikwawa
 628,5,Southern Western,28,Chikwawa
+628,5,Southern Western,28,Chikwawa
+628,5,Southern Western,28,Chikwawa
+629,5,Southern Western,29,Nsanje
 629,5,Southern Western,29,Nsanje
 630,5,Southern Western,29,Nsanje
 631,5,Southern Western,34,Neno
+631,5,Southern Western,34,Neno
+632,6,Shire Highlands,31,Thyolo
+632,6,Shire Highlands,31,Thyolo
 632,6,Shire Highlands,31,Thyolo
 633,6,Shire Highlands,31,Thyolo
+633,6,Shire Highlands,31,Thyolo
+633,6,Shire Highlands,31,Thyolo
+634,6,Shire Highlands,31,Thyolo
+634,6,Shire Highlands,31,Thyolo
 634,6,Shire Highlands,31,Thyolo
 635,6,Shire Highlands,31,Thyolo
+635,6,Shire Highlands,31,Thyolo
+636,6,Shire Highlands,31,Thyolo
+636,6,Shire Highlands,31,Thyolo
 636,6,Shire Highlands,31,Thyolo
 637,6,Shire Highlands,31,Thyolo
+637,6,Shire Highlands,31,Thyolo
+638,6,Shire Highlands,31,Thyolo
+638,6,Shire Highlands,31,Thyolo
 638,6,Shire Highlands,31,Thyolo
 639,6,Shire Highlands,31,Thyolo
+639,6,Shire Highlands,31,Thyolo
+639,6,Shire Highlands,31,Thyolo
+640,6,Shire Highlands,31,Thyolo
 640,6,Shire Highlands,31,Thyolo
 641,6,Shire Highlands,31,Thyolo
+641,6,Shire Highlands,31,Thyolo
+641,6,Shire Highlands,31,Thyolo
+642,6,Shire Highlands,31,Thyolo
+642,6,Shire Highlands,31,Thyolo
 642,6,Shire Highlands,31,Thyolo
 643,6,Shire Highlands,31,Thyolo
+643,6,Shire Highlands,31,Thyolo
+643,6,Shire Highlands,31,Thyolo
+644,6,Shire Highlands,31,Thyolo
+644,6,Shire Highlands,31,Thyolo
 644,6,Shire Highlands,31,Thyolo
 645,6,Shire Highlands,32,Mulanje
+645,6,Shire Highlands,32,Mulanje
+646,6,Shire Highlands,32,Mulanje
 646,6,Shire Highlands,32,Mulanje
 647,6,Shire Highlands,33,Phalombe
 648,1,Northern,3,Rumphi
+648,1,Northern,3,Rumphi
+649,2,Central Eastern,10,Nkhotakota
+649,2,Central Eastern,10,Nkhotakota
 649,2,Central Eastern,10,Nkhotakota
 651,5,Southern Western,26,Blantyre Rural
+651,5,Southern Western,26,Blantyre Rural
 652,3,Central Western,16,Lilongwe Rural East
+652,3,Central Western,16,Lilongwe Rural East
+653,1,Northern,7,Nkhata Bay
+654,2,Central Eastern,11,Dowa
+654,2,Central Eastern,11,Dowa
 654,2,Central Eastern,11,Dowa
 655,4,Southern Eastern,20,Mangochi
+655,4,Southern Eastern,20,Mangochi
+656,1,Northern,1,Chitipa
 657,1,Northern,3,Rumphi
+657,1,Northern,3,Rumphi
+657,1,Northern,3,Rumphi
+658,1,Northern,2,Karonga
+660,1,Northern,3,Rumphi
+660,1,Northern,3,Rumphi
 660,1,Northern,3,Rumphi
 663,2,Central Eastern,12,Ntchisi
+663,2,Central Eastern,12,Ntchisi
 669,3,Central Western,16,Lilongwe Rural East
+669,3,Central Western,16,Lilongwe Rural East
+671,3,Central Western,16,Lilongwe Rural East
+672,5,Southern Western,34,Neno
 672,5,Southern Western,34,Neno
 673,3,Central Western,16,Lilongwe Rural East
+673,3,Central Western,16,Lilongwe Rural East
+674,5,Southern Western,34,Neno
+675,5,Southern Western,34,Neno
+677,3,Central Western,19,Ntcheu
 680,1,Northern,4,Mzimba North
+680,1,Northern,4,Mzimba North
+681,5,Southern Western,28,Chikwawa
+681,5,Southern Western,28,Chikwawa
 684,3,Central Western,16,Lilongwe Rural East
+685,1,Northern,1,Chitipa
+688,6,Shire Highlands,32,Mulanje
 688,6,Shire Highlands,32,Mulanje
 689,5,Southern Western,26,Blantyre Rural
+689,5,Southern Western,26,Blantyre Rural
+690,4,Southern Eastern,24,Zomba Rural
+691,6,Shire Highlands,33,Phalombe
+692,2,Central Eastern,9,Kasungu
 692,2,Central Eastern,9,Kasungu
 694,3,Central Western,16,Lilongwe Rural East
 695,2,Central Eastern,10,Nkhotakota
+695,2,Central Eastern,10,Nkhotakota
+695,2,Central Eastern,10,Nkhotakota
 698,3,Central Western,19,Ntcheu
+699,3,Central Western,16,Lilongwe Rural East
+700,1,Northern,2,Karonga
+702,2,Central Eastern,11,Dowa
+702,2,Central Eastern,11,Dowa
+703,2,Central Eastern,11,Dowa
+703,2,Central Eastern,11,Dowa
 703,2,Central Eastern,11,Dowa
 704,2,Central Eastern,11,Dowa
+704,2,Central Eastern,11,Dowa
+704,2,Central Eastern,11,Dowa
+705,4,Southern Eastern,24,Zomba Rural
 706,2,Central Eastern,13,Salima
 708,2,Central Eastern,10,Nkhotakota
+708,2,Central Eastern,10,Nkhotakota
+709,2,Central Eastern,9,Kasungu
 709,2,Central Eastern,9,Kasungu
 710,2,Central Eastern,13,Salima
 711,2,Central Eastern,12,Ntchisi
 712,3,Central Western,16,Lilongwe Rural East
+712,3,Central Western,16,Lilongwe Rural East
 713,1,Northern,1,Chitipa
 715,3,Central Western,17,Lilongwe Rural West
+715,3,Central Western,17,Lilongwe Rural West
+716,3,Central Western,18,Dedza
+716,3,Central Western,18,Dedza
 717,4,Southern Eastern,24,Zomba Rural
+717,4,Southern Eastern,24,Zomba Rural
+719,5,Southern Western,29,Nsanje
+722,1,Northern,7,Nkhata Bay
 722,1,Northern,7,Nkhata Bay
 723,1,Northern,3,Rumphi
+723,1,Northern,3,Rumphi
+723,1,Northern,3,Rumphi
+724,5,Southern Western,27,Mwanza
 724,5,Southern Western,27,Mwanza
 725,6,Shire Highlands,32,Mulanje
+725,6,Shire Highlands,32,Mulanje
+725,6,Shire Highlands,32,Mulanje
+726,6,Shire Highlands,32,Mulanje
+726,6,Shire Highlands,32,Mulanje
 726,6,Shire Highlands,32,Mulanje
 727,6,Shire Highlands,30,Chiradzulu
+727,6,Shire Highlands,30,Chiradzulu
 731,4,Southern Eastern,20,Mangochi
+731,4,Southern Eastern,20,Mangochi
+734,1,Northern,2,Karonga
+735,2,Central Eastern,10,Nkhotakota
 736,6,Shire Highlands,30,Chiradzulu
+738,4,Southern Eastern,22,Machinga
 738,4,Southern Eastern,22,Machinga
 739,6,Shire Highlands,30,Chiradzulu
 744,3,Central Western,19,Ntcheu
+744,3,Central Western,19,Ntcheu
 746,4,Southern Eastern,24,Zomba Rural
+747,2,Central Eastern,10,Nkhotakota
+747,2,Central Eastern,10,Nkhotakota
+748,6,Shire Highlands,30,Chiradzulu
+753,1,Northern,2,Karonga
 753,1,Northern,2,Karonga
 754,3,Central Western,14,Mchinji
 755,2,Central Eastern,13,Salima
 760,2,Central Eastern,13,Salima
+760,2,Central Eastern,13,Salima
+761,1,Northern,3,Rumphi
+761,1,Northern,3,Rumphi
 761,1,Northern,3,Rumphi
 762,6,Shire Highlands,32,Mulanje
+762,6,Shire Highlands,32,Mulanje
+762,6,Shire Highlands,32,Mulanje
+763,5,Southern Western,27,Mwanza
 763,5,Southern Western,27,Mwanza
 764,2,Central Eastern,11,Dowa
+764,2,Central Eastern,11,Dowa
+764,2,Central Eastern,11,Dowa
+765,2,Central Eastern,11,Dowa
+767,6,Shire Highlands,31,Thyolo
+767,6,Shire Highlands,31,Thyolo
 768,1,Northern,2,Karonga
+769,3,Central Western,17,Lilongwe Rural West
+769,3,Central Western,17,Lilongwe Rural West
 769,3,Central Western,17,Lilongwe Rural West
 770,1,Northern,2,Karonga
 771,2,Central Eastern,12,Ntchisi
+771,2,Central Eastern,12,Ntchisi
+772,1,Northern,3,Rumphi
+772,1,Northern,3,Rumphi
 772,1,Northern,3,Rumphi
 773,2,Central Eastern,10,Nkhotakota
+773,2,Central Eastern,10,Nkhotakota
 774,3,Central Western,17,Lilongwe Rural West
+774,3,Central Western,17,Lilongwe Rural West
+777,1,Northern,3,Rumphi
+777,1,Northern,3,Rumphi
 782,5,Southern Western,27,Mwanza
+782,5,Southern Western,27,Mwanza
+785,3,Central Western,16,Lilongwe Rural East
+787,3,Central Western,17,Lilongwe Rural West
+787,3,Central Western,17,Lilongwe Rural West
 787,3,Central Western,17,Lilongwe Rural West
 790,2,Central Eastern,13,Salima
 792,4,Southern Eastern,21,Balaka
+792,4,Southern Eastern,21,Balaka
+793,4,Southern Eastern,21,Balaka
 793,4,Southern Eastern,21,Balaka
 794,4,Southern Eastern,21,Balaka
+794,4,Southern Eastern,21,Balaka
+795,4,Southern Eastern,21,Balaka
 795,4,Southern Eastern,21,Balaka
 797,4,Southern Eastern,21,Balaka
+797,4,Southern Eastern,21,Balaka
+798,4,Southern Eastern,22,Machinga
+798,4,Southern Eastern,22,Machinga
 799,4,Southern Eastern,21,Balaka
 801,6,Shire Highlands,33,Phalombe
+801,6,Shire Highlands,33,Phalombe
+802,6,Shire Highlands,32,Mulanje
+802,6,Shire Highlands,32,Mulanje
 802,6,Shire Highlands,32,Mulanje
 803,6,Shire Highlands,32,Mulanje
+803,6,Shire Highlands,32,Mulanje
+803,6,Shire Highlands,32,Mulanje
+804,6,Shire Highlands,32,Mulanje
+804,6,Shire Highlands,32,Mulanje
 804,6,Shire Highlands,32,Mulanje
 805,6,Shire Highlands,32,Mulanje
+805,6,Shire Highlands,32,Mulanje
+805,6,Shire Highlands,32,Mulanje
+806,6,Shire Highlands,32,Mulanje
 806,6,Shire Highlands,32,Mulanje
 807,6,Shire Highlands,33,Phalombe
 808,6,Shire Highlands,33,Phalombe
+809,6,Shire Highlands,30,Chiradzulu
 810,6,Shire Highlands,30,Chiradzulu
 812,5,Southern Western,29,Nsanje
 816,1,Northern,3,Rumphi
+816,1,Northern,3,Rumphi
+816,1,Northern,3,Rumphi
+818,6,Shire Highlands,32,Mulanje
+818,6,Shire Highlands,32,Mulanje
 818,6,Shire Highlands,32,Mulanje
 820,3,Central Western,16,Lilongwe Rural East
+820,3,Central Western,16,Lilongwe Rural East
+821,6,Shire Highlands,33,Phalombe
 821,6,Shire Highlands,33,Phalombe
 823,2,Central Eastern,10,Nkhotakota
+823,2,Central Eastern,10,Nkhotakota
+823,2,Central Eastern,10,Nkhotakota
+824,2,Central Eastern,10,Nkhotakota
+824,2,Central Eastern,10,Nkhotakota
 826,5,Southern Western,29,Nsanje
+827,1,Northern,8,Likoma
 829,5,Southern Western,27,Mwanza
+830,2,Central Eastern,10,Nkhotakota
+833,1,Northern,1,Chitipa
+836,6,Shire Highlands,31,Thyolo
+836,6,Shire Highlands,31,Thyolo
 836,6,Shire Highlands,31,Thyolo
 837,1,Northern,2,Karonga
+837,1,Northern,2,Karonga
+838,1,Northern,7,Nkhata Bay
 838,1,Northern,7,Nkhata Bay
 840,1,Northern,3,Rumphi
+840,1,Northern,3,Rumphi
+840,1,Northern,3,Rumphi
 841,1,Northern,3,Rumphi
+841,1,Northern,3,Rumphi
+842,1,Northern,3,Rumphi
+842,1,Northern,3,Rumphi
 842,1,Northern,3,Rumphi
 843,1,Northern,4,Mzimba North
 848,1,Northern,4,Mzimba North
+848,1,Northern,4,Mzimba North
 849,1,Northern,4,Mzimba North
+849,1,Northern,4,Mzimba North
+850,1,Northern,4,Mzimba North
+851,1,Northern,5,Mzimba South
+851,1,Northern,5,Mzimba South
+852,4,Southern Eastern,21,Balaka
 852,4,Southern Eastern,21,Balaka
 854,4,Southern Eastern,21,Balaka
+854,4,Southern Eastern,21,Balaka
+855,2,Central Eastern,9,Kasungu
+855,2,Central Eastern,9,Kasungu
+856,2,Central Eastern,10,Nkhotakota
+856,2,Central Eastern,10,Nkhotakota
 856,2,Central Eastern,10,Nkhotakota
 857,2,Central Eastern,10,Nkhotakota
+857,2,Central Eastern,10,Nkhotakota
+858,2,Central Eastern,10,Nkhotakota
+858,2,Central Eastern,10,Nkhotakota
 858,2,Central Eastern,10,Nkhotakota
 859,2,Central Eastern,11,Dowa
+859,2,Central Eastern,11,Dowa
+859,2,Central Eastern,11,Dowa
+860,3,Central Western,16,Lilongwe Rural East
 861,3,Central Western,15,Lilongwe City
+863,3,Central Western,14,Mchinji
 864,3,Central Western,14,Mchinji
 868,3,Central Western,19,Ntcheu
+868,3,Central Western,19,Ntcheu
 869,3,Central Western,19,Ntcheu
+870,4,Southern Eastern,20,Mangochi
+870,4,Southern Eastern,20,Mangochi
 871,4,Southern Eastern,22,Machinga
+871,4,Southern Eastern,22,Machinga
+871,4,Southern Eastern,22,Machinga
+872,4,Southern Eastern,24,Zomba Rural
 874,2,Central Eastern,10,Nkhotakota
+874,2,Central Eastern,10,Nkhotakota
+875,6,Shire Highlands,30,Chiradzulu
 875,6,Shire Highlands,30,Chiradzulu
 879,5,Southern Western,34,Neno
 880,5,Southern Western,27,Mwanza
+880,5,Southern Western,27,Mwanza
+881,5,Southern Western,34,Neno
 881,5,Southern Western,34,Neno
 882,5,Southern Western,27,Mwanza
 883,5,Southern Western,27,Mwanza
+884,5,Southern Western,34,Neno
+885,5,Southern Western,34,Neno
+886,5,Southern Western,27,Mwanza
+887,5,Southern Western,28,Chikwawa
+887,5,Southern Western,28,Chikwawa
+888,1,Northern,4,Mzimba North
+889,2,Central Eastern,10,Nkhotakota
+889,2,Central Eastern,10,Nkhotakota
 889,2,Central Eastern,10,Nkhotakota
 890,4,Southern Eastern,22,Machinga
+890,4,Southern Eastern,22,Machinga
+891,1,Northern,2,Karonga
 891,1,Northern,2,Karonga
 894,1,Northern,7,Nkhata Bay
+894,1,Northern,7,Nkhata Bay
+902,3,Central Western,19,Ntcheu
 903,5,Southern Western,26,Blantyre Rural
+903,5,Southern Western,26,Blantyre Rural
+904,5,Southern Western,26,Blantyre Rural
+905,5,Southern Western,26,Blantyre Rural
+906,5,Southern Western,27,Mwanza
 906,5,Southern Western,27,Mwanza
 909,1,Northern,7,Nkhata Bay
 910,2,Central Eastern,11,Dowa
+910,2,Central Eastern,11,Dowa
+910,2,Central Eastern,11,Dowa
+911,3,Central Western,16,Lilongwe Rural East
+913,6,Shire Highlands,32,Mulanje
+913,6,Shire Highlands,32,Mulanje
 913,6,Shire Highlands,32,Mulanje
 914,6,Shire Highlands,32,Mulanje
+914,6,Shire Highlands,32,Mulanje
+914,6,Shire Highlands,32,Mulanje
+915,6,Shire Highlands,32,Mulanje
+915,6,Shire Highlands,32,Mulanje
 915,6,Shire Highlands,32,Mulanje
 916,6,Shire Highlands,32,Mulanje
+916,6,Shire Highlands,32,Mulanje
+916,6,Shire Highlands,32,Mulanje
+917,6,Shire Highlands,31,Thyolo
 917,6,Shire Highlands,31,Thyolo
 918,1,Northern,7,Nkhata Bay
+918,1,Northern,7,Nkhata Bay
 919,1,Northern,4,Mzimba North
+919,1,Northern,4,Mzimba North
+920,1,Northern,8,Likoma
+921,1,Northern,8,Likoma
+924,1,Northern,7,Nkhata Bay
 924,1,Northern,7,Nkhata Bay
 925,6,Shire Highlands,30,Chiradzulu
+925,6,Shire Highlands,30,Chiradzulu
 926,1,Northern,2,Karonga
+929,2,Central Eastern,10,Nkhotakota
+930,6,Shire Highlands,30,Chiradzulu
+931,6,Shire Highlands,30,Chiradzulu
 931,6,Shire Highlands,30,Chiradzulu
 932,6,Shire Highlands,32,Mulanje
+932,6,Shire Highlands,32,Mulanje
+932,6,Shire Highlands,32,Mulanje
+933,1,Northern,2,Karonga
 935,2,Central Eastern,10,Nkhotakota
+935,2,Central Eastern,10,Nkhotakota
+941,1,Northern,5,Mzimba South
+943,1,Northern,3,Rumphi
+943,1,Northern,3,Rumphi
 943,1,Northern,3,Rumphi
 945,1,Northern,3,Rumphi
+945,1,Northern,3,Rumphi
+945,1,Northern,3,Rumphi
+946,4,Southern Eastern,24,Zomba Rural
 946,4,Southern Eastern,24,Zomba Rural
 948,1,Northern,3,Rumphi
+948,1,Northern,3,Rumphi
+948,1,Northern,3,Rumphi
+949,6,Shire Highlands,32,Mulanje
 949,6,Shire Highlands,32,Mulanje
 950,5,Southern Western,27,Mwanza
+950,5,Southern Western,27,Mwanza
 952,2,Central Eastern,9,Kasungu
+952,2,Central Eastern,9,Kasungu
+952,2,Central Eastern,9,Kasungu
+954,2,Central Eastern,13,Salima
+955,3,Central Western,18,Dedza
 960,5,Southern Western,27,Mwanza
+960,5,Southern Western,27,Mwanza
+963,2,Central Eastern,11,Dowa
+964,2,Central Eastern,10,Nkhotakota
+965,2,Central Eastern,9,Kasungu
+966,2,Central Eastern,9,Kasungu
+967,2,Central Eastern,10,Nkhotakota
+968,2,Central Eastern,9,Kasungu
+969,6,Shire Highlands,32,Mulanje
+970,2,Central Eastern,11,Dowa
+971,3,Central Western,18,Dedza
+972,4,Southern Eastern,20,Mangochi
+973,2,Central Eastern,9,Kasungu
+974,2,Central Eastern,11,Dowa
+975,2,Central Eastern,11,Dowa
+976,3,Central Western,17,Lilongwe Rural West
+977,2,Central Eastern,11,Dowa
+978,2,Central Eastern,11,Dowa
+979,6,Shire Highlands,31,Thyolo
+980,2,Central Eastern,9,Kasungu
+981,3,Central Western,18,Dedza
+982,3,Central Western,17,Lilongwe Rural West
+983,3,Central Western,17,Lilongwe Rural West
+984,4,Southern Eastern,20,Mangochi
+985,2,Central Eastern,9,Kasungu
+986,4,Southern Eastern,20,Mangochi
+987,3,Central Western,17,Lilongwe Rural West
+988,1,Northern,5,Mzimba South
+989,4,Southern Eastern,20,Mangochi
+990,6,Shire Highlands,32,Mulanje
+991,2,Central Eastern,11,Dowa
+992,3,Central Western,17,Lilongwe Rural West
+993,4,Southern Eastern,22,Machinga
+994,5,Southern Western,28,Chikwawa
+995,4,Southern Eastern,22,Machinga
+996,3,Central Western,17,Lilongwe Rural West
+997,1,Northern,3,Rumphi
+998,6,Shire Highlands,31,Thyolo
+999,2,Central Eastern,10,Nkhotakota
+1000,4,Southern Eastern,20,Mangochi
+1001,4,Southern Eastern,20,Mangochi
+1002,4,Southern Eastern,22,Machinga
+1003,2,Central Eastern,9,Kasungu
+1004,3,Central Western,18,Dedza
+1005,2,Central Eastern,11,Dowa
+1006,6,Shire Highlands,32,Mulanje
+1007,4,Southern Eastern,22,Machinga
+1008,5,Southern Western,28,Chikwawa
+1009,4,Southern Eastern,22,Machinga
+1010,2,Central Eastern,9,Kasungu
+1011,4,Southern Eastern,20,Mangochi
+1012,5,Southern Western,28,Chikwawa
+1013,2,Central Eastern,9,Kasungu
+1014,1,Northern,5,Mzimba South
+1015,2,Central Eastern,11,Dowa
+1016,6,Shire Highlands,31,Thyolo
+1017,1,Northern,3,Rumphi
+1018,1,Northern,3,Rumphi
+1019,2,Central Eastern,11,Dowa
+1020,4,Southern Eastern,22,Machinga
+1021,4,Southern Eastern,22,Machinga
+1022,6,Shire Highlands,32,Mulanje
+1023,6,Shire Highlands,31,Thyolo
+1024,2,Central Eastern,9,Kasungu
+1025,2,Central Eastern,9,Kasungu
+1026,2,Central Eastern,9,Kasungu
+1027,2,Central Eastern,9,Kasungu
+1028,1,Northern,5,Mzimba South
+1029,1,Northern,5,Mzimba South
+1030,4,Southern Eastern,20,Mangochi
+1031,1,Northern,5,Mzimba South
+1032,1,Northern,5,Mzimba South
+1033,2,Central Eastern,9,Kasungu
+1034,4,Southern Eastern,20,Mangochi
+1035,6,Shire Highlands,32,Mulanje
+1036,1,Northern,3,Rumphi
+1037,2,Central Eastern,9,Kasungu
+1038,4,Southern Eastern,20,Mangochi
+1039,6,Shire Highlands,31,Thyolo
+1040,6,Shire Highlands,32,Mulanje
+1041,5,Southern Western,28,Chikwawa
+1042,2,Central Eastern,11,Dowa
+1043,2,Central Eastern,10,Nkhotakota
+1044,2,Central Eastern,11,Dowa
+1045,3,Central Western,17,Lilongwe Rural West
+1046,3,Central Western,17,Lilongwe Rural West
+1047,5,Southern Western,28,Chikwawa
+1048,1,Northern,5,Mzimba South
+1049,1,Northern,3,Rumphi
+1050,1,Northern,3,Rumphi
+1051,4,Southern Eastern,20,Mangochi
+1052,1,Northern,5,Mzimba South

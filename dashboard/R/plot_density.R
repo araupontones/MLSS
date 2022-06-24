@@ -14,8 +14,8 @@ plot_density <- function(database = data_division(),
     ggplot() +
     geom_density(aes(x = targetvar, fill = round, color = round)) +
     labs(x =  x_label) +
-    scale_fill_manual(values = alpha(colors_rounds_rainbow, .5)) +
-    scale_color_manual(values = colors_rounds_rainbow)
+    scale_fill_manual(values = alpha(colors_rounds_rainbow, .5), name = "") +
+    scale_color_manual(values = colors_rounds_rainbow, name = "")
   
   
   #aggregate national or division level

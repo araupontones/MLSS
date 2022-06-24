@@ -34,7 +34,7 @@ plot_bar  <- function(database,
   plot <- plot +
     labs(y = y_label,
          x = "") +
-    scale_fill_manual(name = "Round",
+    scale_fill_manual(name = "",
                       values = alpha(colors_rounds, .9)
                       )+
     theme_MLSS()

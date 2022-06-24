@@ -78,7 +78,8 @@ plot_compare_outcomes_time <- function(database,
   
   
   plot <- plot + 
-    scale_fill_manual(name = paste(str_to_title(level),name_fill),
+    scale_fill_manual(name = paste(#str_to_title(level),
+      name_fill),
                       breaks = c("Yes", "No"),
                       values = c(alpha(color_yes, .9), alpha(color_no, .7))
     ) +

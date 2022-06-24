@@ -1,4 +1,6 @@
 id,var_name,label,format,Dashboard,type,label_yes,dropdown,Filter,Name dropdown,Description
+001,school_id,School ID,%10.0g,TRUE,id,,FALSE,,,
+002,school_nam,School Name,%9s,TRUE,id,,FALSE,,,
 003,division_num,Division Number,%10.0g,TRUE,id,,FALSE,TRUE,,
 004,division_nam,Division,%16s,TRUE,id,,FALSE,TRUE,,
 005,district_num,District Number,%8.0g,TRUE,id,,FALSE,TRUE,,

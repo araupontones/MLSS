@@ -171,9 +171,16 @@ outputForm <- function(id, dirLookUps){
     )
     
     
+    
     compare_var_label <- reactive(
       
-      dropdowns_v$label_yes[dropdowns_v$var_name == input$compare]
+      dropdowns_v$label[dropdowns_v$var_name == input$compare]
+    )
+    
+    #Description
+    var_description <- reactive(
+      
+      indicator_description <- dropdowns_v$Description[dropdowns_v$var_name == input$indicator]
     )
     
     
@@ -206,6 +213,8 @@ outputForm <- function(id, dirLookUps){
       #parameters for plot ----
       x_var_plot = x_var_plot,
       var_label = var_label, 
+      compare_var_label = compare_var_label,
+      var_description = var_description,
       
       #lookup
       lookUp = dropdowns_v

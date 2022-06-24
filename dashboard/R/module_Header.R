@@ -42,8 +42,9 @@ serverHeader <-  function(id, inputs) {
                                    tags$div(class = "con containerHeader",
                                      tags$h3(title_division(), class = "title_division"),
                                      tags$h4(inputs$var_label(), class = "title_indicator"),
+                                     tags$p(inputs$var_description(),class = "compare-text"),
                                      tags$p(class = "compare-text",
-                                            paste0("Whether ", id), 
+                                            paste0("Comparison between: "), 
                                             tags$span(class = "yes",inputs$compare_var_label()),
                                             tags$span(class = "no",  " or not.")
                                      )
@@ -53,7 +54,8 @@ serverHeader <-  function(id, inputs) {
                                    
                                    tags$div(class = "con containerHeader",
                                      tags$h3(title_division(), class = "title_division"),
-                                     tags$h4(inputs$var_label(), class = "title_indicator")
+                                     tags$h4(inputs$var_label(), class = "title_indicator"),
+                                     tags$p(inputs$var_description(), class = "compare-text")
                                    )
                                    
                                  }
