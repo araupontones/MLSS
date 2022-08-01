@@ -72,7 +72,7 @@ outputForm <- function(id, dirLookUps){
       
       if({input$division} == "Malawi"){
         
-        divs <- divisions_v[-1]
+        divs <- c(divisions_v[-1], "")
         
       } else if({input$division} != "Malawi" & {input$display} == "round"){
         

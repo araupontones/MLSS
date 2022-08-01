@@ -7,8 +7,17 @@ serverData <-  function(id, inputs, dirImports ) {
     print(paste("hola", id))
     
     data_user <- eventReactive(inputs$go(),{
+      print(
+      database %>% 
+        rename(targetvar = inputs$indicator()) %>%
+        group_by(round) %>%
+        summarise(mean = mean(targetvar, na.rm = T),
+                  total = n())
+      )
       
-     
+      print(inputs$indicator())
+      print(inputs$compare_by_chars())
+      
       #to compare with other characteristics ==================================
       if(inputs$compare_by_chars() & !inputs$binary_indicator()){
         
@@ -42,7 +51,8 @@ serverData <-  function(id, inputs, dirImports ) {
           filter(division_nam %in% inputs$keep_divisions()) %>%
           filter(round %in% inputs$round())
         
-        
+        print(inputs$round())
+        print(inputs$keep_divisions())
         
         
         #correct misscoding of binary vars

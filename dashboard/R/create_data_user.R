@@ -28,6 +28,7 @@ create_data_user <- function(db,
   
  
   
+  
   #to compare outcomes by characteristics -------------------------------------
   if(by_other_vars){
     
